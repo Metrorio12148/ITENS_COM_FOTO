@@ -68,30 +68,56 @@
             padding: 20px;
         }
 
+        /* ESTILOS PARA PADRONIZAR IMAGENS */
         .item {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             padding: 20px;
             transition: transform 0.3s ease;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            min-height: 400px; /* Altura mínima do card */
+        }
+
+        .item img {
+            width: 100%;
+            height: 250px; /* Altura fixa */
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid var(--accent-color);
+            margin: 10px 0;
+            transition: transform 0.3s ease;
+            flex-shrink: 0; /* Impede redução da imagem */
+        }
+
+        .item p:first-of-type {
+            min-height: 60px; /* Altura fixa para o nome */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Limita a 2 linhas */
+            -webkit-box-orient: vertical;
+        }
+
+        .item p:last-of-type {
+            margin-top: auto; /* Empurra o número para baixo */
+            padding: 10px 0;
+            text-align: center;
+            font-weight: bold;
         }
 
         .item:hover {
             transform: translateY(-5px);
         }
 
-        .item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 2px solid var(--accent-color);
-            margin-bottom: 15px;
-        }
-
-        .item p {
-            margin: 8px 0;
-            font-size: 0.95rem;
+        .item:hover img {
+            transform: scale(1.03);
         }
 
         .search-container {
@@ -150,6 +176,19 @@
                 grid-template-columns: 1fr;
             }
 
+            .item {
+                min-height: 350px;
+            }
+
+            .item img {
+                height: 200px;
+            }
+
+            .item p:first-of-type {
+                min-height: 50px;
+                font-size: 0.9rem;
+            }
+
             .search-container {
                 top: 70px;
                 right: 10px;
@@ -157,6 +196,21 @@
 
             .search-input.active {
                 width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .item {
+                min-height: 320px;
+            }
+
+            .item img {
+                height: 180px;
+            }
+
+            .item p:first-of-type {
+                -webkit-line-clamp: 3;
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -177,7 +231,7 @@
 
     <main class="main-content">
         <div class="items-container">
-            <!-- Itens mantidos do original -->
+            <!-- Itens existentes sem modificações -->
             <div class="item">
                 <p>Nome do Item: ABRACADEIRA 100MMX2,45MMX22MM</p>
                 <img src="ABRACADEIRA 100MMX2,45MMX22MM(10007879).jpg" alt="Item 1">
@@ -3306,7 +3360,7 @@
         <p>Número de Estoque: 30003891</p>
     </div>
 
-    </div>
+   </div>
     </main>
 
     <script>
@@ -3328,11 +3382,7 @@
                     .trim()
                     .toLowerCase();
                 
-                if (itemName.includes(searchTerm)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
+                item.style.display = itemName.includes(searchTerm) ? 'block' : 'none';
             });
         });
     </script>
