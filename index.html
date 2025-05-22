@@ -68,7 +68,7 @@
             padding: 20px;
         }
 
-        /* Estilos revisados para as imagens */
+        /* ESTILOS PARA PADRONIZAR IMAGENS */
         .item {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
@@ -77,44 +77,22 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
-            min-height: 400px;
-            position: relative;
-            overflow: visible; /* Alterado para visible */
+            min-height: 400px; /* Altura mínima do card */
         }
 
         .item img {
             width: 100%;
-            height: 250px;
+            height: 250px; /* Altura fixa */
             object-fit: cover;
             border-radius: 10px;
-            margin: 10px 0;
-            transition: all 0.3s ease;
-            flex-shrink: 0;
-            position: relative;
-            z-index: 1;
-            border: 2px solid transparent; /* Borda transparente */
-        }
-
-        .item::after {
-            content: '';
-            position: absolute;
-            top: 10px;
-            left: 0;
-            width: calc(100% - 4px); /* Compensação para borda */
-            height: 250px;
             border: 2px solid var(--accent-color);
-            border-radius: 10px;
-            z-index: 0;
-            margin: 0 2px; /* Centraliza a borda */
-        }
-
-        .item:hover img {
-            transform: scale(1.03);
-            border-color: rgba(0, 174, 239, 0.3); /* Borda sutil no hover */
+            margin: 10px 0;
+            transition: transform 0.3s ease;
+            flex-shrink: 0; /* Impede redução da imagem */
         }
 
         .item p:first-of-type {
-            min-height: 60px;
+            min-height: 60px; /* Altura fixa para o nome */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -123,15 +101,23 @@
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clamp: 2;
+            -webkit-line-clamp: 2; /* Limita a 2 linhas */
             -webkit-box-orient: vertical;
         }
 
         .item p:last-of-type {
-            margin-top: auto;
+            margin-top: auto; /* Empurra o número para baixo */
             padding: 10px 0;
             text-align: center;
             font-weight: bold;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+        }
+
+        .item:hover img {
+            transform: scale(1.03);
         }
 
         .search-container {
@@ -173,7 +159,6 @@
             opacity: 1;
         }
 
-        /* Media Queries Revisados */
         @media (max-width: 768px) {
             .header {
                 padding: 10px 20px;
@@ -199,10 +184,6 @@
                 height: 200px;
             }
 
-            .item::after {
-                height: 200px;
-            }
-
             .item p:first-of-type {
                 min-height: 50px;
                 font-size: 0.9rem;
@@ -224,10 +205,6 @@
             }
 
             .item img {
-                height: 180px;
-            }
-
-            .item::after {
                 height: 180px;
             }
 
