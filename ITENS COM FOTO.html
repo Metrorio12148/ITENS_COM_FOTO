@@ -1,0 +1,3244 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Pré-carregar a imagem de fundo primeiro -->
+    <link rel="preload" href="TESTE.jpg" as="image">
+    <title>ITENS COM FOTO</title>
+    <style>
+        body {
+            background: none;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            position: relative;
+        }
+        /* Imagem de fundo com prioridade */
+        body:before {
+            content: "";
+            background-image: url('TESTE.jpg');
+            opacity: 0.7;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: fixed;
+            z-index: -1;
+            background-size: cover;
+            /* Forçar renderização antecipada */
+            will-change: transform;
+        }
+        .logo {
+            margin-top: 20px;
+        }
+        .logo img {
+            max-width: 15%;
+            height: auto;
+            /* Adiar carregamento da logo */
+            loading: lazy;
+        }
+        .item {
+            width: 20%;
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+            vertical-align: top;
+            height: 350px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            /* Carregamento lazy para todas as imagens dos itens */
+            loading: lazy;
+        }
+        h1 {
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: black;
+            text-shadow: 0px 0px 0 black, 2px 0px 0 black, 0px 2px 0 black, 2px 2px 0 black;
+            text-stroke-width: 0.1px;
+            text-stroke-color: black;
+        }
+        p {
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            text-stroke-width: 1px;
+            text-stroke-color: black;
+        }
+        .footer {
+            background-color: #2674ae;
+            padding: 10px;
+            border-radius: 20px;
+            margin-top: 10px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+        .footer p {
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+        }
+        .item p {
+            color: black;
+            margin-bottom: 5px;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            text-stroke-width: 1px;
+            text-stroke-color: black;
+        }
+        .item img {
+            width: 200px;
+            height: 200px;
+            border: 5px solid grey;
+            border-radius: 40px;
+            /* Otimizar renderização */
+            content-visibility: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="R.png" alt="Logo da Coordenação">
+    </div>
+   
+    <h1>ITENS DE ESTOQUE - COORDENAÇÃO DE AUTOMAÇÃO E TELECOMUNICAÇÕES</h1>
+    <div class="footer">
+        <p>Ctrl+F ou F3 para pesquisar</p>
+    </div>
+    
+    <!-- Todos os itens aqui (mantive apenas alguns para exemplo) -->
+    <div class="item">
+        <p>Nome do Item:  ABRACADEIRA 100MMX2,45MMX22MM</p>
+        <img src=" ABRACADEIRA 100MMX2,45MMX22MM(10007879).jpg" alt="Item 1">
+        <p>Número de Estoque: 10007879</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ABRACADEIRA AJUST AISI304 57 X 76MM</p>
+        <img src=" ABRACADEIRA AJUST AISI304 57 X 76MM(10000669).jpg" alt="Item 2">
+        <p>Número de Estoque: 10000669</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ABRACADEIRA AJUST AISI304 83 X 102MM</p>
+        <img src=" ABRACADEIRA AJUST AISI304 83 X 102MM(10000674).jpg" alt="Item 3">
+        <p>Número de Estoque: 10000674</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ABRACADEIRA AUTO TRAV NYLON 150MM</p>
+        <img src=" ABRACADEIRA AUTO TRAV NYLON 150MM(10007889).jpg" alt="Item 4">
+        <p>Número de Estoque: 10007889</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ABRACADEIRA AUTO TRAV POLIAM 100,0MM</p>
+        <img src=" ABRACADEIRA AUTO TRAV POLIAM 100,0MM(10007884).jpg" alt="Item 5">
+        <p>Número de Estoque: 10007884</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ABRACADEIRA AUTOTRAV NYLON 390MM</p>
+        <img src=" ABRACADEIRA AUTOTRAV NYLON 390MM(10007882).jpg" alt="Item 6">
+        <p>Número de Estoque: 10007882</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ABRACADEIRA CLIP PVC 5MM</p>
+        <img src=" ABRACADEIRA CLIP PVC 5MM(10007887).jpg" alt="Item 7">
+        <p>Número de Estoque: 10007887</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ABRACADEIRA PLASTICA BRANCA 4,6X200MM</p>
+        <img src=" ABRACADEIRA PLASTICA BRANCA 4,6X200MM(10007880).jpg" alt="Item 8">
+        <p>Número de Estoque: 10007880</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ABRACADEIRA PLASTICA BRANCA 4,6X300MM </p>
+        <img src=" ABRACADEIRA PLASTICA BRANCA 4,6X300MM (2)(10007881).jpg" alt="Item 9">
+        <p>Número de Estoque: 10007881</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ABRACADEIRA PLASTICA BRANCA 7,6X225MM </p>
+        <img src=" ABRACADEIRA PLASTICA BRANCA 7,6X225MM (2)(10007883).jpg" alt="Item 10">
+        <p>Número de Estoque: 10007883</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ABRACADEIRA UNHA E BASE 2.12</p>
+        <img src=" ABRACADEIRA UNHA E BASE 2.12(10000637).jpg" alt="Item 11">
+        <p>Número de Estoque: 10000637</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ADESIVO INSTAN BAIXA VISC 20G IND</p>
+        <img src=" ADESIVO INSTAN BAIXA VISC 20G IND(10020198).jpg" alt="Item 12">
+        <p>Número de Estoque: 10020198</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ALARME SONORO 24VCC 4,5KHZ</p>
+        <img src=" ALARME SONORO 24VCC 4,5KHZ(10006727).jpg" alt="Item 13">
+        <p>Número de Estoque: 10006727</p>
+    </div>
+
+    
+    <div class="item">
+        <p>Nome do Item:  AMORTECEDOR TRIPODE P COFRE TORNIQUETE</p>
+        <img src=" AMORTECEDOR TRIPODE P COFRE TORNIQUETE(10006717).jpg" alt="Item 15">
+        <p>Número de Estoque: 10006717</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ANTENA ATIVA DE RECOLHIMENTO VALIDADOR</p>
+        <img src=" ANTENA ATIVA DE RECOLHIMENTO VALIDADOR(10012281).jpg" alt="Item 16">
+        <p>Número de Estoque: 10012281</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ARAME REDONDO SAE1020 GALV 1,24MM</p>
+        <img src=" ARAME REDONDO SAE1020 GALV 1,24MM(10000000).jpg" alt="Item 17">
+        <p>Número de Estoque: 10000000</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ARAME REDONDO SAE1020 GALV 1,24MM</p>
+        <img src=" ARAME REDONDO SAE1020 GALV 1,24MM(10000001).jpg" alt="Item 18">
+        <p>Número de Estoque: 10000001</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ARMOTECEDOR DO TORNIQUETE-TRIPODE</p>
+        <img src=" ARMOTECEDOR DO TORNIQUETE-TRIPODE(10006781).jpg" alt="Item 19">
+        <p>Número de Estoque: 10006781</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ARRUELA EMBOLO P VALIDADOR TORNIQUETE</p>
+        <img src=" ARRUELA EMBOLO P VALIDADOR TORNIQUETE(10012309).jpg" alt="Item 20">
+        <p>Número de Estoque: 10012309</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ARRUELA LIS CIRC ACO CARB M 8</p>
+        <img src=" ARRUELA LIS CIRC ACO CARB M 8(10007096).jpg" alt="Item 21">
+        <p>Número de Estoque: 10007096</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ARRUELA LIS CIRC AISI304 M 4</p>
+        <img src=" ARRUELA LIS CIRC AISI304 M 4(10007081).jpg" alt="Item 22">
+        <p>Número de Estoque: 10007081</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ARRUELA LIS CIRC AISI304 M 4</p>
+        <img src=" ARRUELA LIS CIRC AISI304 M 4(10007082).jpg" alt="Item 23">
+        <p>Número de Estoque: 10007082</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ARRUELA LIS CIRC AISI304 M10</p>
+        <img src=" ARRUELA LIS CIRC AISI304 M10(10007078).jpg" alt="Item 24">
+        <p>Número de Estoque: 10007078</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ARRUELA LIS CIRC NYLON M 3</p>
+        <img src=" ARRUELA LIS CIRC NYLON M 3(10007522).jpg" alt="Item 25">
+        <p>Número de Estoque: 10007522</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ARRUELA LIS CIRC SAE1020 316</p>
+        <img src=" ARRUELA LIS CIRC SAE1020 316(10000581).jpg" alt="Item 26">
+        <p>Número de Estoque: 10000581</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ARRUELA LIS CIRC SAE1020 BICR M 5</p>
+        <img src=" ARRUELA LIS CIRC SAE1020 BICR M 5(10007095).jpg" alt="Item 27">
+        <p>Número de Estoque: 10007095</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ARRUELA LIS CIRC SAE1030 GAV 38</p>
+        <img src=" ARRUELA LIS CIRC SAE1030 GAV 38(10000587).jpg" alt="Item 28">
+        <p>Número de Estoque: 10000587</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ARRUELA LISA ESPECIAL M6 X 27MM X 1,6MM</p>
+        <img src=" ARRUELA LISA ESPECIAL M6 X 27MM X 1,6MM(10000580).jpg" alt="Item 29">
+        <p>Número de Estoque: 10000580</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ARRUELA PRES SAE1010 M 4</p>
+        <img src=" ARRUELA PRES SAE1010 M 4(10007109).jpg" alt="Item 30">
+        <p>Número de Estoque: 10007109</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ARRUELA TRAVA P MEC TRIPODE TORNIQUETE</p>
+        <img src=" ARRUELA TRAVA P MEC TRIPODE TORNIQUETE(10006713).jpg" alt="Item 31">
+        <p>Número de Estoque: 10006713</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  BATERIA ALCALINA RETANG 9,0V 1UN</p>
+        <img src=" BATERIA ALCALINA RETANG 9,0V 1UN(10009356).jpg" alt="Item 32">
+        <p>Número de Estoque: 10009356</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  BOBINA DO ELETROIMA P TORNIQUETE</p>
+        <img src=" BOBINA DO ELETROIMA P TORNIQUETE(10007525).jpg" alt="Item 33">
+        <p>Número de Estoque: 10007525</p>
+    </div>
+    
+    
+    <div class="item">
+        <p>Nome do Item:  BOTOEIRA COMANDO LIGA-DESLIGA 2NA+2NF</p>
+        <img src=" BOTOEIRA COMANDO LIGA-DESLIGA 2NA+2NF(10009168).jpg" alt="Item 35">
+        <p>Número de Estoque: 10009168</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  BRACO CA 3BR INOX 515MM  ROSCA ESQUERDA</p>
+        <img src=" BRACO CA 3BR INOX 515MM  ROSCA ESQUERDA(10020151).jpg" alt="Item 36">
+        <p>Número de Estoque: 10020151</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  BRACO P TRIPODE DO TORNIQUETE</p>
+        <img src=" BRACO P TRIPODE DO TORNIQUETE(10006676).jpg" alt="Item 37">
+        <p>Número de Estoque: 10006676</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  BROCA CONCR METAL DUR 15,875X 150,0MM</p>
+        <img src=" BROCA CONCR METAL DUR 15,875X 150,0MM(10000699).jpg" alt="Item 38">
+        <p>Número de Estoque: 10000699</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  BROCA CONCR METAL DUR 4,763X 100,0MM</p>
+        <img src=" BROCA CONCR METAL DUR 4,763X 100,0MM(10000693).jpg" alt="Item 39">
+        <p>Número de Estoque: 10000693</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  BROCA CONCR METAL DUR 7,938X 120,0MM</p>
+        <img src=" BROCA CONCR METAL DUR 7,938X 120,0MM(10000701).jpg" alt="Item 40">
+        <p>Número de Estoque: 10000701</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  BROCA HELIC METAL DURO 8,000X 80,0MM</p>
+        <img src=" BROCA HELIC METAL DURO 8,000X 80,0MM(10000702).jpg" alt="Item 41">
+        <p>Número de Estoque: 10000702</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  BUCHA DE FIXACAO POLIAMIDA  6MM</p>
+        <img src=" BUCHA DE FIXACAO POLIAMIDA  6MM(10000484).jpg" alt="Item 42">
+        <p>Número de Estoque: 10000484</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  BUCHA FIX S POLIAM 8MM</p>
+        <img src=" BUCHA FIX S POLIAM 8MM(10000483).jpg" alt="Item 43">
+        <p>Número de Estoque: 10000483</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  BUCHA FIXACAO DIAM 10MM COMPR 50MM NYLON</p>
+        <img src=" BUCHA FIXACAO DIAM 10MM COMPR 50MM NYLON(10000485).jpg" alt="Item 44">
+        <p>Número de Estoque: 10000485</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  BUCHA FIXACAO DIAM 8MM COMPR 40 MM NYLON</p>
+        <img src=" BUCHA FIXACAO DIAM 8MM COMPR 40 MM NYLON(10000486).jpg" alt="Item 45">
+        <p>Número de Estoque: 10000486</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABECA COMANDO P DETECCAO INCENDIO</p>
+        <img src=" CABECA COMANDO P DETECCAO INCENDIO(10001580).jpg" alt="Item 46">
+        <p>Número de Estoque: 10001580</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABECA DESCARGA P DETECCAO DE INCENDIO</p>
+        <img src=" CABECA DESCARGA P DETECCAO DE INCENDIO(10001581).jpg" alt="Item 47">
+        <p>Número de Estoque: 10001581</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABO COAXIAL RG6 90_PRETO</p>
+        <img src=" CABO COAXIAL RG6 90_ PRETO(10012226).jpg" alt="Item 48">
+        <p>Número de Estoque: 10012226</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABO FLEX COBRE CL4 PVC AZ 1X 2,5MM2</p>
+        <img src=" CABO FLEX COBRE CL4 PVC AZ 1X 2,5MM2(10007694).jpg" alt="Item 49">
+        <p>Número de Estoque: 10007694</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABO FLEX COBRE CL5 BORR 0,3MM2</p>
+        <img src=" CABO FLEX COBRE CL5 BORR 0,3MM2(10004018).jpg" alt="Item 50">
+        <p>Número de Estoque: 10004018</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABO FLEX COBRE CL5 PVCA PT 2X 1,5MM2</p>
+        <img src=" CABO FLEX COBRE CL5 PVCA PT 2X 1,5MM2(10007691).jpg" alt="Item 51">
+        <p>Número de Estoque: 10007691</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABO FLEX COBRE CL5 TERMOP AZ 1X 1,0MM2</p>
+        <img src=" CABO FLEX COBRE CL5 TERMOP AZ 1X 1,0MM2(10007701).jpg" alt="Item 52">
+        <p>Número de Estoque: 10007701</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABO LB 12 CONDUTORES 18AWG</p>
+        <img src=" CABO LB 12 CONDUTORES 18AWG(10007536).jpg" alt="Item 53">
+        <p>Número de Estoque: 10007536</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABO MONT 4PAR 24AWG AZ RJ-45 1,50M</p>
+        <img src=" CABO MONT 4PAR 24AWG AZ RJ-45 1,50M(10007719).jpg" alt="Item 54">
+        <p>Número de Estoque: 10007719</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABO POT COBRE CL2 PVC 03X 2,50MM2</p>
+        <img src=" CABO POT COBRE CL2 PVC 03X 2,50MM2(10007704).jpg" alt="Item 55">
+        <p>Número de Estoque: 10007704</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABO POTENCIA COBRE CL5 PVCA 04X 1,50MM2</p>
+        <img src=" CABO POTENCIA COBRE CL5 PVCA 04X 1,50MM2(10001086).jpg" alt="Item 56">
+        <p>Número de Estoque: 10001086</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABO PP FLEXIVEL 3X2,5MM² 300500V</p>
+        <img src=" CABO PP FLEXIVEL 3X2,5MM² 300500V(10007705).jpg" alt="Item 57">
+        <p>Número de Estoque: 10007705</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABO PP FLEXIVEL 3X6,0MM² 300500V</p>
+        <img src=" CABO PP FLEXIVEL 3X6,0MM² 300500V(10007707).jpg" alt="Item 58">
+        <p>Número de Estoque: 10007707</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABO REDE AZULCINZA CATEGORIA 6 23AWG</p>
+        <img src=" CABO REDE AZULCINZA CATEGORIA 6 23AWG(10012227).jpg" alt="Item 59">
+        <p>Número de Estoque: 10012227</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABO TEMP COBRE SI 01X 0,75MM2</p>
+        <img src=" CABO TEMP COBRE SI 01X 0,75MM2(10004015).jpg" alt="Item 60">
+        <p>Número de Estoque: 10004015</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABO TEMP COBRE SI 01X 1,50MM2</p>
+        <img src=" CABO TEMP COBRE SI 01X 1,50MM2(10007717).jpg" alt="Item 61">
+        <p>Número de Estoque: 10007717</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABO TEMP COBRE SI 01X 6,00MM2</p>
+        <img src=" CABO TEMP COBRE SI 01X 6,00MM2(10004089).jpg" alt="Item 62">
+        <p>Número de Estoque: 10004089</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABOLA GABINE 3BR P ADAR</p>
+        <img src=" CABOLA GABINE 3BR P ADAR(10012283).jpg" alt="Item 63">
+        <p>Número de Estoque: 10012283</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CAME P TRIPODE DO MECANISMO WS</p>
+        <img src=" CAME P TRIPODE DO MECANISMO WS(10006780).jpg" alt="Item 64">
+        <p>Número de Estoque: 10006780</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CAPA P BOTAO A</p>
+        <img src=" CAPA P BOTAO A(10006668).jpg" alt="Item 65">
+        <p>Número de Estoque: 10006668</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CAPA P BOTAO T</p>
+        <img src=" CAPA P BOTAO T(10006670).jpg" alt="Item 66">
+        <p>Número de Estoque: 10006670</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CAPACITOR ELETROL 33UF ±20% 25V</p>
+        <img src=" CAPACITOR ELETROL 33UF ±20_ 25V(10011166).jpg" alt="Item 67">
+        <p>Número de Estoque: 10011166</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CAPACITOR FILM POLIEST 2200V 47NF</p>
+        <img src=" CAPACITOR FILM POLIEST 2200V 47NF(10007263).jpg" alt="Item 68">
+        <p>Número de Estoque: 10007263</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CAPTOR OPTICO P INICIALIZACAO CARTOES</p>
+        <img src=" CAPTOR OPTICO P INICIALIZACAO CARTOES(10007544).jpg" alt="Item 69">
+        <p>Número de Estoque: 10007544</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CARRETEL DATADOR P TORNIQUETE BH31</p>
+        <img src=" CARRETEL DATADOR P TORNIQUETE BH31(10007244).jpg" alt="Item 70">
+        <p>Número de Estoque: 10007244</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CHAVE BLOQUEIO P DISPARO DE CO2</p>
+        <img src=" CHAVE BLOQUEIO P DISPARO DE CO2(10008623).jpg" alt="Item 72">
+        <p>Número de Estoque: 10008623</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CHAVE COMUT 4 POS 90GR 8 CONT</p>
+        <img src=" CHAVE COMUT 4 POS 90GR 8 CONT(10006730).jpg" alt="Item 73">
+        <p>Número de Estoque: 10006730</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CHAVE DO FLAP P LEITORA FD</p>
+        <img src=" CHAVE DO FLAP P LEITORA FD(10006754).jpg" alt="Item 74">
+        <p>Número de Estoque: 10006754</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CHAVE MESTRA NR1</p>
+        <img src=" CHAVE MESTRA NR1(10002791).jpg" alt="Item 75">
+        <p>Número de Estoque: 10002791</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CHUMBADOR RETO SAE1045 38X 3.34</p>
+        <img src=" CHUMBADOR RETO SAE1045 38X 3.34(10000482).jpg" alt="Item 76">
+        <p>Número de Estoque: 10000482</p>
+    </div>
+   
+    <div class="item">
+        <p>Nome do Item:  CONECTOR 37 PINOS P BILHETAGEM</p>
+        <img src=" CONECTOR 37 PINOS P BILHETAGEM(10007375).jpg" alt="Item 82">
+        <p>Número de Estoque: 10007375</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONECTOR 4 PINOS</p>
+        <img src=" CONECTOR 4 PINOS(10007329).jpg" alt="Item 83">
+        <p>Número de Estoque: 10007329</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONECTOR BNC PARA RG6 COMPRESSAO</p>
+        <img src=" CONECTOR BNC PARA RG6 COMPRESSAO(10012095).jpg" alt="Item 84">
+        <p>Número de Estoque: 10012095</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONECTOR CIR FEM 19 PINOS P ADAR</p>
+        <img src=" CONECTOR CIR FEM 19 PINOS P ADAR(10006884).jpg" alt="Item 85">
+        <p>Número de Estoque: 10006884</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONECTOR DB25 SOLDA MACHO</p>
+        <img src=" CONECTOR DB25 SOLDA MACHO(10006900).jpg" alt="Item 86">
+        <p>Número de Estoque: 10006900</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONECTOR DB9 SOLDA MACHO</p>
+        <img src=" CONECTOR DB9 SOLDA MACHO(10007507).jpg" alt="Item 87">
+        <p>Número de Estoque: 10007507</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONECTOR DE VIDEO BNC MACHO LATAO</p>
+        <img src=" CONECTOR DE VIDEO BNC MACHO LATAO(10012096).jpg" alt="Item 88">
+        <p>Número de Estoque: 10012096</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONECTOR DE VIDEO BNC MACHO ZINCO</p>
+        <img src=" CONECTOR DE VIDEO BNC MACHO ZINCO(10012094).jpg" alt="Item 89">
+        <p>Número de Estoque: 10012094</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONECTOR FEM 38 PINOS</p>
+        <img src=" CONECTOR FEM 38 PINOS(10007326).jpg" alt="Item 90">
+        <p>Número de Estoque: 10007326</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONECTOR FEM DEC</p>
+        <img src=" CONECTOR FEM DEC(10007467).jpg" alt="Item 91">
+        <p>Número de Estoque: 10007467</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONECTOR MULT PE 600V 25A 6,0MM2</p>
+        <img src=" CONECTOR MULT PE 600V 25A 6,0MM2(10008037).jpg" alt="Item 92">
+        <p>Número de Estoque: 10008037</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONECTOR P ADAR TRW</p>
+        <img src=" CONECTOR P ADAR TRW(10006882).jpg" alt="Item 93">
+        <p>Número de Estoque: 10006882</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONECTOR PARALELO I50 PINOS</p>
+        <img src=" CONECTOR PARALELO I50 PINOS(10007386).jpg" alt="Item 94">
+        <p>Número de Estoque: 10007386</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONECTOR RJ11 MACHO 4 CONTATOS</p>
+        <img src=" CONECTOR RJ11 MACHO 4 CONTATOS(10012100).jpg" alt="Item 95">
+        <p>Número de Estoque: 10012100</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONECTOR TIPO FR CANNON</p>
+        <img src=" CONECTOR TIPO FR CANNON(10007524).jpg" alt="Item 96">
+        <p>Número de Estoque: 10007524</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONJUNTO ROLETE P MAQ INICIALIZ CARTOES</p>
+        <img src=" CONJUNTO ROLETE P MAQ INICIALIZ CARTOES(10007549).jpg" alt="Item 97">
+        <p>Número de Estoque: 10007549</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONJUNTO SENSOR P RODA FONICA TORNIQ FD</p>
+        <img src=" CONJUNTO SENSOR P RODA FONICA TORNIQ FD(10006776).jpg" alt="Item 98">
+        <p>Número de Estoque: 10006776</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONJUNTO SENSOR PDISCO FONICO TORNIQ FD</p>
+        <img src=" CONJUNTO SENSOR PDISCO FONICO TORNIQ FD(10006757).jpg" alt="Item 99">
+        <p>Número de Estoque: 10006757</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONJUNTO SUPORTE COLETOR VALIDAD DG 2000</p>
+        <img src=" CONJUNTO SUPORTE COLETOR VALIDAD DG 2000(10012228).jpg" alt="Item 100">
+        <p>Número de Estoque: 10012228</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONTATOR 1,25A 2NF 60V</p>
+        <img src=" CONTATOR 1,25A 2NF 60V(10008239).jpg" alt="Item 101">
+        <p>Número de Estoque: 10008239</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONTATOR 1A 2NF 60V</p>
+        <img src=" CONTATOR 1A 2NF 60V(10008241).jpg" alt="Item 102">
+        <p>Número de Estoque: 10008241</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CONTATOR 2 A 2NF 60V</p>
+        <img src=" CONTATOR 2 A 2NF 60V(10008240).jpg" alt="Item 103">
+        <p>Número de Estoque: 10008240</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  COROA 9 DENTES P TRAVAMENTO TORNIQUETE</p>
+        <img src=" COROA 9 DENTES P TRAVAMENTO TORNIQUETE(10007137).jpg" alt="Item 104">
+        <p>Número de Estoque: 10007137</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CRISTAL QUARTZO</p>
+        <img src=" CRISTAL QUARTZO(10007444).jpg" alt="Item 110">
+        <p>Número de Estoque: 10007444</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DETECTOR FUMACA OTICO ENDEREC DISCOVERY</p>
+        <img src=" DETECTOR FUMACA OTICO ENDEREC DISCOVERY(10008638).jpg" alt="Item 111">
+        <p>Número de Estoque: 10008638</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DETECTOR FUMACA OTICO ENDEREC LED XP95</p>
+        <img src=" DETECTOR FUMACA OTICO ENDEREC LED XP95(10008639).jpg" alt="Item 112">
+        <p>Número de Estoque: 10008639</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DIODO RETIFICADOR 1N4148 100V 200MA DO35</p>
+        <img src=" DIODO RETIFICADOR 1N4148 100V 200MA DO35(10011352).jpg" alt="Item 113">
+        <p>Número de Estoque: 10011352</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DISCO CAME ALUMINIO RECICLADOR MOEDAS</p>
+        <img src=" DISCO CAME ALUMINIO RECICLADOR MOEDAS(10006934).jpg" alt="Item 114">
+        <p>Número de Estoque: 10006934</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DISJUNTOR CAIXA MOLD 3P 380VCA 32A</p>
+        <img src=" DISJUNTOR CAIXA MOLD 3P 380VCA 32A(10008186).jpg" alt="Item 115">
+        <p>Número de Estoque: 10008186</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DISJUNTOR CAIXA MOLD 3P 480VCA 25A</p>
+        <img src=" DISJUNTOR CAIXA MOLD 3P 480VCA 25A(10008147).jpg" alt="Item 116">
+        <p>Número de Estoque: 10008147</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DISJUNTOR CAIXA MOLD 3P 480VCA 35A</p>
+        <img src=" DISJUNTOR CAIXA MOLD 3P 480VCA 35A(10008165).jpg" alt="Item 117">
+        <p>Número de Estoque: 10008165</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DISJUNTOR CAIXA MOLD 3P 600VCA 125A</p>
+        <img src=" DISJUNTOR CAIXA MOLD 3P 600VCA 125A(10008166).jpg" alt="Item 118">
+        <p>Número de Estoque: 10008166</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DISJUNTOR CAIXA MOLD 3P 600VCA 25A</p>
+        <img src=" DISJUNTOR CAIXA MOLD 3P 600VCA 25A(10008154).jpg" alt="Item 119">
+        <p>Número de Estoque: 10008154</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DISJUNTOR CAIXA MOLD 3P 600VCA 35A</p>
+        <img src=" DISJUNTOR CAIXA MOLD 3P 600VCA 35A(10008155).jpg" alt="Item 120">
+        <p>Número de Estoque: 10008155</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DISJUNTOR TERMOMAGN 2P 10A 400V - 415V</p>
+        <img src=" DISJUNTOR TERMOMAGN 2P 10A 400V - 415V(10008207).jpg" alt="Item 121">
+        <p>Número de Estoque: 10008207</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DISJUNTOR TERMOMAGN 2P 440VCA 16A</p>
+        <img src=" DISJUNTOR TERMOMAGN 2P 440VCA 16A(10008194).jpg" alt="Item 122">
+        <p>Número de Estoque: 10008194</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DISJUNTOR TERMOMAGN 2P 440VCA 20A</p>
+        <img src=" DISJUNTOR TERMOMAGN 2P 440VCA 20A(10008205).jpg" alt="Item 123">
+        <p>Número de Estoque: 10008205</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DISJUNTOR TERMOMAGNETICO 2P 220VCA 15A</p>
+        <img src=" DISJUNTOR TERMOMAGNETICO 2P 220VCA 15A(10008137).jpg" alt="Item 124">
+        <p>Número de Estoque: 10008137</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DISJUNTOR TERMOMAGNETICO 2P 380VCA 30A</p>
+        <img src=" DISJUNTOR TERMOMAGNETICO 2P 380VCA 30A(10008136).jpg" alt="Item 125">
+        <p>Número de Estoque: 10008136</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DISJUNTOR TIPO SP UNIPOLAR 220380V 334A</p>
+        <img src=" DISJUNTOR TIPO SP UNIPOLAR 220380V 334A(10006950).jpg" alt="Item 126">
+        <p>Número de Estoque: 10006950</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DISPLAY 7 SEGMENTOS VERMELHO</p>
+        <img src=" DISPLAY 7 SEGMENTOS VERMELHO(10012089).jpg" alt="Item 127">
+        <p>Número de Estoque: 10012089</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  DISTRIBUIDOR DE SINAL VIDEO BNC 2 PORTAS</p>
+        <img src=" DISTRIBUIDOR DE SINAL VIDEO BNC 2 PORTAS(10006608).jpg" alt="Item 128">
+        <p>Número de Estoque: 10006608</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  EIXO TENSIONADOR INFERIOR P LEITORA FD</p>
+        <img src=" EIXO TENSIONADOR INFERIOR P LEITORA FD(10006747).jpg" alt="Item 129">
+        <p>Número de Estoque: 10006747</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  EIXO TENSIONADOR SUPERIOR P LEITORA FD</p>
+        <img src=" EIXO TENSIONADOR SUPERIOR P LEITORA FD(10006746).jpg" alt="Item 130">
+        <p>Número de Estoque: 10006746</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ELETRODUTO RIGIDO PVC PT BSP 34</p>
+        <img src=" ELETRODUTO RIGIDO PVC PT BSP 34(10007722).jpg" alt="Item 131">
+        <p>Número de Estoque: 10007722</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ELETROIMA 120V ETNA 109925 BOBINA T52154</p>
+        <img src=" ELETROIMA 120V ETNA 109925 BOBINA T52154(10008748).jpg" alt="Item 132">
+        <p>Número de Estoque: 10008748</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ELETROIMA 24VCC 18W</p>
+        <img src=" ELETROIMA 24VCC 18W(10007363).jpg" alt="Item 133">
+        <p>Número de Estoque: 10007363</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ELETROIMA 24VCC 200W</p>
+        <img src=" ELETROIMA 24VCC 200W(10007361).jpg" alt="Item 134">
+        <p>Número de Estoque: 10007361</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ELETROIMA 24VCC P TORNIQUETE BH36</p>
+        <img src=" ELETROIMA 24VCC P TORNIQUETE BH36(10006810).jpg" alt="Item 135">
+        <p>Número de Estoque: 10006810</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  EMBOLO DE ELETROIMA EM ACO INOX 13X64MM</p>
+        <img src=" EMBOLO DE ELETROIMA EM ACO INOX 13X64MM(10006940).jpg" alt="Item 136">
+        <p>Número de Estoque: 10006940</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  EMBOLO ELETROIMA VALIDADOR DG 2000PLUS</p>
+        <img src=" EMBOLO ELETROIMA VALIDADOR DG 2000PLUS(10012224).jpg" alt="Item 137">
+        <p>Número de Estoque: 10012224</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ENGRENAGEM AMARELA P TRIPODE TORNIQUETE</p>
+        <img src=" ENGRENAGEM AMARELA P TRIPODE TORNIQUETE(10006689).jpg" alt="Item 138">
+        <p>Número de Estoque: 10006689</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ENGRENAGEM DENTADA 33MM P BILHETAGEM</p>
+        <img src=" ENGRENAGEM DENTADA 33MM P BILHETAGEM(10007162).jpg" alt="Item 139">
+        <p>Número de Estoque: 10007162</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ENGRENAGEM DENTADA 46MM P BILHETAGEM</p>
+        <img src=" ENGRENAGEM DENTADA 46MM P BILHETAGEM(10007186).jpg" alt="Item 140">
+        <p>Número de Estoque: 10007186</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ENGRENAGEM HELICOIDAL INTERMEDIARIA</p>
+        <img src=" ENGRENAGEM HELICOIDAL INTERMEDIARIA(10006748).jpg" alt="Item 141">
+        <p>Número de Estoque: 10006748</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ESPACADOR ANTENA RECOLHIMENTO VALIDADOR</p>
+        <img src=" ESPACADOR ANTENA RECOLHIMENTO VALIDADOR(10012298).jpg" alt="Item 142">
+        <p>Número de Estoque: 10012298</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ESPACADOR DN 20MM DI 9MM PCORREIA MOTOR</p>
+        <img src=" ESPACADOR DN 20MM DI 9MM PCORREIA MOTOR(10006723).jpg" alt="Item 143">
+        <p>Número de Estoque: 10006723</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ESTANHO SOLDA FIO 6040 1,50MM 500G</p>
+        <img src=" ESTANHO SOLDA FIO 6040 1,50MM 500G(10000190).jpg" alt="Item 144">
+        <p>Número de Estoque: 10000190</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FECHADURA LINGU CROM CHAVE</p>
+        <img src=" FECHADURA LINGU CROM CHAVE(10000685).jpg" alt="Item 145">
+        <p>Número de Estoque: 10000685</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FITA ADES SIMPLES CREPE BG 19MMX 50M</p>
+        <img src=" FITA ADES SIMPLES CREPE BG 19MMX 50M(10000255).jpg" alt="Item 146">
+        <p>Número de Estoque: 10000255</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FITA ISOL AM 105GRC 19MM 20M 1UN</p>
+        <img src=" FITA ISOL AM 105GRC 19MM 20M 1UN(10000158).jpg" alt="Item 147">
+        <p>Número de Estoque: 10000158</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FITA ISOL PRETA 69KV 19MM 10M AUTOFUSAO</p>
+        <img src=" FITA ISOL PRETA 69KV 19MM 10M AUTOFUSAO(10000159).jpg" alt="Item 148">
+        <p>Número de Estoque: 10000159</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FITA ISOLANTE DE MICA 0,15MM 180 GRAUS</p>
+        <img src=" FITA ISOLANTE DE MICA 0,15MM 180 GRAUS(10000132).jpg" alt="Item 149">
+        <p>Número de Estoque: 10000132</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FITA ISOLANTE PRETA 750V 19MM 20M</p>
+        <img src=" FITA ISOLANTE PRETA 750V 19MM 20M(10000157).jpg" alt="Item 150">
+        <p>Número de Estoque: 10000157</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FITA ISOLANTE VERMELHA 750V 19MM  20M</p>
+        <img src=" FITA ISOLANTE VERMELHA 750V 19MM  20M(10000155).jpg" alt="Item 151">
+        <p>Número de Estoque: 10000155</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FITA P IMPRESSORA EPSON LX-300 PRETA</p>
+        <img src=" FITA P IMPRESSORA EPSON LX-300 PRETA(10006782).jpg" alt="Item 152">
+        <p>Número de Estoque: 10006782</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FITA TEFLON 18MM  X 50M</p>
+        <img src=" FITA TEFLON 18MM  X 50M(10000745).jpg" alt="Item 153">
+        <p>Número de Estoque: 10000745</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FIXADOR AUTO ADES ABRACAD ACO 10MM</p>
+        <img src=" FIXADOR AUTO ADES ABRACAD ACO 10MM(10007891).jpg" alt="Item 154">
+        <p>Número de Estoque: 10007891</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FONTE ALIM CHAV MONOF 110220VCA 5V 10A</p>
+        <img src=" FONTE ALIM CHAV MONOF 110220VCA 5V 10A(10012323).jpg" alt="Item 155">
+        <p>Número de Estoque: 10012323</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FONTE ALIMENTACAO 12V 1A P CFTV</p>
+        <img src=" FONTE ALIMENTACAO 12V 1A P CFTV(10006601).jpg" alt="Item 156">
+        <p>Número de Estoque: 10006601</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FONTE CHAVEADA 12VCC 1A P CFTV </p>
+        <img src=" FONTE CHAVEADA 12VCC 1A P CFTV (2)(10006602).jpg" alt="Item 157">
+        <p>Número de Estoque: 10006602</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FONTE CHAVEADA 24V 1A P CFTV </p>
+        <img src=" FONTE CHAVEADA 24V 1A P CFTV (2)(10006603).jpg" alt="Item 158">
+        <p>Número de Estoque: 10006603</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FUSIVEL CART RAPIDA 10,0X 38,0MM 10A</p>
+        <img src=" FUSIVEL CART RAPIDA 10,0X 38,0MM 10A(10008836).jpg" alt="Item 159">
+        <p>Número de Estoque: 10008836</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FUSIVEL CART RAPIDA 10,3X 38,0MM 8A</p>
+        <img src=" FUSIVEL CART RAPIDA 10,3X 38,0MM 8A(10008835).jpg" alt="Item 160">
+        <p>Número de Estoque: 10008835</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FUSIVEL CART RAPIDA 14,0X 51,0MM 10A</p>
+        <img src=" FUSIVEL CART RAPIDA 14,0X 51,0MM 10A(10008871).jpg" alt="Item 161">
+        <p>Número de Estoque: 10008871</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FUSIVEL CARTUCHO 1000VCC 800A 100200KA</p>
+        <img src=" FUSIVEL CARTUCHO 1000VCC 800A 100200KA(10003288).jpg" alt="Item 162">
+        <p>Número de Estoque: 10003288</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FUSIVEL NH RETARD 00 120KA 500V 100A</p>
+        <img src=" FUSIVEL NH RETARD 00 120KA 500V 100A(10009000).jpg" alt="Item 163">
+        <p>Número de Estoque: 10009000</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FUSIVEL NH RETARD 00 120KA 500V 80A</p>
+        <img src=" FUSIVEL NH RETARD 00 120KA 500V 80A(10008988).jpg" alt="Item 164">
+        <p>Número de Estoque: 10008988</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FUSIVEL VID 5,00X20,00MM 3A</p>
+        <img src=" FUSIVEL VID 5,00X20,00MM 3A(10001517).jpg" alt="Item 165">
+        <p>Número de Estoque: 10001517</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FUSIVEL VID RAPIDA 5,00X20,00MM 10A</p>
+        <img src=" FUSIVEL VID RAPIDA 5,00X20,00MM 10A(10008953).jpg" alt="Item 166">
+        <p>Número de Estoque: 10008953</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FUSIVEL VID RAPIDA 5,00X20,00MM 1A </p>
+        <img src=" FUSIVEL VID RAPIDA 5,00X20,00MM 1A (2)(10008911).jpg" alt="Item 167">
+        <p>Número de Estoque: 10008911</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FUSIVEL VID RAPIDA 5,00X20,00MM 1A</p>
+        <img src=" FUSIVEL VID RAPIDA 5,00X20,00MM 1A(10008859).jpg" alt="Item 168">
+        <p>Número de Estoque: 10008859</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FUSIVEL VID RAPIDA 5,00X20,00MM 3,15A</p>
+        <img src=" FUSIVEL VID RAPIDA 5,00X20,00MM 3,15A(10008945).jpg" alt="Item 169">
+        <p>Número de Estoque: 10008945</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FUSIVEL VID RAPIDA 5,00X20,00MM 5A</p>
+        <img src=" FUSIVEL VID RAPIDA 5,00X20,00MM 5A(10008844).jpg" alt="Item 170">
+        <p>Número de Estoque: 10008844</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FUSIVEL VID RETARD 5,00X20,00MM 6A</p>
+        <img src=" FUSIVEL VID RETARD 5,00X20,00MM 6A(10008867).jpg" alt="Item 171">
+        <p>Número de Estoque: 10008867</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FUSIVEL VIDRO 250V 2A RAPIDO 5X20MM</p>
+        <img src=" FUSIVEL VIDRO 250V 2A RAPIDO 5X20MM(10008852).jpg" alt="Item 172">
+        <p>Número de Estoque: 10008852</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FUSIVEL VIDRO 250V 4A NORMAL 5X20MM</p>
+        <img src=" FUSIVEL VIDRO 250V 4A NORMAL 5X20MM(10008956).jpg" alt="Item 173">
+        <p>Número de Estoque: 10008956</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  IMA C SUPORTE P ADAR</p>
+        <img src=" IMA C SUPORTE P ADAR(10007242).jpg" alt="Item 174">
+        <p>Número de Estoque: 10007242</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  INTERRUPTOR PRED 250V 10A 2P 1 TECLA</p>
+        <img src=" INTERRUPTOR PRED 250V 10A 2P 1 TECLA(10008330).jpg" alt="Item 175">
+        <p>Número de Estoque: 10008330</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  LAMINA P SENSOR RECOLHIMENTO VALIDADOR</p>
+        <img src=" LAMINA P SENSOR RECOLHIMENTO VALIDADOR(10012304).jpg" alt="Item 176">
+        <p>Número de Estoque: 10012304</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  LAMPADA FLUORESC TUBULAR FRIA 32W</p>
+        <img src=" LAMPADA FLUORESC TUBULAR FRIA 32W(10009314).jpg" alt="Item 177">
+        <p>Número de Estoque: 10009314</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  LAMPADA LED 9-9,5W 100-240V E27</p>
+        <img src=" LAMPADA LED 9-9,5W 100-240V E27(10009183).jpg" alt="Item 178">
+        <p>Número de Estoque: 10009183</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  LENTE CFTV 13 5-50MM F1,4</p>
+        <img src=" LENTE CFTV 13 5-50MM F1,4(10006604).jpg" alt="Item 179">
+        <p>Número de Estoque: 10006604</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  LIXA FOLHA DAGUA GR1500 225X275MM</p>
+        <img src=" LIXA FOLHA DAGUA GR1500 225X275MM(10000230).jpg" alt="Item 180">
+        <p>Número de Estoque: 10000230</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  LIXA FOLHA FERRO GR100 225X275MM</p>
+        <img src=" LIXA FOLHA FERRO GR100 225X275MM(10000227).jpg" alt="Item 181">
+        <p>Número de Estoque: 10000227</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  LIXA FOLHA FERRO GR80 225X275MM -</p>
+        <img src=" LIXA FOLHA FERRO GR80 225X275MM -(10000236).jpg" alt="Item 182">
+        <p>Número de Estoque: 10000236</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  LIXA FOLHA FERRO GR80 225X275MM</p>
+        <img src=" LIXA FOLHA FERRO GR80 225X275MM(10000226).jpg" alt="Item 183">
+        <p>Número de Estoque: 10000226</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  LIXA FOLHA MADEIRA GR80 225X275MM</p>
+        <img src=" LIXA FOLHA MADEIRA GR80 225X275MM(10000212).jpg" alt="Item 184">
+        <p>Número de Estoque: 10000212</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MICRO AMPERIMETRO P BASTIDOR ARL</p>
+        <img src=" MICRO AMPERIMETRO P BASTIDOR ARL(10006441).jpg" alt="Item 185">
+        <p>Número de Estoque: 10006441</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MICRO CHAVE 250V 5A PADAR</p>
+        <img src=" MICRO CHAVE 250V 5A PADAR(10006890).jpg" alt="Item 186">
+        <p>Número de Estoque: 10006890</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MICRO SWITCH 250VAC 5A P TRIPODE</p>
+        <img src=" MICRO SWITCH 250VAC 5A P TRIPODE(10007411).jpg" alt="Item 187">
+        <p>Número de Estoque: 10007411</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MICRO SWITCH P PRESENCA CARTAO ENTRADA</p>
+        <img src=" MICRO SWITCH P PRESENCA CARTAO ENTRADA(10007543).jpg" alt="Item 188">
+        <p>Número de Estoque: 10007543</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA 2 ESPIRAS 4MM P TORNIQUETE</p>
+        <img src=" MOLA 2 ESPIRAS 4MM P TORNIQUETE(10007140).jpg" alt="Item 189">
+        <p>Número de Estoque: 10007140</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA 2 ESPIRAS 6MM P TORNIQUETE</p>
+        <img src=" MOLA 2 ESPIRAS 6MM P TORNIQUETE(10007148).jpg" alt="Item 190">
+        <p>Número de Estoque: 10007148</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA AISI302 6,40X 49,00MM</p>
+        <img src=" MOLA AISI302 6,40X 49,00MM(10006991).jpg" alt="Item 191">
+        <p>Número de Estoque: 10006991</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA BARRA 10MM P TORNIQUETE</p>
+        <img src=" MOLA BARRA 10MM P TORNIQUETE(10007189).jpg" alt="Item 192">
+        <p>Número de Estoque: 10007189</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA BARRA 15MM P TORNIQUETE</p>
+        <img src=" MOLA BARRA 15MM P TORNIQUETE(10007198).jpg" alt="Item 193">
+        <p>Número de Estoque: 10007198</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA BARRA 32MM P TORNIQUETE</p>
+        <img src=" MOLA BARRA 32MM P TORNIQUETE(10007196).jpg" alt="Item 194">
+        <p>Número de Estoque: 10007196</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA BARRA P CELULA SAIDA TORNIQUETE</p>
+        <img src=" MOLA BARRA P CELULA SAIDA TORNIQUETE(10006756).jpg" alt="Item 195">
+        <p>Número de Estoque: 10006756</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA BARRA TIPO L 40MM</p>
+        <img src=" MOLA BARRA TIPO L 40MM(10007190).jpg" alt="Item 196">
+        <p>Número de Estoque: 10007190</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA FITA P TORNIQUETE LEITORA FD</p>
+        <img src=" MOLA FITA P TORNIQUETE LEITORA FD(10006753).jpg" alt="Item 197">
+        <p>Número de Estoque: 10006753</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA HELICOIDAL 10 ESPIRAS 1,5MM</p>
+        <img src=" MOLA HELICOIDAL 10 ESPIRAS 1,5MM(10007217).jpg" alt="Item 198">
+        <p>Número de Estoque: 10007217</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA HELICOIDAL 10 ESPIRAS 1MM</p>
+        <img src=" MOLA HELICOIDAL 10 ESPIRAS 1MM(10007144).jpg" alt="Item 199">
+        <p>Número de Estoque: 10007144</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA HELICOIDAL 18 ESPIRAS P TORNIQUETE</p>
+        <img src=" MOLA HELICOIDAL 18 ESPIRAS P TORNIQUETE(10007152).jpg" alt="Item 200">
+        <p>Número de Estoque: 10007152</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA HELICOIDAL 20 ESP P MOTOR BOUCLE</p>
+        <img src=" MOLA HELICOIDAL 20 ESP P MOTOR BOUCLE(10007226).jpg" alt="Item 201">
+        <p>Número de Estoque: 10007226</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA HELICOIDAL 21 ESPIRAS P TORNIQUETE</p>
+        <img src=" MOLA HELICOIDAL 21 ESPIRAS P TORNIQUETE(10007145).jpg" alt="Item 202">
+        <p>Número de Estoque: 10007145</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA HELICOIDAL 36 ESPIRAS P TORNIQUETE</p>
+        <img src=" MOLA HELICOIDAL 36 ESPIRAS P TORNIQUETE(10007155).jpg" alt="Item 203">
+        <p>Número de Estoque: 10007155</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA HELICOIDAL 38 ESPIRAS P TORNIQUETE</p>
+        <img src=" MOLA HELICOIDAL 38 ESPIRAS P TORNIQUETE(10007142).jpg" alt="Item 204">
+        <p>Número de Estoque: 10007142</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA HELICOIDAL 42 ESPIRAS P TORNIQUETE</p>
+        <img src=" MOLA HELICOIDAL 42 ESPIRAS P TORNIQUETE(10007156).jpg" alt="Item 205">
+        <p>Número de Estoque: 10007156</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA HELICOIDAL 6 ESPIRAS P TORNIQUETE</p>
+        <img src=" MOLA HELICOIDAL 6 ESPIRAS P TORNIQUETE(10007150).jpg" alt="Item 206">
+        <p>Número de Estoque: 10007150</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA INOX 42,50X 51,30X 30,50MM</p>
+        <img src=" MOLA INOX 42,50X 51,30X 30,50MM(10006715).jpg" alt="Item 207">
+        <p>Número de Estoque: 10006715</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA P AMORTEDOR TORNIQUETE LEITORA FD</p>
+        <img src=" MOLA P AMORTEDOR TORNIQUETE LEITORA FD(10006722).jpg" alt="Item 208">
+        <p>Número de Estoque: 10006722</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA P LEITOR ADAR GUIA BILHETE ENTRADA</p>
+        <img src=" MOLA P LEITOR ADAR GUIA BILHETE ENTRADA(10006889).jpg" alt="Item 209">
+        <p>Número de Estoque: 10006889</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA P PELICANO LEITORA BH36</p>
+        <img src=" MOLA P PELICANO LEITORA BH36(10006995).jpg" alt="Item 210">
+        <p>Número de Estoque: 10006995</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOLA P RETORNO TORNIQUETE WOLPAC</p>
+        <img src=" MOLA P RETORNO TORNIQUETE WOLPAC(10006857).jpg" alt="Item 211">
+        <p>Número de Estoque: 10006857</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOTOR P CORREIA TRANSPORTE CARTAO SMART</p>
+        <img src=" MOTOR P CORREIA TRANSPORTE CARTAO SMART(10007541).jpg" alt="Item 212">
+        <p>Número de Estoque: 10007541</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  MOTOR P LEITORA FD</p>
+        <img src=" MOTOR P LEITORA FD(10006774).jpg" alt="Item 213">
+        <p>Número de Estoque: 10006774</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PANO LIMP CELULSINT BR</p>
+        <img src=" PANO LIMP CELULSINT BR(10012162).jpg" alt="Item 214">
+        <p>Número de Estoque: 10012162</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PANO LIMPEZA MULTIUSO</p>
+        <img src=" PANO LIMPEZA MULTIUSO(10012170).jpg" alt="Item 215">
+        <p>Número de Estoque: 10012170</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PARAFUSO ABAU SAE1010 RT 316 X 78</p>
+        <img src=" PARAFUSO ABAU SAE1010 RT 316 X 78(10002770).jpg" alt="Item 216">
+        <p>Número de Estoque: 10002770</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PARAFUSO ATARR AISI304 4,8X 50,0MM</p>
+        <img src=" PARAFUSO ATARR AISI304 4,8X 50,0MM(10000460).jpg" alt="Item 217">
+        <p>Número de Estoque: 10000460</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PARAFUSO ATARR SAE1020 4,1X 32,8MM</p>
+        <img src=" PARAFUSO ATARR SAE1020 4,1X 32,8MM(10000457).jpg" alt="Item 218">
+        <p>Número de Estoque: 10000457</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PARAFUSO ATARR SAE1020 4,8X 32MM</p>
+        <img src=" PARAFUSO ATARR SAE1020 4,8X 32MM(10000437).jpg" alt="Item 219">
+        <p>Número de Estoque: 10000437</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PARAFUSO AUTOATARRACHANTE 4,8X32MM</p>
+        <img src=" PARAFUSO AUTOATARRACHANTE 4,8X32MM(10000468).jpg" alt="Item 220">
+        <p>Número de Estoque: 10000468</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PARAFUSO AUTOATARRAXANTE 14 X 2</p>
+        <img src=" PARAFUSO AUTOATARRAXANTE 14 X 2(10000477).jpg" alt="Item 221">
+        <p>Número de Estoque: 10000477</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PARAFUSO AUTOATARRAXANTE Nº10 X 1 12</p>
+        <img src=" PARAFUSO AUTOATARRAXANTE Nº10 X 1 12(10000470).jpg" alt="Item 222">
+        <p>Número de Estoque: 10000470</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PARAFUSO CABECA CILINDRICA M3X 8MM</p>
+        <img src=" PARAFUSO CABECA CILINDRICA M3X 8MM(10007021).jpg" alt="Item 223">
+        <p>Número de Estoque: 10007021</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PARAFUSO CIL AISI304 RT M 4X 16MM</p>
+        <img src=" PARAFUSO CIL AISI304 RT M 4X 16MM(10007025).jpg" alt="Item 224">
+        <p>Número de Estoque: 10007025</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PARAFUSO PANELA SAE1020 RT M 4X 16MM</p>
+        <img src=" PARAFUSO PANELA SAE1020 RT M 4X 16MM(10007041).jpg" alt="Item 225">
+        <p>Número de Estoque: 10007041</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PILHA ALCALINA GRANDE D 1,5V</p>
+        <img src=" PILHA ALCALINA GRANDE D 1,5V(10009352).jpg" alt="Item 226">
+        <p>Número de Estoque: 10009352</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PILHA ALCALINA MEDIA C 1,5V</p>
+        <img src=" PILHA ALCALINA MEDIA C 1,5V(10009353).jpg" alt="Item 227">
+        <p>Número de Estoque: 10009353</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PILHA ALCALINA PALITO AAA 1,5V</p>
+        <img src=" PILHA ALCALINA PALITO AAA 1,5V(10009355).jpg" alt="Item 228">
+        <p>Número de Estoque: 10009355</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PILHA ALCALINA PEQUENA AA 1,5V</p>
+        <img src=" PILHA ALCALINA PEQUENA AA 1,5V(10009354).jpg" alt="Item 229">
+        <p>Número de Estoque: 10009354</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PINO MACHO PARA TOMADA DE RED</p>
+        <img src=" PINO MACHO PARA TOMADA DE RED(10006785).jpg" alt="Item 230">
+        <p>Número de Estoque: 10006785</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PLACA ANTENA P MAQ INICIAL CARTOES</p>
+        <img src=" PLACA ANTENA P MAQ INICIAL CARTOES(10007540).jpg" alt="Item 231">
+        <p>Número de Estoque: 10007540</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PLACA CP PPAINEL DE CONTROLE TORNIQUETE</p>
+        <img src=" PLACA CP PPAINEL DE CONTROLE TORNIQUETE(10020152).jpg" alt="Item 232">
+        <p>Número de Estoque: 10020152</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PLACA FONTE P MAQ INICIALIZACAO CARTOES</p>
+        <img src=" PLACA FONTE P MAQ INICIALIZACAO CARTOES(10007548).jpg" alt="Item 233">
+        <p>Número de Estoque: 10007548</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PLUGUE PREDIAL 250V 10A 2P</p>
+        <img src=" PLUGUE PREDIAL 250V 10A 2P(10008107).jpg" alt="Item 234">
+        <p>Número de Estoque: 10008107</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PLUGUE PREDIAL 250V 10A 2P</p>
+        <img src=" PLUGUE PREDIAL 250V 10A 2P(10008116).jpg" alt="Item 235">
+        <p>Número de Estoque: 10008116</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  POLIA 37 DENTES P LEITORA FD TORNIQUETE</p>
+        <img src=" POLIA 37 DENTES P LEITORA FD TORNIQUETE(10006749).jpg" alt="Item 236">
+        <p>Número de Estoque: 10006749</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  POLIA CORREIA TRANSPORT MAQ EMISS CARTAO</p>
+        <img src=" POLIA CORREIA TRANSPORT MAQ EMISS CARTAO(10007550).jpg" alt="Item 237">
+        <p>Número de Estoque: 10007550</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  POLIA DENT PGUIA 5M1 CORREIA LEITORA FD</p>
+        <img src=" POLIA DENT PGUIA 5M1 CORREIA LEITORA FD(10006763).jpg" alt="Item 238">
+        <p>Número de Estoque: 10006763</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  POLIA DENT PGUIA 6M1 CORREIA LEITORA FD</p>
+        <img src=" POLIA DENT PGUIA 6M1 CORREIA LEITORA FD(10006764).jpg" alt="Item 239">
+        <p>Número de Estoque: 10006764</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  POLIA MESTRA INFERIOR P TORNIQUETE FD</p>
+        <img src=" POLIA MESTRA INFERIOR P TORNIQUETE FD(10006726).jpg" alt="Item 240">
+        <p>Número de Estoque: 10006726</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PONTA PROVA PRETA P MULTIMETRO</p>
+        <img src=" PONTA PROVA PRETA P MULTIMETRO(10000300).jpg" alt="Item 241">
+        <p>Número de Estoque: 10000300</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PONTA PROVA VERM P MULTIMETRO</p>
+        <img src=" PONTA PROVA VERM P MULTIMETRO(10000301).jpg" alt="Item 242">
+        <p>Número de Estoque: 10000301</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PORCA SEXT SAE 10101020 GALV MG M10</p>
+        <img src=" PORCA SEXT SAE 10101020 GALV MG M10(10007074).jpg" alt="Item 243">
+        <p>Número de Estoque: 10007074</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PORCA SEXT SAE1020 BSW 316</p>
+        <img src=" PORCA SEXT SAE1020 BSW 316(10000497).jpg" alt="Item 244">
+        <p>Número de Estoque: 10000497</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PORTA CADEADO ACO CARB 63,0MM</p>
+        <img src=" PORTA CADEADO ACO CARB 63,0MM(10008553).jpg" alt="Item 245">
+        <p>Número de Estoque: 10008553</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PORTA FUSIVEL P BILHETAGEM</p>
+        <img src=" PORTA FUSIVEL P BILHETAGEM(10007483).jpg" alt="Item 246">
+        <p>Número de Estoque: 10007483</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PORTA FUSIVEL P LEITOR DECODIFICADOR</p>
+        <img src=" PORTA FUSIVEL P LEITOR DECODIFICADOR(10006979).jpg" alt="Item 247">
+        <p>Número de Estoque: 10006979</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PRENDEDOR C FIXACAO P ADAR</p>
+        <img src=" PRENDEDOR C FIXACAO P ADAR(10007214).jpg" alt="Item 248">
+        <p>Número de Estoque: 10007214</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PROTECAO P RECOLHIMENTO PPLACA ANTENA</p>
+        <img src=" PROTECAO P RECOLHIMENTO PPLACA ANTENA(10012307).jpg" alt="Item 249">
+        <p>Número de Estoque: 10012307</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PROTETOR P MECANIXA TORNIQUETE</p>
+        <img src=" PROTETOR P MECANIXA TORNIQUETE(10006861).jpg" alt="Item 250">
+        <p>Número de Estoque: 10006861</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  PUXADOR P CARTOES CARREGADORES LINHA 2</p>
+        <img src=" PUXADOR P CARTOES CARREGADORES LINHA 2(10007532).jpg" alt="Item 251">
+        <p>Número de Estoque: 10007532</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  RABICHO LIGACAO P IMPRESSORAPDV</p>
+        <img src=" RABICHO LIGACAO P IMPRESSORAPDV(10006967).jpg" alt="Item 252">
+        <p>Número de Estoque: 10006967</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  RACK TAMPAO C 3 FUSIVEIS</p>
+        <img src=" RACK TAMPAO C 3 FUSIVEIS(10012091).jpg" alt="Item 253">
+        <p>Número de Estoque: 10012091</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  REBITE CAB ABAUL ALUM 1,5X5MM</p>
+        <img src=" REBITE CAB ABAUL ALUM 1,5X5MM(10006842).jpg" alt="Item 254">
+        <p>Número de Estoque: 10006842</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  REBITE CAB ABAUL ALUM 3,0X 6,0MM</p>
+        <img src=" REBITE CAB ABAUL ALUM 3,0X 6,0MM(10006841).jpg" alt="Item 255">
+        <p>Número de Estoque: 10006841</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  RELE 303 C1 P</p>
+        <img src=" RELE 303 C1 P(10007366).jpg" alt="Item 256">
+        <p>Número de Estoque: 10007366</p>
+    </div>
+
+     <div class="item">
+        <p>Nome do Item:  RELE ACOPLADOR AA 24V 15A 1NAF</p>
+        <img src="RELE ACOPLADOR AA 24V 15A 1NAF.jpg" alt="Item 256">
+        <p>Número de Estoque: 10027720</p>
+    </div>
+
+    <div class="item">
+        <p>Nome do Item:  RELE FOTOELET ELETRICO 220V 1NF 1000W</p>
+        <img src=" RELE FOTOELET ELETRICO 220V 1NF 1000W(10008390).jpg" alt="Item 257">
+        <p>Número de Estoque: 10008390</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  RELE FOTOELET ELETROMAGN 220V 1NF 1000W</p>
+        <img src=" RELE FOTOELET ELETROMAGN 220V 1NF 1000W(10010733).jpg" alt="Item 258">
+        <p>Número de Estoque: 10010733</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  RELE IND 0,25 A 175VCC 1 REV 24V</p>
+        <img src=" RELE IND 0,25 A 175VCC 1 REV 24V(10007409).jpg" alt="Item 259">
+        <p>Número de Estoque: 10007409</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  RELE K7N10 V34321 A3620 X-1 PTELEFONIA</p>
+        <img src=" RELE K7N10 V34321 A3620 X-1 PTELEFONIA(10006512).jpg" alt="Item 260">
+        <p>Número de Estoque: 10006512</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  RELE K7N2 V34321 A3710 X-2 P TELEFONIA</p>
+        <img src=" RELE K7N2 V34321 A3710 X-2 P TELEFONIA(10006513).jpg" alt="Item 261">
+        <p>Número de Estoque: 10006513</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  RELE TEMPORIZ RETARDO 0,6 A 6MIN</p>
+        <img src=" RELE TEMPORIZ RETARDO 0,6 A 6MIN(10001629).jpg" alt="Item 262">
+        <p>Número de Estoque: 10001629</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  RESISTOR FILME CARBONO 0,25W 15K OHM</p>
+        <img src=" RESISTOR FILME CARBONO 0,25W 15K OHM(10009394).jpg" alt="Item 263">
+        <p>Número de Estoque: 10009394</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  RESISTOR FILME CARBONO 0,25W 33K OHM</p>
+        <img src=" RESISTOR FILME CARBONO 0,25W 33K OHM(10009398).jpg" alt="Item 264">
+        <p>Número de Estoque: 10009398</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  RESISTOR FILME CARBONO 0,25W 47,0OHM</p>
+        <img src=" RESISTOR FILME CARBONO 0,25W 47,0OHM(10009372).jpg" alt="Item 265">
+        <p>Número de Estoque: 10009372</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  RESISTOR FILME CARBONO 0,25W 47K OHM</p>
+        <img src=" RESISTOR FILME CARBONO 0,25W 47K OHM(10009400).jpg" alt="Item 266">
+        <p>Número de Estoque: 10009400</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  RESISTOR FILME CARBONO 0,25W 560K OHM</p>
+        <img src=" RESISTOR FILME CARBONO 0,25W 560K OHM(10009413).jpg" alt="Item 267">
+        <p>Número de Estoque: 10009413</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  RESISTOR FILME CARBONO 184W 1K OHM</p>
+        <img src=" RESISTOR FILME CARBONO 184W 1K OHM(10009380).jpg" alt="Item 268">
+        <p>Número de Estoque: 10009380</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  RODA FONICA P LEITORA FD</p>
+        <img src=" RODA FONICA P LEITORA FD(10006772).jpg" alt="Item 269">
+        <p>Número de Estoque: 10006772</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ROLAMENTO AGULAX ESF NKX 35 Z9</p>
+        <img src=" ROLAMENTO AGULAX ESF NKX 35 Z9(10000818).jpg" alt="Item 270">
+        <p>Número de Estoque: 10000818</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ROLAMENTO AGULHA RNA 4906</p>
+        <img src=" ROLAMENTO AGULHA RNA 4906(10000817).jpg" alt="Item 271">
+        <p>Número de Estoque: 10000817</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ROLAMENTO RIG ESF 6003-2Z</p>
+        <img src=" ROLAMENTO RIG ESF 6003-2Z(10006847).jpg" alt="Item 272">
+        <p>Número de Estoque: 10006847</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ROLAMENTO RIG ESF 61900-2Z</p>
+        <img src=" ROLAMENTO RIG ESF 61900-2Z(10006677).jpg" alt="Item 273">
+        <p>Número de Estoque: 10006677</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ROLAMENTO RIG ESF 698-ZZ</p>
+        <img src=" ROLAMENTO RIG ESF 698-ZZ(10006863).jpg" alt="Item 274">
+        <p>Número de Estoque: 10006863</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ROLAMENTO RIG ESF SSR 1350 ZZ</p>
+        <img src=" ROLAMENTO RIG ESF SSR 1350 ZZ(10006864).jpg" alt="Item 275">
+        <p>Número de Estoque: 10006864</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ROLDANA BRACO POS TRIPODE P TORNIQUETE</p>
+        <img src=" ROLDANA BRACO POS TRIPODE P TORNIQUETE(10006708).jpg" alt="Item 276">
+        <p>Número de Estoque: 10006708</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ROLDANA HMW ABA GRD P LEITOR TORNIQUETE</p>
+        <img src=" ROLDANA HMW ABA GRD P LEITOR TORNIQUETE(10007136).jpg" alt="Item 277">
+        <p>Número de Estoque: 10007136</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ROLDANA HMW ABA PQN P LEITOR TORNIQUETE</p>
+        <img src=" ROLDANA HMW ABA PQN P LEITOR TORNIQUETE(10006838).jpg" alt="Item 278">
+        <p>Número de Estoque: 10006838</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ROLETE P LEITORA FD</p>
+        <img src=" ROLETE P LEITORA FD(10006751).jpg" alt="Item 279">
+        <p>Número de Estoque: 10006751</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  ROLETE PRESSAO P MOD LEITOR TORNIQUETE</p>
+        <img src=" ROLETE PRESSAO P MOD LEITOR TORNIQUETE(10006812).jpg" alt="Item 280">
+        <p>Número de Estoque: 10006812</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SABAO LIQ. DESENG. CESFOLIA CITRIC POWE</p>
+        <img src=" SABAO LIQ. DESENG. CESFOLIA CITRIC POWE(10000071).jpg" alt="Item 281">
+        <p>Número de Estoque: 10000071</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SACO LIXO USO GERAL</p>
+        <img src=" SACO LIXO USO GERAL(10000176).jpg" alt="Item 282">
+        <p>Número de Estoque: 10000176</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SERRA MAN HSS 300X13X0,6MM 24DENTES</p>
+        <img src=" SERRA MAN HSS 300X13X0,6MM 24DENTES(10000705).jpg" alt="Item 283">
+        <p>Número de Estoque: 10000705</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SILICONE PASTA 85G</p>
+        <img src=" SILICONE PASTA 85G(10000080).jpg" alt="Item 284">
+        <p>Número de Estoque: 10000080</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SOLENOIDE P LEITORA FD TORNIQUETE</p>
+        <img src=" SOLENOIDE P LEITORA FD TORNIQUETE(10006985).jpg" alt="Item 285">
+        <p>Número de Estoque: 10006985</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SOLENOIDE P RECOLHIMENTO CARTAO DEFET</p>
+        <img src=" SOLENOIDE P RECOLHIMENTO CARTAO DEFET(10007547).jpg" alt="Item 286">
+        <p>Número de Estoque: 10007547</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SOLENOIDE TRAV TRIPODE P LEITORA FD</p>
+        <img src=" SOLENOIDE TRAV TRIPODE P LEITORA FD(10006741).jpg" alt="Item 287">
+        <p>Número de Estoque: 10006741</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SOQUETE LAMP PORC 4A-250V E-27</p>
+        <img src=" SOQUETE LAMP PORC 4A-250V E-27(10009340).jpg" alt="Item 288">
+        <p>Número de Estoque: 10009340</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SOQUETE LAMP TERMOPL 110W-250V E-27</p>
+        <img src=" SOQUETE LAMP TERMOPL 110W-250V E-27(10009342).jpg" alt="Item 289">
+        <p>Número de Estoque: 10009342</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SUPORTE CONICO P BRACO TRIPODE</p>
+        <img src=" SUPORTE CONICO P BRACO TRIPODE(10006679).jpg" alt="Item 290">
+        <p>Número de Estoque: 10006679</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SUPORTE FIX P BANDEJA CABOS ARMARIO T</p>
+        <img src=" SUPORTE FIX P BANDEJA CABOS ARMARIO T(10006521).jpg" alt="Item 291">
+        <p>Número de Estoque: 10006521</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SUPORTE FIX PAR TVDVD</p>
+        <img src=" SUPORTE FIX PAR TVDVD(10006600).jpg" alt="Item 292">
+        <p>Número de Estoque: 10006600</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SUPORTE P CONECTOR MODULO ECONOMIA</p>
+        <img src=" SUPORTE P CONECTOR MODULO ECONOMIA(10006860).jpg" alt="Item 293">
+        <p>Número de Estoque: 10006860</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SUPORTE P LEITORA FD 02</p>
+        <img src=" SUPORTE P LEITORA FD 02(10006771).jpg" alt="Item 294">
+        <p>Número de Estoque: 10006771</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SUPORTE P LEITORA FD 03</p>
+        <img src=" SUPORTE P LEITORA FD 03(10006770).jpg" alt="Item 295">
+        <p>Número de Estoque: 10006770</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SUPORTE P MOTOR LEITORA FD</p>
+        <img src=" SUPORTE P MOTOR LEITORA FD(10006779).jpg" alt="Item 296">
+        <p>Número de Estoque: 10006779</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SUPORTE P SOLEN RECOLHIMENTO VALIDADOR</p>
+        <img src=" SUPORTE P SOLEN RECOLHIMENTO VALIDADOR(10012310).jpg" alt="Item 297">
+        <p>Número de Estoque: 10012310</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  SUPORTE PTINTA PROTETORES TELEFONIA ESK</p>
+        <img src=" SUPORTE PTINTA PROTETORES TELEFONIA ESK(10006667).jpg" alt="Item 298">
+        <p>Número de Estoque: 10006667</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TAMPA CEGA P COFRE TORNIQUETE COMPLETO</p>
+        <img src=" TAMPA CEGA P COFRE TORNIQUETE COMPLETO(10006850).jpg" alt="Item 299">
+        <p>Número de Estoque: 10006850</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TAMPA CEGA P MODULO LEITOR TORNIQUETE</p>
+        <img src=" TAMPA CEGA P MODULO LEITOR TORNIQUETE(10006851).jpg" alt="Item 300">
+        <p>Número de Estoque: 10006851</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR ANEL 10,00MM2</p>
+        <img src=" TERMINAL COMPR ANEL 10,00MM2(10004091).jpg" alt="Item 301">
+        <p>Número de Estoque: 10004091</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR ENGATE FEMEA 0,2-1,5MM2</p>
+        <img src=" TERMINAL COMPR ENGATE FEMEA 0,2-1,5MM2(10007986).jpg" alt="Item 302">
+        <p>Número de Estoque: 10007986</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR ENGATE FEMEA 1,0-2,6MM2</p>
+        <img src=" TERMINAL COMPR ENGATE FEMEA 1,0-2,6MM2(10007948).jpg" alt="Item 303">
+        <p>Número de Estoque: 10007948</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR ENGATE FEMEA 1,25-2,00MM2</p>
+        <img src=" TERMINAL COMPR ENGATE FEMEA 1,25-2,00MM2(10007957).jpg" alt="Item 304">
+        <p>Número de Estoque: 10007957</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR ENGATE FEMEA 1,6-2,6MM2</p>
+        <img src=" TERMINAL COMPR ENGATE FEMEA 1,6-2,6MM2(10007949).jpg" alt="Item 305">
+        <p>Número de Estoque: 10007949</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR ENGATE FEMEA 16-14 AWG </p>
+        <img src=" TERMINAL COMPR ENGATE FEMEA 16-14 AWG (2)(10001524).jpg" alt="Item 306">
+        <p>Número de Estoque: 10001524</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR ENGATE FEMEA 2,6-6,5MM2</p>
+        <img src=" TERMINAL COMPR ENGATE FEMEA 2,6-6,5MM2(10007956).jpg" alt="Item 307">
+        <p>Número de Estoque: 10007956</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR ENGATE MACHO 0,5-1,0MM2</p>
+        <img src=" TERMINAL COMPR ENGATE MACHO 0,5-1,0MM2(10007941).jpg" alt="Item 308">
+        <p>Número de Estoque: 10007941</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR OLHAL 1,0-2,6MM2</p>
+        <img src=" TERMINAL COMPR OLHAL 1,0-2,6MM2(10007968).jpg" alt="Item 309">
+        <p>Número de Estoque: 10007968</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR OLHAL 1,5-2,5MM2</p>
+        <img src=" TERMINAL COMPR OLHAL 1,5-2,5MM2(10007954).jpg" alt="Item 310">
+        <p>Número de Estoque: 10007954</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR OLHAL 1,5-2,5MM2</p>
+        <img src=" TERMINAL COMPR OLHAL 1,5-2,5MM2(10007959).jpg" alt="Item 311">
+        <p>Número de Estoque: 10007959</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR OLHAL 4,0-6,0MM2</p>
+        <img src=" TERMINAL COMPR OLHAL 4,0-6,0MM2(10007963).jpg" alt="Item 312">
+        <p>Número de Estoque: 10007963</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR OLHAL 4,0-6,0MM2</p>
+        <img src=" TERMINAL COMPR OLHAL 4,0-6,0MM2(10007971).jpg" alt="Item 313">
+        <p>Número de Estoque: 10007971</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR OLHAL 4,0-6,0MM2</p>
+        <img src=" TERMINAL COMPR OLHAL 4,0-6,0MM2(10007979).jpg" alt="Item 314">
+        <p>Número de Estoque: 10007979</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR PINO 0,3-1,4MM2</p>
+        <img src=" TERMINAL COMPR PINO 0,3-1,4MM2(10007962).jpg" alt="Item 315">
+        <p>Número de Estoque: 10007962</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR PINO 2,62-6,64MM2</p>
+        <img src=" TERMINAL COMPR PINO 2,62-6,64MM2(10007955).jpg" alt="Item 316">
+        <p>Número de Estoque: 10007955</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR PINO 2,62-6,64MM2</p>
+        <img src=" TERMINAL COMPR PINO 2,62-6,64MM2(10007964).jpg" alt="Item 317">
+        <p>Número de Estoque: 10007964</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPR PINO RETO 1,3-2,6MM2</p>
+        <img src=" TERMINAL COMPR PINO RETO 1,3-2,6MM2(10007961).jpg" alt="Item 318">
+        <p>Número de Estoque: 10007961</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL COMPRESSAO PINO 22-16 AWG</p>
+        <img src=" TERMINAL COMPRESSAO PINO 22-16 AWG(10007974).jpg" alt="Item 319">
+        <p>Número de Estoque: 10007974</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL PINO 1,0-2,5MM2</p>
+        <img src=" TERMINAL PINO 1,0-2,5MM2(10007977).jpg" alt="Item 320">
+        <p>Número de Estoque: 10007977</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL PRE-ISOLADO AZUL</p>
+        <img src=" TERMINAL PRE-ISOLADO AZUL(10007950).jpg" alt="Item 321">
+        <p>Número de Estoque: 10007950</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TERMINAL PRE-ISOLADO VERMELHO</p>
+        <img src=" TERMINAL PRE-ISOLADO VERMELHO(10007951).jpg" alt="Item 322">
+        <p>Número de Estoque: 10007951</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TESTE TELEFONIA ESK 400E530751-K2082-X2</p>
+        <img src=" TESTE TELEFONIA ESK 400E530751-K2082-X2(10006673).jpg" alt="Item 323">
+        <p>Número de Estoque: 10006673</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TOMADA EMBUTIR RETANG 250V 10A 1X 2P </p>
+        <img src=" TOMADA EMBUTIR RETANG 250V 10A 1X 2P (2)(10008099).jpg" alt="Item 324">
+        <p>Número de Estoque: 10008099</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TOMADA EMBUTIR RETANG 250V 10A 1X 2P </p>
+        <img src=" TOMADA EMBUTIR RETANG 250V 10A 1X 2P (2)(10008101).jpg" alt="Item 325">
+        <p>Número de Estoque: 10008101</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TOMADA TELEFONE 4PRJ11 EMBUTIDA 1X</p>
+        <img src=" TOMADA TELEFONE 4PRJ11 EMBUTIDA 1X(10012101).jpg" alt="Item 326">
+        <p>Número de Estoque: 10012101</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TRANSFORMADOR 127220VAC 241S</p>
+        <img src=" TRANSFORMADOR 127220VAC 241S(10006568).jpg" alt="Item 327">
+        <p>Número de Estoque: 10006568</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TRANSFORMADOR DE COMANDO 6VA</p>
+        <img src=" TRANSFORMADOR DE COMANDO 6VA(10001249).jpg" alt="Item 328">
+        <p>Número de Estoque: 10001249</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TRANSFORMADOR P TELECOM</p>
+        <img src=" TRANSFORMADOR P TELECOM(10006523).jpg" alt="Item 329">
+        <p>Número de Estoque: 10006523</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TRANSISTOR ALTA TENS NPN TO-126 KSC2688</p>
+        <img src=" TRANSISTOR ALTA TENS NPN TO-126 KSC2688(10006588).jpg" alt="Item 330">
+        <p>Número de Estoque: 10006588</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TRANSISTOR POTENCIA BJT NPN TO-3 MJ15003</p>
+        <img src=" TRANSISTOR POTENCIA BJT NPN TO-3 MJ15003(10007308).jpg" alt="Item 331">
+        <p>Número de Estoque: 10007308</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TRANSISTOR POTENCIA PNP TO-3 MJ15004</p>
+        <img src=" TRANSISTOR POTENCIA PNP TO-3 MJ15004(10007307).jpg" alt="Item 332">
+        <p>Número de Estoque: 10007307</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TRANSMISSOR OPTICO 4 CANAIS P CFTV</p>
+        <img src=" TRANSMISSOR OPTICO 4 CANAIS P CFTV(10006606).jpg" alt="Item 333">
+        <p>Número de Estoque: 10006606</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TRAVA P RELE MOTOR</p>
+        <img src=" TRAVA P RELE MOTOR(10006859).jpg" alt="Item 334">
+        <p>Número de Estoque: 10006859</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TRAVA QUIM ALTA FIX CILIND 50G</p>
+        <img src=" TRAVA QUIM ALTA FIX CILIND 50G(10000082).jpg" alt="Item 335">
+        <p>Número de Estoque: 10000082</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TRAVA TRIPODE P TORNIQUETE LEITORA FD</p>
+        <img src=" TRAVA TRIPODE P TORNIQUETE LEITORA FD(10006720).jpg" alt="Item 336">
+        <p>Número de Estoque: 10006720</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  TRINCHA PLASTICA 34POL</p>
+        <img src=" TRINCHA PLASTICA 34POL(10000262).jpg" alt="Item 337">
+        <p>Número de Estoque: 10000262</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  VALIDADOR PRODATA V3690</p>
+        <img src=" VALIDADOR PRODATA V3690(30003149).jpg" alt="Item 338">
+        <p>Número de Estoque: 30003149</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  VASELINA LIQUIDA IND 1000ML</p>
+        <img src=" VASELINA LIQUIDA IND 1000ML(10000048).jpg" alt="Item 339">
+        <p>Número de Estoque: 10000048</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  FITA ADES SIMPLES CREPE BR 24MMX 50M.jfif</p>
+        <img src="(10000256) FITA ADES SIMPLES CREPE BR 24MMX 50M.jfif" alt="Item 340">
+        <p>Número de Estoque: 10000256</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: TRINCHA DUPL CERDA GRIS 2.png</p>
+        <img src="(10000266) TRINCHA DUPL CERDA GRIS 2.png" alt="Item 341">
+        <p>Número de Estoque: 10000266</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item:  CABO FLEXIVEL PRETO 2,5MM² 70°C.jfif</p>
+        <img src="(10007684) CABO FLEXIVEL PRETO 2,5MM² 70°C.jfif" alt="Item 342">
+        <p>Número de Estoque: 10007684</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CANETA ESFEROGRAFICA TRANSPARENTE  AZUL.png</p>
+        <img src="(10017369)CANETA ESFEROGRAFICA TRANSPARENTE  AZUL.png" alt="Item 343">
+        <p>Número de Estoque: 10017369</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: ELETRODUTO CONDULETE TOP  34.png</p>
+        <img src="(10023128)ELETRODUTO CONDULETE TOP  34.png" alt="Item 344">
+        <p>Número de Estoque: 10023128</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: LED VERDE INCOLOR PICTOG TORNIQUETE.png</p>
+        <img src="(10024145)LED VERDE INCOLOR PICTOG TORNIQUETE.png" alt="Item 345">
+        <p>Número de Estoque: 10024145</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: ABRACADEIRA CONDULETE TOP  34</p>
+        <img src="ABRACADEIRA CONDULETE TOP  34(10023107).jpg" alt="Item 346">
+        <p>Número de Estoque: 10023107</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: ABRACADEIRA CONDULETE TOP 1</p>
+        <img src="ABRACADEIRA CONDULETE TOP 1(10023106).jpg" alt="Item 347">
+        <p>Número de Estoque: 10023106</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: ACIONADOR MANUAL QUEBRE O VIDRO HCP-W</p>
+        <img src="ACIONADOR MANUAL QUEBRE O VIDRO HCP-W(10024658).jpg" alt="Item 348">
+        <p>Número de Estoque: 10024658</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: ADAPTADOR CONDULETE TOP 1</p>
+        <img src="ADAPTADOR CONDULETE TOP 1(10023108).jpg" alt="Item 349">
+        <p>Número de Estoque: 10023108</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: ALCOOL ETILICO 92,8% 1Lls</p>
+        <img src=" ALCOOL ETILICO 92,8_ 1Lls(10018545).jpg" alt="Item 350">
+        <p>Número de Estoque: 10018545</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: ANTENA OMNIDIRECIONAL I-ATO1-3802700-02</p>
+        <img src="ANTENA OMNIDIRECIONAL I-ATO1-3802700-02(10026653).jpg" alt="Item 351">
+        <p>Número de Estoque: 10026653</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: ARRUELA LIS CIRC SAE1020 BICR M8</p>
+        <img src="ARRUELA LIS CIRC SAE1020 BICR M8(10007117).jpg" alt="Item 352">
+        <p>Número de Estoque: 10007117</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: BASE MONTAGEM P DETECTOR DE INCENDIO</p>
+        <img src="BASE MONTAGEM P DETECTOR DE INCENDIO(10012780).jpg" alt="Item 353">
+        <p>Número de Estoque: 10012780</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: BATERIA LITIO 3V MOEDA MOD. CR 2032</p>
+        <img src="BATERIA LITIO 3V MOEDA MOD. CR 2032(10015563).jpg" alt="Item 354">
+        <p>Número de Estoque: 10015563</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: BLOCO AUTO ADESIVO AMARELO 38X50MM</p>
+        <img src="BLOCO AUTO ADESIVO AMARELO 38X50MM(10017361).jpg" alt="Item 355">
+        <p>Número de Estoque: 10017361</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: BLOCO AUTO ADESIVO AMARELO 76X102MM</p>
+        <img src="BLOCO AUTO ADESIVO AMARELO 76X102MM(10017362).jpg" alt="Item 356">
+        <p>Número de Estoque: 10017362</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: BLOCO CONTATO BOTAO COMANDO 1NA</p>
+        <img src="BLOCO CONTATO BOTAO COMANDO 1NA(10026731).jpg" alt="Item 357">
+        <p>Número de Estoque: 10026731</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: BOBINA PAPEL RELOGIO PONTO 55MM</p>
+        <img src="BOBINA PAPEL RELOGIO PONTO 55MM(10012842).jpg" alt="Item 358">
+        <p>Número de Estoque: 10012842</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: BOBINA PARA COFRES INTELIGENTES</p>
+        <img src="BOBINA PARA COFRES INTELIGENTES(10023600).jpg" alt="Item 359">
+        <p>Número de Estoque: 10023600</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: BOCAL ACRILICO P VALIDADOR DG2000</p>
+        <img src="BOCAL ACRILICO P VALIDADOR DG2000(10012875).jpg" alt="Item 360">
+        <p>Número de Estoque: 10012875</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: BOCAL DG2000 PLUS RECOLHEDORA MCA VBU</p>
+        <img src="BOCAL DG2000 PLUS RECOLHEDORA MCA VBU(10026652).jpg" alt="Item 361">
+        <p>Número de Estoque: 10026652</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: BRACO DO TRIPODE M30 DH E FD</p>
+        <img src="BRACO DO TRIPODE M30 DH E FD(10012282).jpg" alt="Item 362">
+        <p>Número de Estoque: 10012282</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CABO COAXIAL FLEXIVEL 12 CELLFLEX</p>
+        <img src="CABO COAXIAL FLEXIVEL 12 CELLFLEX(10026655).jpg" alt="Item 363">
+        <p>Número de Estoque: 10026655</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CABO COAXIAL FLEXIVEL 78 CELLFLEX</p>
+        <img src="CABO COAXIAL FLEXIVEL 78 CELLFLEX(10026656).jpg" alt="Item 364">
+        <p>Número de Estoque: 10026656</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CABO DO RECOLHIMENTO CN16 DO VBU</p>
+        <img src="CABO DO RECOLHIMENTO CN16 DO VBU(10026643).jpg" alt="Item 365">
+        <p>Número de Estoque: 10026643</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CABO FLEXIVEL 2,5MM2 750V AZUL</p>
+        <img src="CABO FLEXIVEL 2,5MM2 750V AZUL(10023775).jpg" alt="Item 366">
+        <p>Número de Estoque: 10023775</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CABO FLEXIVEL 2,5MM2 750V VERDE</p>
+        <img src="CABO FLEXIVEL 2,5MM2 750V VERDE(10023776).jpg" alt="Item 367">
+        <p>Número de Estoque: 10023776</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CABO FLEXIVEL 4MM2 750V AZUL</p>
+        <img src="CABO FLEXIVEL 4MM2 750V AZUL(10023778).jpg" alt="Item 368">
+        <p>Número de Estoque: 10023778</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CABO FLEXIVEL 4MM2 750V VERDE</p>
+        <img src="CABO FLEXIVEL 4MM2 750V VERDE(10023780).jpg" alt="Item 369">
+        <p>Número de Estoque: 10023780</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CABO FLEXIVEL 4MM2 750V VERMELHO</p>
+        <img src="CABO FLEXIVEL 4MM2 750V VERMELHO(10023781).jpg" alt="Item 370">
+        <p>Número de Estoque: 10023781</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CABO FLEXIVEL 6MM2 750V AZUL</p>
+        <img src="CABO FLEXIVEL 6MM2 750V AZUL(10023782).jpg" alt="Item 371">
+        <p>Número de Estoque: 10023782</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CABO FLEXIVEL 6MM2 750V VERDE</p>
+        <img src="CABO FLEXIVEL 6MM2 750V VERDE(10023783).jpg" alt="Item 372">
+        <p>Número de Estoque: 10023783</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CABO PATCHCORD FUTP 1,5M CZ CAT6</p>
+        <img src="CABO PATCHCORD FUTP 1,5M CZ CAT6(10015558).jpg" alt="Item 373">
+        <p>Número de Estoque: 10015558</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CADEADO HASTE LONGA CR 3070 MM</p>
+        <img src="CADEADO HASTE LONGA CR 3070 MM(10017364).jpg" alt="Item 374">
+        <p>Número de Estoque: 10017364</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CADERNO UNIVERS CAPA FLEXIVEL 200 FLS</p>
+        <img src="CADERNO UNIVERS CAPA FLEXIVEL 200 FLS(10017366).jpg" alt="Item 375">
+        <p>Número de Estoque: 10017366</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CALOTA CA 3BR USINADA</p>
+        <img src="CALOTA CA 3BR USINADA(10021301).jpg" alt="Item 376">
+        <p>Número de Estoque: 10021301</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CAPA DE PROTECAO DO CONECTOR RJ45 VBU</p>
+        <img src="CAPA DE PROTECAO DO CONECTOR RJ45 VBU(10026645).jpg" alt="Item 377">
+        <p>Número de Estoque: 10026645</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CAPACITOR ELETROLITICO 6800UF±20% 6,3VDC</p>
+        <img src="CAPACITOR ELETROLITICO 6800UF±20_ 6,3VDC(10023996).jpg" alt="Item 378">
+        <p>Número de Estoque: 10023996</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CARENAGEM P VALIDADORES 315X196MM FIBRA</p>
+        <img src="CARENAGEM P VALIDADORES 315X196MM FIBRA(10024558).jpg" alt="Item 379">
+        <p>Número de Estoque: 10024558</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CHIP SAM DE RESSARCIMENTO P PDV DG820-C</p>
+        <img src="CHIP SAM DE RESSARCIMENTO P PDV DG820-C(10015680).jpg" alt="Item 380">
+        <p>Número de Estoque: 10015680</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CHIP SAM DE REVALIDACAO</p>
+        <img src="CHIP SAM DE REVALIDACAO(10012880).jpg" alt="Item 381">
+        <p>Número de Estoque: 10012880</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CHIP SAM DE VALIDACAO PARA DG710</p>
+        <img src="CHIP SAM DE VALIDACAO PARA DG710(10012884).jpg" alt="Item 382">
+        <p>Número de Estoque: 10012884</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CHIP SAM P PDV MODELO DG820-C</p>
+        <img src="CHIP SAM P PDV MODELO DG820-C(10012878).jpg" alt="Item 383">
+        <p>Número de Estoque: 10012878</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CHIP SAM P VALIDADOR DIGICON DG2000</p>
+        <img src="CHIP SAM P VALIDADOR DIGICON DG2000(10012877).jpg" alt="Item 384">
+        <p>Número de Estoque: 10012877</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CHUMBADOR UNC 38 X 3POL</p>
+        <img src="CHUMBADOR UNC 38 X 3POL(10012712).jpg" alt="Item 385">
+        <p>Número de Estoque: 10012712</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CIRCUITO INTEGRADO MOSFET  TOP-227</p>
+        <img src="CIRCUITO INTEGRADO MOSFET  TOP-227(10015608).jpg" alt="Item 386">
+        <p>Número de Estoque: 10015608</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CJ. BRACO INOX GAB. METRO RIO </p>
+        <img src="CJ. BRACO INOX GAB. METRO RIO (MOD. 2013(10025306).jpg" alt="Item 387">
+        <p>Número de Estoque: 10025306</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CJ. MONTADO CLICO MECANISMO FMEC-105 - T</p>
+        <img src="CJ. MONTADO CLICO MECANISMO FMEC-105 - T(10020087).jpg" alt="Item 388">
+        <p>Número de Estoque: 10020087</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONECTOR FEMEA GIGALAN</p>
+        <img src="CONECTOR FEMEA GIGALAN(10015557).jpg" alt="Item 389">
+        <p>Número de Estoque: 10015557</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONECTOR OMNI FIT DE 12 FEMEA</p>
+        <img src="CONECTOR OMNI FIT DE 12 FEMEA(10026658).jpg" alt="Item 390">
+        <p>Número de Estoque: 10026658</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONECTOR OMNI FIT DE 12 MACHO</p>
+        <img src="CONECTOR OMNI FIT DE 12 MACHO(10026659).jpg" alt="Item 391">
+        <p>Número de Estoque: 10026659</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONECTOR PARA CABO COAXIAL N-TER-01</p>
+        <img src="CONECTOR PARA CABO COAXIAL N-TER-01(10026657).jpg" alt="Item 392">
+        <p>Número de Estoque: 10026657</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONECTOR RAPID FIT DE 78 FEMEA</p>
+        <img src="CONECTOR RAPID FIT DE 78 FEMEA(10026661).jpg" alt="Item 393">
+        <p>Número de Estoque: 10026661</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONECTOR RJ45 LCS2 CAT6A FEMEA UTP</p>
+        <img src="CONECTOR RJ45 LCS2 CAT6A FEMEA UTP(10026690).jpg" alt="Item 394">
+        <p>Número de Estoque: 10026690</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONECTOR TERMINAL 16MM2 BRACADEIRA </p>
+        <img src="CONECTOR TERMINAL 16MM2 BRACADEIRA (2)(10022676).jpg" alt="Item 395">
+        <p>Número de Estoque: 10022676</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONJ EMENDA OPTICA CAPACID 12-96 FIBRAS</p>
+        <img src="CONJ EMENDA OPTICA CAPACID 12-96 FIBRAS(10012846).jpg" alt="Item 396">
+        <p>Número de Estoque: 10012846</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONJUNTO COLETOR DE RECOLHIMENTO DO VBU</p>
+        <img src="CONJUNTO COLETOR DE RECOLHIMENTO DO VBU(10026644).jpg" alt="Item 397">
+        <p>Número de Estoque: 10026644</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONJUNTO DE ABAS CINZA WIDE FLAP</p>
+        <img src="CONJUNTO DE ABAS CINZA WIDE FLAP(10023833).jpg" alt="Item 398">
+        <p>Número de Estoque: 10023833</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONJUNTO DE FIXACAO DA PLACA DIREITA VBU</p>
+        <img src="CONJUNTO DE FIXACAO DA PLACA DIREITA VBU(10026650).jpg" alt="Item 399">
+        <p>Número de Estoque: 10026650</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONJUNTO DE FIXACAO PLACA ESQUERDA VBU</p>
+        <img src="CONJUNTO DE FIXACAO PLACA ESQUERDA VBU(10026651).jpg" alt="Item 400">
+        <p>Número de Estoque: 10026651</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONJUNTO DE LEITOR E CABO DO VBU</p>
+        <img src="CONJUNTO DE LEITOR E CABO DO VBU(10026648).jpg" alt="Item 401">
+        <p>Número de Estoque: 10026648</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONJUNTO DE LEITOR QR CODE E CABO DO VBU</p>
+        <img src="CONJUNTO DE LEITOR QR CODE E CABO DO VBU(10026649).jpg" alt="Item 402">
+        <p>Número de Estoque: 10026649</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONJUNTO PICTOGRAMA ENTRADA GAB. AL1</p>
+        <img src="CONJUNTO PICTOGRAMA ENTRADA GAB. AL1(10022654).jpg" alt="Item 403">
+        <p>Número de Estoque: 10022654</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONJUNTO PORTA COM PICTOGRAMA GABINETE</p>
+        <img src="CONJUNTO PORTA COM PICTOGRAMA GABINETE(10012789).jpg" alt="Item 404">
+        <p>Número de Estoque: 10012789</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONJUNTO TAMPA GABINETE AL-1</p>
+        <img src="CONJUNTO TAMPA GABINETE AL-1(10012790).jpg" alt="Item 405">
+        <p>Número de Estoque: 10012790</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONTATOR 3P AC-3 32A 2NA+2NF 110VCA</p>
+        <img src="CONTATOR 3P AC-3 32A 2NA+2NF 110VCA(10008325).jpg" alt="Item 406">
+        <p>Número de Estoque: 10008325</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONVERSOR DE SINAL COAXIAL PARA UTP</p>
+        <img src="CONVERSOR DE SINAL COAXIAL PARA UTP(10026654).jpg" alt="Item 407">
+        <p>Número de Estoque: 10026654</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONVERSOR M MONO FT-802S15 SC 5VDC</p>
+        <img src="CONVERSOR M MONO FT-802S15 SC 5VDC(10023673).jpg" alt="Item 408">
+        <p>Número de Estoque: 10023673</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONVERSOR MOXA</p>
+        <img src="CONVERSOR MOXA(10026249).jpg" alt="Item 409">
+        <p>Número de Estoque: 10026249</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONVERSOR PLANET FTP-802S15 48VDC</p>
+        <img src="CONVERSOR PLANET FTP-802S15 48VDC(10023672).jpg" alt="Item 410">
+        <p>Número de Estoque: 10023672</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CONVERSOR TELEFONIA ANALOGICA VG224</p>
+        <img src="CONVERSOR TELEFONIA ANALOGICA VG224(10015104).jpg" alt="Item 411">
+        <p>Número de Estoque: 10015104</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: CURVA ELETRODUTO CONDULETE TOP 34 90°</p>
+        <img src="CURVA ELETRODUTO CONDULETE TOP 34 90°(10023122).jpg" alt="Item 412">
+        <p>Número de Estoque: 10023122</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: DESENGRAXANTE SOLUVEL BIO LIQUIDO 5L</p>
+        <img src="DESENGRAXANTE SOLUVEL BIO LIQUIDO 5L(10018585).jpg" alt="Item 413">
+        <p>Número de Estoque: 10018585</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: DETECTOR INCENDIO INTELIGENTE FP-11</p>
+        <img src="DETECTOR INCENDIO INTELIGENTE FP-11(10012775).jpg" alt="Item 414">
+        <p>Número de Estoque: 10012775</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: DISJUNTOR SIEMENS 220VCA 1P 10A 5SY4</p>
+        <img src="DISJUNTOR SIEMENS 220VCA 1P 10A 5SY4(10015883).jpg" alt="Item 415">
+        <p>Número de Estoque: 10015883</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: DISJUNTOR TERMOMAGN 3P 380VCA 32A</p>
+        <img src="DISJUNTOR TERMOMAGN 3P 380VCA 32A(10008200).jpg" alt="Item 416">
+        <p>Número de Estoque: 10008200</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: DISJUNTOR TERMOMAGN 3P 440VCA 40A</p>
+        <img src="DISJUNTOR TERMOMAGN 3P 440VCA 40A(10008204).jpg" alt="Item 417">
+        <p>Número de Estoque: 10008204</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: DISJUNTOR TERMOMAGNETICO 2P 380VCA 20A</p>
+        <img src="DISJUNTOR TERMOMAGNETICO 2P 380VCA 20A(10008130).jpg" alt="Item 418">
+        <p>Número de Estoque: 10008130</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: DISJUNTOR TERMOMAGNETICO 3P 690VCA 40A</p>
+        <img src="DISJUNTOR TERMOMAGNETICO 3P 690VCA 40A(10013303).jpg" alt="Item 419">
+        <p>Número de Estoque: 10013303</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: DISPLAY DE INTERFACE LED 4.3 DO VBU</p>
+        <img src="DISPLAY DE INTERFACE LED 4.3 DO VBU(10026646).jpg" alt="Item 420">
+        <p>Número de Estoque: 10026646</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: DIVISOR DE SINAL SPLITERS DUAS VIAS PDSE</p>
+        <img src="DIVISOR DE SINAL SPLITERS DUAS VIAS PDSE(10026663).jpg" alt="Item 421">
+        <p>Número de Estoque: 10026663</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: DIVISOR DE SINAL SPLITERS TRES VIAS PDSC</p>
+        <img src="DIVISOR DE SINAL SPLITERS TRES VIAS PDSC(10026662).jpg" alt="Item 422">
+        <p>Número de Estoque: 10026662</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: ELETRODUTO FLEXIVEL TIPO SEALTUBO 3x4</p>
+        <img src="ELETRODUTO FLEXIVEL TIPO SEALTUBO 3x4(10012481).jpg" alt="Item 423">
+        <p>Número de Estoque: 10012481</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: EMENDA RJ-45 INDUSTRIAL BLIND 1,5MM</p>
+        <img src="EMENDA RJ-45 INDUSTRIAL BLIND 1,5MM(10015554).jpg" alt="Item 424">
+        <p>Número de Estoque: 10015554</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: ESTANHO SOLDA FIO 6040 1,50MM 500G</p>
+        <img src="ESTANHO SOLDA FIO 6040 1,50MM 500G(10016102).jpg" alt="Item 425">
+        <p>Número de Estoque: 10016102</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: ETIQUETA IDENT RETIRADOS EM CORRETIVA</p>
+        <img src="ETIQUETA IDENT RETIRADOS EM CORRETIVA(10012435).jpg" alt="Item 426">
+        <p>Número de Estoque: 10012435</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: EXTENSOR AVX-VGA-TP-SRX</p>
+        <img src="EXTENSOR AVX-VGA-TP-SRX(10019673).jpg" alt="Item 427">
+        <p>Número de Estoque: 10019673</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: EXTENSOR VGA AVX-VGA-TP-TX-8</p>
+        <img src="EXTENSOR VGA AVX-VGA-TP-TX-8(10019672).jpg" alt="Item 428">
+        <p>Número de Estoque: 10019672</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: EXTENSOR VGA REMOTO B PINDIC DESTINO</p>
+        <img src="EXTENSOR VGA REMOTO B PINDIC DESTINO(10012748).jpg" alt="Item 429">
+        <p>Número de Estoque: 10012748</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: EXTRATOR GRAMPO ESPATULA ZINCADO CA-111</p>
+        <img src="EXTRATOR GRAMPO ESPATULA ZINCADO CA-111(10017381).jpg" alt="Item 430">
+        <p>Número de Estoque: 10017381</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: FITA ADES DPL FACE ESP CZ 2,0X12MMX20M</p>
+        <img src="FITA ADES DPL FACE ESP CZ 2,0X12MMX20M(10000253).jpg" alt="Item 431">
+        <p>Número de Estoque: 10000253</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: FITA ARMAZ DADOS DDS-5 170,0M 72GB</p>
+        <img src="FITA ARMAZ DADOS DDS-5 170,0M 72GB(10012866).jpg" alt="Item 432">
+        <p>Número de Estoque: 10012866</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: FLAP STANDARD</p>
+        <img src="FLAP STANDARD(10026442).jpg" alt="Item 433">
+        <p>Número de Estoque: 10026442</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: FONTE ALIM CHAV MONOF 110220VCA 12V 5A</p>
+        <img src="FONTE ALIM CHAV MONOF 110220VCA 12V 5A(10012341).jpg" alt="Item 434">
+        <p>Número de Estoque: 10012341</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: FONTE ALIM CHAV MONOF 110220VCA 24V 3A</p>
+        <img src="FONTE ALIM CHAV MONOF 110220VCA 24V 3A(10012340).jpg" alt="Item 435">
+        <p>Número de Estoque: 10012340</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: FONTE ALIMENTAC TDK LAMBDA DRF 480-24-1</p>
+        <img src="FONTE ALIMENTAC TDK LAMBDA DRF 480-24-1(10023834).jpg" alt="Item 436">
+        <p>Número de Estoque: 10023834</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: FONTE ALIMENTACAO AUDIO PSW 12V12A</p>
+        <img src="FONTE ALIMENTACAO AUDIO PSW 12V12A(10020489).jpg" alt="Item 437">
+        <p>Número de Estoque: 10020489</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: FONTE DE ALIMENTACAO 3.3V 10 CANAIS CFTV</p>
+        <img src="FONTE DE ALIMENTACAO 3.3V 10 CANAIS CFTV(10023993).jpg" alt="Item 438">
+        <p>Número de Estoque: 10023993</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: FUSIVEL CART 22X58MM RPC 20A CPERCUTOR</p>
+        <img src="FUSIVEL CART 22X58MM RPC 20A CPERCUTOR(10015264).jpg" alt="Item 439">
+        <p>Número de Estoque: 10015264</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: FUSIVEL CART 22X58MM RPC 40A CPERCUTOR</p>
+        <img src="FUSIVEL CART 22X58MM RPC 40A CPERCUTOR(10015265).jpg" alt="Item 440">
+        <p>Número de Estoque: 10015265</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: GABINETE DE CAMERA SISTEMA CFTV ESTACOES</p>
+        <img src="GABINETE DE CAMERA SISTEMA CFTV ESTACOES(10024010).jpg" alt="Item 441">
+        <p>Número de Estoque: 10024010</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: GBIC SFP 1GB LH CISCO</p>
+        <img src="GBIC SFP 1GB LH CISCO(10013238).jpg" alt="Item 442">
+        <p>Número de Estoque: 10013238</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: GBIC SFP 1GB SX CISCO</p>
+        <img src="GBIC SFP 1GB SX CISCO(10013237).jpg" alt="Item 443">
+        <p>Número de Estoque: 10013237</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: HEAD FONE HEADSET 2 TONS</p>
+        <img src="HEAD FONE HEADSET 2 TONS(10012677).jpg" alt="Item 444">
+        <p>Número de Estoque: 10012677</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: KIT AMORTECEDOR P TORNIQUETE WOLPAC</p>
+        <img src="KIT AMORTECEDOR P TORNIQUETE WOLPAC(10022660).jpg" alt="Item 445">
+        <p>Número de Estoque: 10022660</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: KIT EXTENSOR CATVGA LOCALREMOTE B</p>
+        <img src="KIT EXTENSOR CATVGA LOCALREMOTE B(10012751).jpg" alt="Item 446">
+        <p>Número de Estoque: 10012751</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: LAMPADA FLUORESC TUBULAR LUZ DIA 28W</p>
+        <img src="LAMPADA FLUORESC TUBULAR LUZ DIA 28W(10012701).jpg" alt="Item 447">
+        <p>Número de Estoque: 10012701</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: LAMPADA LED TUBULAR T8 18-20W BIVOLT</p>
+        <img src="LAMPADA LED TUBULAR T8 18-20W BIVOLT(10023289).jpg" alt="Item 448">
+        <p>Número de Estoque: 10023289</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: LAMPADA TUBULAR LED 9W T8</p>
+        <img src="LAMPADA TUBULAR LED 9W T8(10022302).jpg" alt="Item 449">
+        <p>Número de Estoque: 10022302</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: LANTERNA MODELO LED CREE POLICE</p>
+        <img src="LANTERNA MODELO LED CREE POLICE(10026797).jpg" alt="Item 450">
+        <p>Número de Estoque: 10026797</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: LED VERMELHO INCOLOR PICTOG TORNIQUETE</p>
+        <img src="LED VERMELHO INCOLOR PICTOG TORNIQUETE(10024146).jpg" alt="Item 451">
+        <p>Número de Estoque: 10024146</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: LIMPA CONTATO ELETRICO SOLVENTE 300 ML</p>
+        <img src="LIMPA CONTATO ELETRICO SOLVENTE 300 ML(10018556).jpg" alt="Item 452">
+        <p>Número de Estoque: 10018556</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: LIMPADOR CONTATO ELETRICO NAO INFLAMAVEL</p>
+        <img src="LIMPADOR CONTATO ELETRICO NAO INFLAMAVEL(10022360).jpg" alt="Item 453">
+        <p>Número de Estoque: 10022360</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: LIMPADOR PLCD E PLASMA 60ML</p>
+        <img src="LIMPADOR PLCD E PLASMA 60ML(10012697).jpg" alt="Item 454">
+        <p>Número de Estoque: 10012697</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: LUVA ELETRODUTO CONDULETE TOP 1</p>
+        <img src="LUVA ELETRODUTO CONDULETE TOP 1(10023132).jpg" alt="Item 455">
+        <p>Número de Estoque: 10023132</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: LUVA ELETRODUTO CONDULETE TOP 34</p>
+        <img src="LUVA ELETRODUTO CONDULETE TOP 34(10023133).jpg" alt="Item 456">
+        <p>Número de Estoque: 10023133</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: MANCAL ROLMAX COM ROLAMENTO</p>
+        <img src="MANCAL ROLMAX COM ROLAMENTO(10022737).jpg" alt="Item 457">
+        <p>Número de Estoque: 10022737</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: MEMBRANA TECLADO</p>
+        <img src="MEMBRANA TECLADO(10012674).jpg" alt="Item 458">
+        <p>Número de Estoque: 10012674</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: MICROSWITCH 250V 16A BILHETAGEM</p>
+        <img src="MICROSWITCH 250V 16A BILHETAGEM(10020086).jpg" alt="Item 459">
+        <p>Número de Estoque: 10020086</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: MODULO BLINDADO JACK  RJ-45</p>
+        <img src="MODULO BLINDADO JACK  RJ-45(10015560).jpg" alt="Item 460">
+        <p>Número de Estoque: 10015560</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: MODULO CHOPPER MOTOR TORNIQUETE FLAP</p>
+        <img src="MODULO CHOPPER MOTOR TORNIQUETE FLAP(10024556).jpg" alt="Item 461">
+        <p>Número de Estoque: 10024556</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: MODULO INTERCOM P SUPERVISAOBILHETERIA</p>
+        <img src="MODULO INTERCOM P SUPERVISAOBILHETERIA(30001134).jpg" alt="Item 462">
+        <p>Número de Estoque: 30001134</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: MODULO PRE-AMPLIFICADOR AP-PRE 05</p>
+        <img src="MODULO PRE-AMPLIFICADOR AP-PRE 05(30002793).jpg" alt="Item 463">
+        <p>Número de Estoque: 30002793</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: MODULO PRE-AMPLIFICADOR AP-PRE 05</p>
+        <img src="MODULO PRE-AMPLIFICADOR AP-PRE 05(30002865).jpg" alt="Item 464">
+        <p>Número de Estoque: 30002865</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: MODULO PRINCIPAL MBB-2 DECTEC INCENDIO</p>
+        <img src="MODULO PRINCIPAL MBB-2 DECTEC INCENDIO(10012776).jpg" alt="Item 465">
+        <p>Número de Estoque: 10012776</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: MODULO RECONHECIMENTO P BILHETERIA</p>
+        <img src="MODULO RECONHECIMENTO P BILHETERIA(30001135).jpg" alt="Item 466">
+        <p>Número de Estoque: 30001135</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: MODULO TOMADA VERMELHA 2P+T 20A 250V</p>
+        <img src="MODULO TOMADA VERMELHA 2P+T 20A 250V(10026104).jpg" alt="Item 467">
+        <p>Número de Estoque: 10026104</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: MOLA DO TRIQUE TORNIQUETE DUPLO WOLPAC</p>
+        <img src="MOLA DO TRIQUE TORNIQUETE DUPLO WOLPAC(10022736).jpg" alt="Item 468">
+        <p>Número de Estoque: 10022736</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: MOLA HELICOIDAL PALAVANCA SUPINF BH36</p>
+        <img src="MOLA HELICOIDAL PALAVANCA SUPINF BH36(10006852).jpg" alt="Item 469">
+        <p>Número de Estoque: 10006852</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: MOTOR CONTROLADOR FLAP 24VDC</p>
+        <img src="MOTOR CONTROLADOR FLAP 24VDC(10026264).jpg" alt="Item 470">
+        <p>Número de Estoque: 10026264</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: OBS conector molex tipo kk 4 pinos</p>
+        <img src="OBS conector molex tipo kk 4 pinos(10026641).jpg" alt="Item 471">
+        <p>Número de Estoque: 10026641</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: OLEO DESENGRIPANTE AEROSAL 300ML</p>
+        <img src="OLEO DESENGRIPANTE AEROSAL 300ML(10018522).jpg" alt="Item 472">
+        <p>Número de Estoque: 10018522</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: PAINEL COMANDO P CONTROLE CFTV</p>
+        <img src="PAINEL COMANDO P CONTROLE CFTV(30001128).jpg" alt="Item 473">
+        <p>Número de Estoque: 30001128</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: PAINEL DIGICON</p>
+        <img src="PAINEL DIGICON(30003146).jpg" alt="Item 474">
+        <p>Número de Estoque: 30003146</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: PAINEL INTERCONEXAO P COFRE TORNIQUETE</p>
+        <img src="PAINEL INTERCONEXAO P COFRE TORNIQUETE(10006742).jpg" alt="Item 475">
+        <p>Número de Estoque: 10006742</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: PARAFUSO ATARR AISI304 4,8X 32MM </p>
+        <img src="PARAFUSO ATARR AISI304 4,8X 32MM (2)(10012709).jpg" alt="Item 476">
+        <p>Número de Estoque: 10012709</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: PARAFUSO ATARR SAE1020 4,8X 45,0MM</p>
+        <img src="PARAFUSO ATARR SAE1020 4,8X 45,0MM(10012558).jpg" alt="Item 477">
+        <p>Número de Estoque: 10012558</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: PARAFUSO CAB SEXTAVADA SAE1020 316” X 1</p>
+        <img src="PARAFUSO CAB SEXTAVADA SAE1020 316” X 1(10000411).jpg" alt="Item 478">
+        <p>Número de Estoque: 10000411</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: PATCH CORD CAT6A LCS UTP 3M</p>
+        <img src="PATCH CORD CAT6A LCS UTP 3M(10026691).jpg" alt="Item 479">
+        <p>Número de Estoque: 10026691</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: PLACA CHAVEAMENTO CONTROLE CCOMA</p>
+        <img src="PLACA CHAVEAMENTO CONTROLE CCOMA(10012883).jpg" alt="Item 480">
+        <p>Número de Estoque: 10012883</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: PLACA CONTROLADORA FC-100 PROGRAMAVEL </p>
+        <img src="PLACA CONTROLADORA FC-100 PROGRAMAVEL (2)(10020725).jpg" alt="Item 481">
+        <p>Número de Estoque: 10020725</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: PLACA CPU VALIDADOR VBU CP1714 VMR</p>
+        <img src="PLACA CPU VALIDADOR VBU CP1714 VMR(10026619).jpg" alt="Item 482">
+        <p>Número de Estoque: 10026619</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: PLACA FC-150</p>
+        <img src="PLACA FC-150(10019010).jpg" alt="Item 483">
+        <p>Número de Estoque: 10019010</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: PLACA INTERTRAVAMENTOLIBERACAO ROLETA</p>
+        <img src="PLACA INTERTRAVAMENTOLIBERACAO ROLETA(10012176).jpg" alt="Item 484">
+        <p>Número de Estoque: 10012176</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: REATOR LAMP. FLUOR. 127220 V 2 x 28W</p>
+        <img src="REATOR LAMP. FLUOR. 127220 V 2 x 28W(10012698).jpg" alt="Item 485">
+        <p>Número de Estoque: 10012698</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: REFIL GEL SANITIZANTE PURELL NXT GO2770</p>
+        <img src="REFIL GEL SANITIZANTE PURELL NXT GO2770(10018623).jpg" alt="Item 486">
+        <p>Número de Estoque: 10018623</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: REFLETOR LED 200W 100240V 6000K</p>
+        <img src="REFLETOR LED 200W 100240V 6000K(10026100).jpg" alt="Item 487">
+        <p>Número de Estoque: 10026100</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: REFLETOR LED 50W 100240V 6000K</p>
+        <img src="REFLETOR LED 50W 100240V 6000K(10026101).jpg" alt="Item 488">
+        <p>Número de Estoque: 10026101</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: RESISTOR FILME CARBONO 0,25W 33K OHM</p>
+        <img src="RESISTOR FILME CARBONO 0,25W 33K OHM(10015263).jpg" alt="Item 489">
+        <p>Número de Estoque: 10015263</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: RESISTOR FIO NICR 5W 10,0OHM +-5%</p>
+        <img src="RESISTOR FIO NICR 5W 10,0OHM +-5_(10010201).jpg" alt="Item 490">
+        <p>Número de Estoque: 10010201</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: SENSOR FLAP</p>
+        <img src="SENSOR FLAP(10026260).jpg" alt="Item 491">
+        <p>Número de Estoque: 10026260</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: SILICONE PASTA 85G</p>
+        <img src="SILICONE PASTA 85G(10023665).jpg" alt="Item 492">
+        <p>Número de Estoque: 10023665</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: SOLENOIDE DO CONJUNTO ELETRONICO DO VBU</p>
+        <img src="SOLENOIDE DO CONJUNTO ELETRONICO DO VBU(10026640).jpg" alt="Item 493">
+        <p>Número de Estoque: 10026640</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: SOLENOIDE SL040 127VAC 25% CURSO 10MM</p>
+        <img src="SOLENOIDE SL040 127VAC 25_ CURSO 10MM(10016126).jpg" alt="Item 494">
+        <p>Número de Estoque: 10016126</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: SOLENOIDE SL040 24V PARA TORNIQUETE</p>
+        <img src="SOLENOIDE SL040 24V PARA TORNIQUETE(10020150).jpg" alt="Item 495">
+        <p>Número de Estoque: 10020150</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: SOQUETE G5 PARA LAMPADA T5</p>
+        <img src="SOQUETE G5 PARA LAMPADA T5(10023140).jpg" alt="Item 496">
+        <p>Número de Estoque: 10023140</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: SUPORTE FIM DE CURSO CLICO TORNIQUETE</p>
+        <img src="SUPORTE FIM DE CURSO CLICO TORNIQUETE(10020085).jpg" alt="Item 497">
+        <p>Número de Estoque: 10020085</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: SUPORTE PARA PAINEL DE COMANDO DIGICON</p>
+        <img src="SUPORTE PARA PAINEL DE COMANDO DIGICON(10021390).jpg" alt="Item 498">
+        <p>Número de Estoque: 10021390</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: TAMPA CEGA CONDULETE TOP</p>
+        <img src="TAMPA CEGA CONDULETE TOP(10023144).jpg" alt="Item 499">
+        <p>Número de Estoque: 10023144</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: TAMPA CONDULETE 12 E 34</p>
+        <img src="TAMPA CONDULETE 12 E 34(10026103).jpg" alt="Item 500">
+        <p>Número de Estoque: 10026103</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: TAMPA CONDULETE TOP 2 INTERRUPTORES</p>
+        <img src="TAMPA CONDULETE TOP 2 INTERRUPTORES(10023143).jpg" alt="Item 501">
+        <p>Número de Estoque: 10023143</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: TAMPA TOMADA REDONDA CONDULETE TOP</p>
+        <img src="TAMPA TOMADA REDONDA CONDULETE TOP(10023145).jpg" alt="Item 502">
+        <p>Número de Estoque: 10023145</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: TERMINAL COMPR ENGATE FEMEA 16-14AWG</p>
+        <img src="TERMINAL COMPR ENGATE FEMEA 16-14AWG(10012342).jpg" alt="Item 503">
+        <p>Número de Estoque: 10012342</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: TERMINAL COMPR OLHAL 0,2-1,6MM2</p>
+        <img src="TERMINAL COMPR OLHAL 0,2-1,6MM2(10007953).jpg" alt="Item 504">
+        <p>Número de Estoque: 10007953</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: TERMINAL COMPRESSAO 1F 2C 16MM2 M6</p>
+        <img src="TERMINAL COMPRESSAO 1F 2C 16MM2 M6(10022322).jpg" alt="Item 505">
+        <p>Número de Estoque: 10022322</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: TERMINAL RECARGA SALDO</p>
+        <img src="TERMINAL RECARGA SALDO(30003147).jpg" alt="Item 506">
+        <p>Número de Estoque: 30003147</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: TOMADA DE EMBUTIR 2P+T 10A 250V</p>
+        <img src="TOMADA DE EMBUTIR 2P+T 10A 250V(10023146).jpg" alt="Item 507">
+        <p>Número de Estoque: 10023146</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: TOMADA DE EMBUTIR 2P+T 20A 250V</p>
+        <img src="TOMADA DE EMBUTIR 2P+T 20A 250V(10023147).jpg" alt="Item 508">
+        <p>Número de Estoque: 10023147</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: TREVO GUIA PMECANISMO COM AMORTECIMENTO</p>
+        <img src="TREVO GUIA PMECANISMO COM AMORTECIMENTO(10016562).jpg" alt="Item 509">
+        <p>Número de Estoque: 10016562</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: TUBO ESPIRAL PARA PROTECAO CABO HWPP20</p>
+        <img src="TUBO ESPIRAL PARA PROTECAO CABO HWPP20(10012405).jpg" alt="Item 510">
+        <p>Número de Estoque: 10012405</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R-AMPLIFICADOR 240W 20OHMS 110220VAC</p>
+        <img src="U.R-AMPLIFICADOR 240W 20OHMS 110220VAC(30000855).jpg" alt="Item 511">
+        <p>Número de Estoque: 30000855</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R-AMPLIFICADOR POT</p>
+        <img src="U.R-AMPLIFICADOR POT(30000638).jpg" alt="Item 512">
+        <p>Número de Estoque: 30000638</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R-CAMERA CFTV COL 13 CCD 12VCC24VCA</p>
+        <img src="U.R-CAMERA CFTV COL 13 CCD 12VCC24VCA(30000637).jpg" alt="Item 513">
+        <p>Número de Estoque: 30000637</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R-CAMERA CFTV COL 14 CCD 24VCA</p>
+        <img src="U.R-CAMERA CFTV COL 14 CCD 24VCA(30000477).jpg" alt="Item 514">
+        <p>Número de Estoque: 30000477</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R-CARTAO CI CONTROL TONALIDADE GR5020</p>
+        <img src="U.R-CARTAO CI CONTROL TONALIDADE GR5020(30000514).jpg" alt="Item 515">
+        <p>Número de Estoque: 30000514</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R-CARTAO CI P MODULO COMANDO GR5076</p>
+        <img src="U.R-CARTAO CI P MODULO COMANDO GR5076(30000494).jpg" alt="Item 516">
+        <p>Número de Estoque: 30000494</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R-CARTAO CI RELE MOD LEITOR TORNIQUETE</p>
+        <img src="U.R-CARTAO CI RELE MOD LEITOR TORNIQUETE(30000523).jpg" alt="Item 517">
+        <p>Número de Estoque: 30000523</p>
+    </div>
+
+    <div class="item">
+        <p>Nome do Item: U.R-FONTE CHAVEADA FC-100  24 VCC</p>
+        <img src="U.R-FONTE CHAVEADA FC-100  24 VCC.jpg" alt="Item 517">
+        <p>Número de Estoque: 30003692</p>
+    </div>
+
+    <div class="item">
+        <p>Nome do Item: U.R-MODULO AMPLIFICADOR 200W</p>
+        <img src="U.R-MODULO AMPLIFICADOR 200W(30000499).jpg" alt="Item 518">
+        <p>Número de Estoque: 30000499</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R-MODULO INTERCOMUNICADOR</p>
+        <img src="U.R-MODULO INTERCOMUNICADOR(30000511).jpg" alt="Item 519">
+        <p>Número de Estoque: 30000511</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R-MODULO INTERLIGACAO SINAIS AUDIO</p>
+        <img src="U.R-MODULO INTERLIGACAO SINAIS AUDIO(30000497).jpg" alt="Item 520">
+        <p>Número de Estoque: 30000497</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R-MODULO LOGICA P SIST SEGURANCA</p>
+        <img src="U.R-MODULO LOGICA P SIST SEGURANCA(30000512).jpg" alt="Item 521">
+        <p>Número de Estoque: 30000512</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R-MODULO MISTURADOR 4 CANAIS NIVEL VU</p>
+        <img src="U.R-MODULO MISTURADOR 4 CANAIS NIVEL VU(30000501).jpg" alt="Item 522">
+        <p>Número de Estoque: 30000501</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R-MODULO PRE-AMPLIFICADOR</p>
+        <img src="U.R-MODULO PRE-AMPLIFICADOR(30000503).jpg" alt="Item 523">
+        <p>Número de Estoque: 30000503</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R-MOTOR CC SHUNT B3 100S 1,3CV</p>
+        <img src="U.R-MOTOR CC SHUNT B3 100S 1,3CV(30000186).jpg" alt="Item 524">
+        <p>Número de Estoque: 30000186</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R-RELE 72 VDC RCA-116-05</p>
+        <img src="U.R-RELE 72 VDC RCA-116-05(30000544).jpg" alt="Item 525">
+        <p>Número de Estoque: 30000544</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R. - PONTO DE VENDA DG 820</p>
+        <img src="U.R. - PONTO DE VENDA DG 820(30002835).jpg" alt="Item 527">
+        <p>Número de Estoque: 30002835</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R.-VALIDADOR PRODATA  V3681</p>
+        <img src="U.R.-VALIDADOR PRODATA  V3681(30002870).jpg" alt="Item 528">
+        <p>Número de Estoque: 30002870</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R.-VALIDADOR PRODATA V3680MG RECOLHIM</p>
+        <img src="U.R.-VALIDADOR PRODATA V3680MG RECOLHIM(30002869).jpg" alt="Item 529">
+        <p>Número de Estoque: 30002869</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: U.R.-VALIDADOR PRODATA V770MG RECOLHIMEN</p>
+        <img src="U.R.-VALIDADOR PRODATA V770MG RECOLHIMEN(30002867).jpg" alt="Item 530">
+        <p>Número de Estoque: 30002867</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: VASELINA SOLIDA IND 1KG</p>
+        <img src="VASELINA SOLIDA IND 1KG(10018542).jpg" alt="Item 531">
+        <p>Número de Estoque: 10018542</p>
+    </div>
+    
+    <div class="item">
+        <p>Nome do Item: VBU</p>
+        <img src="VBU(30003148).jpg" alt="Item 532">
+        <p>Número de Estoque: 30003148</p>
+    </div>
+    
+     <div class="item">
+        <p>Nome do Item: VBU QRCODE</p>
+        <img src="VBU(30003148).jpg" alt="Item 532">
+        <p>Número de Estoque: 30003891</p>
+    </div>
+
+    </div>
+</body>
+</html>
