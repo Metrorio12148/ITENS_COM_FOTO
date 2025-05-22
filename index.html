@@ -70,26 +70,30 @@
 
         /* ESTILOS PARA PADRONIZAR IMAGENS */
         .item {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 20px;
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            min-height: 400px; /* Altura mínima do card */
-        }
+        position: relative;
+        overflow: hidden; /* Novo */
+    }
 
         .item img {
-            width: 100%;
-            height: 250px; /* Altura fixa */
-            object-fit: cover;
-            border-radius: 10px;
-            border: 2px solid var(--accent-color);
-            margin: 10px 0;
-            transition: transform 0.3s ease;
-            flex-shrink: 0; /* Impede redução da imagem */
-        }
+        width: calc(100% - 4px); /* Compensa a borda */
+        height: calc(250px - 4px); /* Compensa a borda */
+        margin: 10px 0;
+        border: 2px solid transparent; /* Borda transparente */
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 1;
+    }
+        .item::after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        border: 2px solid var(--accent-color);
+        border-radius: 10px;
+        z-index: 0;
+    }
 
         .item p:first-of-type {
             min-height: 60px; /* Altura fixa para o nome */
@@ -116,9 +120,10 @@
             transform: translateY(-5px);
         }
 
-        .item:hover img {
-            transform: scale(1.03);
-        }
+       .item:hover img {
+        transform: scale(1.03);
+        border: 2px solid rgba(0, 174, 239, 0.5); /* Borda sutil no hover */
+    }
 
         .search-container {
             position: fixed;
@@ -160,9 +165,9 @@
         }
 
         @media (max-width: 768px) {
-            .header {
-                padding: 10px 20px;
-            }
+        .item img {
+            height: calc(200px - 4px);
+        }
 
             .header-logo {
                 height: 40px;
@@ -179,6 +184,10 @@
             .item {
                 min-height: 350px;
             }
+            .item::after {
+            height: 200px;
+        }
+    }
 
             .item img {
                 height: 200px;
@@ -200,9 +209,13 @@
         }
 
         @media (max-width: 480px) {
-            .item {
-                min-height: 320px;
-            }
+        .item img {
+            height: calc(180px - 4px);
+        }
+            .item::after {
+            height: 180px;
+        }
+    }
 
             .item img {
                 height: 180px;
