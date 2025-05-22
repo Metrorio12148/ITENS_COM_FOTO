@@ -81,17 +81,15 @@
         }
 
         .item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover; /* Mantém a proporção e preenche o container */
-            border-radius: 10px;
-            border: 2px solid var(--accent-color);
-            margin: 0; /* Remove margens anteriores */
-            transition: transform 0.3s ease;
-            flex-shrink: 0;
-            box-sizing: border-box; /* Considera a borda no cálculo do tamanho */
-            padding: 2px; /* Compensa a borda para preenchimento total */
-        }
+    width: 100%;
+    height: 250px; /* Altura fixa */
+    object-fit: fill; /* ALTERADO: Imagem é esticada/achatada para preencher */
+    border-radius: 10px;
+    border: 2px solid var(--accent-color);
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+    flex-shrink: 0; /* Impede redução da imagem */
+}
 
         .item p:first-of-type {
             min-height: 60px; /* Altura fixa para o nome */
