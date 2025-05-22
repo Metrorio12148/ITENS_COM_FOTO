@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Pré-carregar a imagem de fundo primeiro -->
     <link rel="preload" href="TESTE.jpg" as="image">
     <title>ITENS COM FOTO</title>
     <style>
@@ -15,7 +14,6 @@
             position: relative;
         }
 
-        /* Imagem de fundo com prioridade */
         body:before {
             content: "";
             background-image: url('TESTE.jpg');
@@ -27,7 +25,7 @@
             position: fixed;
             z-index: -1;
             background-size: cover;
-            /* Forçar renderização antecipada */
+            
             will-change: transform;
         }
 
@@ -38,7 +36,7 @@
         .logo img {
             max-width: 15%;
             height: auto;
-            /* Adiar carregamento da logo */
+
             loading: lazy;
         }
 
@@ -54,7 +52,6 @@
         img {
             max-width: 100%;
             height: auto;
-            /* Carregamento lazy para todas as imagens dos itens */
             loading: lazy;
         }
 
@@ -106,11 +103,9 @@
             height: 200px;
             border: 5px solid grey;
             border-radius: 40px;
-            /* Otimizar renderização */
             content-visibility: auto;
         }
 
-        /* Media Queries para Mobile */
         @media (max-width: 768px) {
             .logo img {
                 max-width: 30%;
@@ -173,7 +168,6 @@
     <div class="footer">
         <p>Ctrl+F ou F3 para pesquisar</p>
     </div>
-    <!-- Todos os itens aqui (mantive apenas alguns para exemplo) -->
     <div class="item">
         <p>Nome do Item:  ABRACADEIRA 100MMX2,45MMX22MM</p>
         <img src=" ABRACADEIRA 100MMX2,45MMX22MM(10007879).jpg" alt="Item 1">
