@@ -82,13 +82,14 @@
 
         .item img {
             width: 100%;
-            height: 250px; /* Altura fixa */
-            object-fit: cover;
+            height: 250px;
+            object-fit: contain; /* Alterado de 'cover' para 'contain' */
             border-radius: 10px;
             border: 2px solid var(--accent-color);
             margin: 10px 0;
             transition: transform 0.3s ease;
-            flex-shrink: 0; /* Impede redução da imagem */
+            flex-shrink: 0;
+            box-sizing: border-box; /* Adicionado para incluir a borda no cálculo do tamanho */
         }
 
         .item p:first-of-type {
