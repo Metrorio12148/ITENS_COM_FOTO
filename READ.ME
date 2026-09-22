@@ -1,0 +1,42 @@
+ITENS DE ESTOQUE - CAT
+
+Estrutura do repositorio
+
+fotos/          pasta com as fotos de todos os itens
+Index.html      estrutura da pagina
+Style.css       toda a aparencia visual
+Script.js       logica de renderizacao dos itens e da busca
+items.js        dados dos itens (nome, arquivo de imagem, numero de estoque)
+converte.py     script que gera o items.js a partir de um index.html antigo
+READ.ME         este arquivo
+
+Como cada arquivo funciona
+
+O Index.html so contem a estrutura da pagina. Ele carrega o Style.css para a aparencia e, no final, carrega o items.js e depois o Script.js.
+
+O items.js define um array chamado ITEMS, onde cada item tem tres campos: name (nome do item), img (nome do arquivo de imagem, sem o caminho da pasta) e num (numero de estoque).
+
+O Script.js le o array ITEMS e monta os itens na tela, um por um. Ele monta o caminho da imagem juntando o nome da pasta fotos com o nome do arquivo guardado em items.js. Tambem cuida da caixa de busca, que filtra por nome ou por numero de estoque.
+
+O converte.py serve para gerar o items.js automaticamente a partir de um index.html antigo, daqueles com os 534 blocos de item repetidos no HTML. Ele nao precisa saber os nomes dos itens com antecedencia, ele so le o padrao do HTML antigo e extrai o que estiver escrito ali.
+
+Passo a passo para gerar o items.js a partir do index.html antigo
+
+1. Coloque o index.html antigo (o com os 534 itens) na pasta do projeto, com um nome diferente, por exemplo index_antigo.html.
+
+2. Abra o terminal integrado do VS Code (menu Terminal, opcao Novo Terminal).
+
+3. Rode o comando:
+   python converte.py index_antigo.html
+
+4. O terminal vai mostrar quantos itens foram encontrados. Se o numero for 534, deu tudo certo. Se vier menor, algum bloco do HTML antigo tem uma pequena diferenca de formatacao e precisa ser conferido a mao.
+
+5. O arquivo items.js vai ser sobrescrito com os 534 itens.
+
+Como testar a pagina
+
+Basta abrir o Index.html direto no navegador, com um duplo clique, ou pelo VS Code clicando com o botao direito no arquivo e escolhendo revelar na pasta do sistema, depois abrindo por la. Nao e preciso instalar nenhum servidor local nem extensao, porque os dados sao carregados por tags de script, nao por requisicoes de rede.
+
+Observacao sobre os nomes dos arquivos de imagem
+
+Alguns nomes de arquivo podem ter espacos extras no inicio ou no fim, herdados do index.html antigo. O converte.py preserva esses espacos exatamente como estavam, porque remove-los poderia fazer o nome nao bater mais com o arquivo real dentro da pasta fotos. Vale conferir se esses espacos sao mesmo parte do nome do arquivo ou so um erro de digitacao antigo.

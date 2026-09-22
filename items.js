@@ -1,0 +1,2612 @@
+const ITEMS = [
+  {
+    "name": "ABRACADEIRA 100MMX2,45MMX22MM",
+    "img": "ABRACADEIRA 100MMX2,45MMX22MM(10007879).jpg",
+    "num": "10007879"
+  },
+  {
+    "name": "ABRACADEIRA AJUST AISI304 57 X 76MM",
+    "img": "ABRACADEIRA AJUST AISI304 57 X 76MM(10000669).jpg",
+    "num": "10000669"
+  },
+  {
+    "name": "ABRACADEIRA AJUST AISI304 83 X 102MM",
+    "img": "ABRACADEIRA AJUST AISI304 83 X 102MM(10000674).jpg",
+    "num": "10000674"
+  },
+  {
+    "name": "ABRACADEIRA AUTO TRAV NYLON 150MM",
+    "img": "ABRACADEIRA AUTO TRAV NYLON 150MM(10007889).jpg",
+    "num": "10007889"
+  },
+  {
+    "name": "ABRACADEIRA AUTO TRAV POLIAM 100,0MM",
+    "img": "ABRACADEIRA AUTO TRAV POLIAM 100,0MM(10007884).jpg",
+    "num": "10007884"
+  },
+  {
+    "name": "ABRACADEIRA AUTOTRAV NYLON 390MM",
+    "img": "ABRACADEIRA AUTOTRAV NYLON 390MM(10007882).jpg",
+    "num": "10007882"
+  },
+  {
+    "name": "ABRACADEIRA CLIP PVC 5MM",
+    "img": "ABRACADEIRA CLIP PVC 5MM(10007887).jpg",
+    "num": "10007887"
+  },
+  {
+    "name": "ABRACADEIRA PLASTICA BRANCA 4,6X200MM",
+    "img": "ABRACADEIRA PLASTICA BRANCA 4,6X200MM(10007880).jpg",
+    "num": "10007880"
+  },
+  {
+    "name": "ABRACADEIRA PLASTICA BRANCA 4,6X300MM",
+    "img": "ABRACADEIRA PLASTICA BRANCA 4,6X300MM (2)(10007881).jpg",
+    "num": "10007881"
+  },
+  {
+    "name": "ABRACADEIRA PLASTICA BRANCA 7,6X225MM",
+    "img": "ABRACADEIRA PLASTICA BRANCA 7,6X225MM (2)(10007883).jpg",
+    "num": "10007883"
+  },
+  {
+    "name": "ABRACADEIRA UNHA E BASE 2.12",
+    "img": "ABRACADEIRA UNHA E BASE 2.12(10000637).jpg",
+    "num": "10000637"
+  },
+  {
+    "name": "ADESIVO INSTAN BAIXA VISC 20G IND",
+    "img": "ADESIVO INSTAN BAIXA VISC 20G IND(10020198).jpg",
+    "num": "10020198"
+  },
+  {
+    "name": "ALARME SONORO 24VCC 4,5KHZ",
+    "img": "ALARME SONORO 24VCC 4,5KHZ(10006727).jpg",
+    "num": "10006727"
+  },
+  {
+    "name": "AMORTECEDOR TRIPODE P COFRE TORNIQUETE",
+    "img": "AMORTECEDOR TRIPODE P COFRE TORNIQUETE(10006717).jpg",
+    "num": "10006717"
+  },
+  {
+    "name": "ANTENA ATIVA DE RECOLHIMENTO VALIDADOR",
+    "img": "ANTENA ATIVA DE RECOLHIMENTO VALIDADOR(10012281).jpg",
+    "num": "10012281"
+  },
+  {
+    "name": "ARAME REDONDO SAE1020 GALV 1,24MM",
+    "img": "ARAME REDONDO SAE1020 GALV 1,24MM(10000000).jpg",
+    "num": "10000000"
+  },
+  {
+    "name": "ARAME REDONDO SAE1020 GALV 1,24MM",
+    "img": "ARAME REDONDO SAE1020 GALV 1,24MM(10000001).jpg",
+    "num": "10000001"
+  },
+  {
+    "name": "ARMOTECEDOR DO TORNIQUETE-TRIPODE",
+    "img": "ARMOTECEDOR DO TORNIQUETE-TRIPODE(10006781).jpg",
+    "num": "10006781"
+  },
+  {
+    "name": "ARRUELA EMBOLO P VALIDADOR TORNIQUETE",
+    "img": "ARRUELA EMBOLO P VALIDADOR TORNIQUETE(10012309).jpg",
+    "num": "10012309"
+  },
+  {
+    "name": "ARRUELA LIS CIRC ACO CARB M 8",
+    "img": "ARRUELA LIS CIRC ACO CARB M 8(10007096).jpg",
+    "num": "10007096"
+  },
+  {
+    "name": "ARRUELA LIS CIRC AISI304 M 4",
+    "img": "ARRUELA LIS CIRC AISI304 M 4(10007081).jpg",
+    "num": "10007081"
+  },
+  {
+    "name": "ARRUELA LIS CIRC AISI304 M 4",
+    "img": "ARRUELA LIS CIRC AISI304 M 4(10007082).jpg",
+    "num": "10007082"
+  },
+  {
+    "name": "ARRUELA LIS CIRC AISI304 M10",
+    "img": "ARRUELA LIS CIRC AISI304 M10(10007078).jpg",
+    "num": "10007078"
+  },
+  {
+    "name": "ARRUELA LIS CIRC NYLON M 3",
+    "img": "ARRUELA LIS CIRC NYLON M 3(10007522).jpg",
+    "num": "10007522"
+  },
+  {
+    "name": "ARRUELA LIS CIRC SAE1020 316",
+    "img": "ARRUELA LIS CIRC SAE1020 316(10000581).jpg",
+    "num": "10000581"
+  },
+  {
+    "name": "ARRUELA LIS CIRC SAE1020 BICR M 5",
+    "img": "ARRUELA LIS CIRC SAE1020 BICR M 5(10007095).jpg",
+    "num": "10007095"
+  },
+  {
+    "name": "ARRUELA LIS CIRC SAE1030 GAV 38",
+    "img": "ARRUELA LIS CIRC SAE1030 GAV 38(10000587).jpg",
+    "num": "10000587"
+  },
+  {
+    "name": "ARRUELA LISA ESPECIAL M6 X 27MM X 1,6MM",
+    "img": "ARRUELA LISA ESPECIAL M6 X 27MM X 1,6MM(10000580).jpg",
+    "num": "10000580"
+  },
+  {
+    "name": "ARRUELA PRES SAE1010 M 4",
+    "img": "ARRUELA PRES SAE1010 M 4(10007109).jpg",
+    "num": "10007109"
+  },
+  {
+    "name": "ARRUELA TRAVA P MEC TRIPODE TORNIQUETE",
+    "img": "ARRUELA TRAVA P MEC TRIPODE TORNIQUETE(10006713).jpg",
+    "num": "10006713"
+  },
+  {
+    "name": "BATERIA ALCALINA RETANG 9,0V 1UN",
+    "img": "BATERIA ALCALINA RETANG 9,0V 1UN(10009356).jpg",
+    "num": "10009356"
+  },
+  {
+    "name": "BOBINA DO ELETROIMA P TORNIQUETE",
+    "img": "BOBINA DO ELETROIMA P TORNIQUETE(10007525).jpg",
+    "num": "10007525"
+  },
+  {
+    "name": "BOTOEIRA COMANDO LIGA-DESLIGA 2NA+2NF",
+    "img": "BOTOEIRA COMANDO LIGA-DESLIGA 2NA+2NF(10009168).jpg",
+    "num": "10009168"
+  },
+  {
+    "name": "BRACO CA 3BR INOX 515MM  ROSCA ESQUERDA",
+    "img": "BRACO CA 3BR INOX 515MM  ROSCA ESQUERDA(10020151).jpg",
+    "num": "10020151"
+  },
+  {
+    "name": "BROCA CONCR METAL DUR 15,875X 150,0MM",
+    "img": "BROCA CONCR METAL DUR 15,875X 150,0MM(10000699).jpg",
+    "num": "10000699"
+  },
+  {
+    "name": "BROCA CONCR METAL DUR 4,763X 100,0MM",
+    "img": "BROCA CONCR METAL DUR 4,763X 100,0MM(10000693).jpg",
+    "num": "10000693"
+  },
+  {
+    "name": "BROCA CONCR METAL DUR 7,938X 120,0MM",
+    "img": "BROCA CONCR METAL DUR 7,938X 120,0MM(10000701).jpg",
+    "num": "10000701"
+  },
+  {
+    "name": "BROCA HELIC METAL DURO 8,000X 80,0MM",
+    "img": "BROCA HELIC METAL DURO 8,000X 80,0MM(10000702).jpg",
+    "num": "10000702"
+  },
+  {
+    "name": "BUCHA DE FIXACAO POLIAMIDA  6MM",
+    "img": "BUCHA DE FIXACAO POLIAMIDA  6MM(10000484).jpg",
+    "num": "10000484"
+  },
+  {
+    "name": "BUCHA FIX S POLIAM 8MM",
+    "img": "BUCHA FIX S POLIAM 8MM(10000483).jpg",
+    "num": "10000483"
+  },
+  {
+    "name": "BUCHA FIXACAO DIAM 10MM COMPR 50MM NYLON",
+    "img": "BUCHA FIXACAO DIAM 10MM COMPR 50MM NYLON(10000485).jpg",
+    "num": "10000485"
+  },
+  {
+    "name": "BUCHA FIXACAO DIAM 8MM COMPR 40 MM NYLON",
+    "img": "BUCHA FIXACAO DIAM 8MM COMPR 40 MM NYLON(10000486).jpg",
+    "num": "10000486"
+  },
+  {
+    "name": "CABECA COMANDO P DETECCAO INCENDIO",
+    "img": "CABECA COMANDO P DETECCAO INCENDIO(10001580).jpg",
+    "num": "10001580"
+  },
+  {
+    "name": "CABECA DESCARGA P DETECCAO DE INCENDIO",
+    "img": "CABECA DESCARGA P DETECCAO DE INCENDIO(10001581).jpg",
+    "num": "10001581"
+  },
+  {
+    "name": "CABO COAXIAL RG6 90_PRETO",
+    "img": "CABO COAXIAL RG6 90_ PRETO(10012226).jpg",
+    "num": "10012226"
+  },
+  {
+    "name": "CABO FLEX COBRE CL4 PVC AZ 1X 2,5MM2",
+    "img": "CABO FLEX COBRE CL4 PVC AZ 1X 2,5MM2(10007694).jpg",
+    "num": "10007694"
+  },
+  {
+    "name": "CABO FLEX COBRE CL5 BORR 0,3MM2",
+    "img": "CABO FLEX COBRE CL5 BORR 0,3MM2(10004018).jpg",
+    "num": "10004018"
+  },
+  {
+    "name": "CABO FLEX COBRE CL5 PVCA PT 2X 1,5MM2",
+    "img": "CABO FLEX COBRE CL5 PVCA PT 2X 1,5MM2(10007691).jpg",
+    "num": "10007691"
+  },
+  {
+    "name": "CABO FLEX COBRE CL5 TERMOP AZ 1X 1,0MM2",
+    "img": "CABO FLEX COBRE CL5 TERMOP AZ 1X 1,0MM2(10007701).jpg",
+    "num": "10007701"
+  },
+  {
+    "name": "CABO LB 12 CONDUTORES 18AWG",
+    "img": "CABO LB 12 CONDUTORES 18AWG(10007536).jpg",
+    "num": "10007536"
+  },
+  {
+    "name": "CABO MONT 4PAR 24AWG AZ RJ-45 1,50M",
+    "img": "CABO MONT 4PAR 24AWG AZ RJ-45 1,50M(10007719).jpg",
+    "num": "10007719"
+  },
+  {
+    "name": "CABO POT COBRE CL2 PVC 03X 2,50MM2",
+    "img": "CABO POT COBRE CL2 PVC 03X 2,50MM2(10007704).jpg",
+    "num": "10007704"
+  },
+  {
+    "name": "CABO POTENCIA COBRE CL5 PVCA 04X 1,50MM2",
+    "img": "CABO POTENCIA COBRE CL5 PVCA 04X 1,50MM2(10001086).jpg",
+    "num": "10001086"
+  },
+  {
+    "name": "CABO PP FLEXIVEL 3X2,5MM² 300500V",
+    "img": "CABO PP FLEXIVEL 3X2,5MM² 300500V(10007705).jpg",
+    "num": "10007705"
+  },
+  {
+    "name": "CABO PP FLEXIVEL 3X6,0MM² 300500V",
+    "img": "CABO PP FLEXIVEL 3X6,0MM² 300500V(10007707).jpg",
+    "num": "10007707"
+  },
+  {
+    "name": "CABO REDE AZULCINZA CATEGORIA 6 23AWG",
+    "img": "CABO REDE AZULCINZA CATEGORIA 6 23AWG(10012227).jpg",
+    "num": "10012227"
+  },
+  {
+    "name": "CABO TEMP COBRE SI 01X 0,75MM2",
+    "img": "CABO TEMP COBRE SI 01X 0,75MM2(10004015).jpg",
+    "num": "10004015"
+  },
+  {
+    "name": "CABO TEMP COBRE SI 01X 1,50MM2",
+    "img": "CABO TEMP COBRE SI 01X 1,50MM2(10007717).jpg",
+    "num": "10007717"
+  },
+  {
+    "name": "CABO TEMP COBRE SI 01X 6,00MM2",
+    "img": "CABO TEMP COBRE SI 01X 6,00MM2(10004089).jpg",
+    "num": "10004089"
+  },
+  {
+    "name": "CABOLA GABINE 3BR P ADAR",
+    "img": "CABOLA GABINE 3BR P ADAR(10012283).jpg",
+    "num": "10012283"
+  },
+  {
+    "name": "CAME P TRIPODE DO MECANISMO WS",
+    "img": "CAME P TRIPODE DO MECANISMO WS(10006780).jpg",
+    "num": "10006780"
+  },
+  {
+    "name": "CAPA P BOTAO A",
+    "img": "CAPA P BOTAO A(10006668).jpg",
+    "num": "10006668"
+  },
+  {
+    "name": "CAPA P BOTAO T",
+    "img": "CAPA P BOTAO T(10006670).jpg",
+    "num": "10006670"
+  },
+  {
+    "name": "CAPACITOR ELETROL 33UF ±20% 25V",
+    "img": "CAPACITOR ELETROL 33UF ±20_ 25V(10011166).jpg",
+    "num": "10011166"
+  },
+  {
+    "name": "CAPACITOR FILM POLIEST 2200V 47NF",
+    "img": "CAPACITOR FILM POLIEST 2200V 47NF(10007263).jpg",
+    "num": "10007263"
+  },
+  {
+    "name": "CAPTOR OPTICO P INICIALIZACAO CARTOES",
+    "img": "CAPTOR OPTICO P INICIALIZACAO CARTOES(10007544).jpg",
+    "num": "10007544"
+  },
+  {
+    "name": "CARRETEL DATADOR P TORNIQUETE BH31",
+    "img": "CARRETEL DATADOR P TORNIQUETE BH31(10007244).jpg",
+    "num": "10007244"
+  },
+  {
+    "name": "CHAVE BLOQUEIO P DISPARO DE CO2",
+    "img": "CHAVE BLOQUEIO P DISPARO DE CO2(10008623).jpg",
+    "num": "10008623"
+  },
+  {
+    "name": "CHAVE COMUT 4 POS 90GR 8 CONT",
+    "img": "CHAVE COMUT 4 POS 90GR 8 CONT(10006730).jpg",
+    "num": "10006730"
+  },
+  {
+    "name": "CHAVE DO FLAP P LEITORA FD",
+    "img": "CHAVE DO FLAP P LEITORA FD(10006754).jpg",
+    "num": "10006754"
+  },
+  {
+    "name": "CHAVE MESTRA NR1",
+    "img": "CHAVE MESTRA NR1(10002791).jpg",
+    "num": "10002791"
+  },
+  {
+    "name": "CHUMBADOR RETO SAE1045 38X 3.34",
+    "img": "CHUMBADOR RETO SAE1045 38X 3.34(10000482).jpg",
+    "num": "10000482"
+  },
+  {
+    "name": "CONECTOR 37 PINOS P BILHETAGEM",
+    "img": "CONECTOR 37 PINOS P BILHETAGEM(10007375).jpg",
+    "num": "10007375"
+  },
+  {
+    "name": "CONECTOR 4 PINOS",
+    "img": "CONECTOR 4 PINOS(10007329).jpg",
+    "num": "10007329"
+  },
+  {
+    "name": "CONECTOR BNC PARA RG6 COMPRESSAO",
+    "img": "CONECTOR BNC PARA RG6 COMPRESSAO(10012095).jpg",
+    "num": "10012095"
+  },
+  {
+    "name": "CONECTOR CIR FEM 19 PINOS P ADAR",
+    "img": "CONECTOR CIR FEM 19 PINOS P ADAR(10006884).jpg",
+    "num": "10006884"
+  },
+  {
+    "name": "CONECTOR DB25 SOLDA MACHO",
+    "img": "CONECTOR DB25 SOLDA MACHO(10006900).jpg",
+    "num": "10006900"
+  },
+  {
+    "name": "CONECTOR DB9 SOLDA MACHO",
+    "img": "CONECTOR DB9 SOLDA MACHO(10007507).jpg",
+    "num": "10007507"
+  },
+  {
+    "name": "CONECTOR DE VIDEO BNC MACHO LATAO",
+    "img": "CONECTOR DE VIDEO BNC MACHO LATAO(10012096).jpg",
+    "num": "10012096"
+  },
+  {
+    "name": "CONECTOR DE VIDEO BNC MACHO ZINCO",
+    "img": "CONECTOR DE VIDEO BNC MACHO ZINCO(10012094).jpg",
+    "num": "10012094"
+  },
+  {
+    "name": "CONECTOR FEM 38 PINOS",
+    "img": "CONECTOR FEM 38 PINOS(10007326).jpg",
+    "num": "10007326"
+  },
+  {
+    "name": "CONECTOR FEM DEC",
+    "img": "CONECTOR FEM DEC(10007467).jpg",
+    "num": "10007467"
+  },
+  {
+    "name": "CONECTOR MULT PE 600V 25A 6,0MM2",
+    "img": "CONECTOR MULT PE 600V 25A 6,0MM2(10008037).jpg",
+    "num": "10008037"
+  },
+  {
+    "name": "CONECTOR P ADAR TRW",
+    "img": "CONECTOR P ADAR TRW(10006882).jpg",
+    "num": "10006882"
+  },
+  {
+    "name": "CONECTOR PARALELO I50 PINOS",
+    "img": "CONECTOR PARALELO I50 PINOS(10007386).jpg",
+    "num": "10007386"
+  },
+  {
+    "name": "CONECTOR RJ11 MACHO 4 CONTATOS",
+    "img": "CONECTOR RJ11 MACHO 4 CONTATOS(10012100).jpg",
+    "num": "10012100"
+  },
+  {
+    "name": "CONECTOR TIPO FR CANNON",
+    "img": "CONECTOR TIPO FR CANNON(10007524).jpg",
+    "num": "10007524"
+  },
+  {
+    "name": "CONJUNTO ROLETE P MAQ INICIALIZ CARTOES",
+    "img": "CONJUNTO ROLETE P MAQ INICIALIZ CARTOES(10007549).jpg",
+    "num": "10007549"
+  },
+  {
+    "name": "CONJUNTO SENSOR P RODA FONICA TORNIQ FD",
+    "img": "CONJUNTO SENSOR P RODA FONICA TORNIQ FD(10006776).jpg",
+    "num": "10006776"
+  },
+  {
+    "name": "CONJUNTO SENSOR PDISCO FONICO TORNIQ FD",
+    "img": "CONJUNTO SENSOR PDISCO FONICO TORNIQ FD(10006757).jpg",
+    "num": "10006757"
+  },
+  {
+    "name": "CONJUNTO SUPORTE COLETOR VALIDAD DG 2000",
+    "img": "CONJUNTO SUPORTE COLETOR VALIDAD DG 2000(10012228).jpg",
+    "num": "10012228"
+  },
+  {
+    "name": "CONTATOR 1,25A 2NF 60V",
+    "img": "CONTATOR 1,25A 2NF 60V(10008239).jpg",
+    "num": "10008239"
+  },
+  {
+    "name": "CONTATOR 1A 2NF 60V",
+    "img": "CONTATOR 1A 2NF 60V(10008241).jpg",
+    "num": "10008241"
+  },
+  {
+    "name": "CONTATOR 2 A 2NF 60V",
+    "img": "CONTATOR 2 A 2NF 60V(10008240).jpg",
+    "num": "10008240"
+  },
+  {
+    "name": "COROA 9 DENTES P TRAVAMENTO TORNIQUETE",
+    "img": "COROA 9 DENTES P TRAVAMENTO TORNIQUETE(10007137).jpg",
+    "num": "10007137"
+  },
+  {
+    "name": "CRISTAL QUARTZO",
+    "img": "CRISTAL QUARTZO(10007444).jpg",
+    "num": "10007444"
+  },
+  {
+    "name": "DETECTOR FUMACA OTICO ENDEREC DISCOVERY",
+    "img": "DETECTOR FUMACA OTICO ENDEREC DISCOVERY(10008638).jpg",
+    "num": "10008638"
+  },
+  {
+    "name": "DETECTOR FUMACA OTICO ENDEREC LED XP95",
+    "img": "DETECTOR FUMACA OTICO ENDEREC LED XP95(10008639).jpg",
+    "num": "10008639"
+  },
+  {
+    "name": "DIODO RETIFICADOR 1N4148 100V 200MA DO35",
+    "img": "DIODO RETIFICADOR 1N4148 100V 200MA DO35(10011352).jpg",
+    "num": "10011352"
+  },
+  {
+    "name": "DISCO CAME ALUMINIO RECICLADOR MOEDAS",
+    "img": "DISCO CAME ALUMINIO RECICLADOR MOEDAS(10006934).jpg",
+    "num": "10006934"
+  },
+  {
+    "name": "DISJUNTOR CAIXA MOLD 3P 380VCA 32A",
+    "img": "DISJUNTOR CAIXA MOLD 3P 380VCA 32A(10008186).jpg",
+    "num": "10008186"
+  },
+  {
+    "name": "DISJUNTOR CAIXA MOLD 3P 480VCA 25A",
+    "img": "DISJUNTOR CAIXA MOLD 3P 480VCA 25A(10008147).jpg",
+    "num": "10008147"
+  },
+  {
+    "name": "DISJUNTOR CAIXA MOLD 3P 480VCA 35A",
+    "img": "DISJUNTOR CAIXA MOLD 3P 480VCA 35A(10008165).jpg",
+    "num": "10008165"
+  },
+  {
+    "name": "DISJUNTOR CAIXA MOLD 3P 600VCA 125A",
+    "img": "DISJUNTOR CAIXA MOLD 3P 600VCA 125A(10008166).jpg",
+    "num": "10008166"
+  },
+  {
+    "name": "DISJUNTOR CAIXA MOLD 3P 600VCA 25A",
+    "img": "DISJUNTOR CAIXA MOLD 3P 600VCA 25A(10008154).jpg",
+    "num": "10008154"
+  },
+  {
+    "name": "DISJUNTOR CAIXA MOLD 3P 600VCA 35A",
+    "img": "DISJUNTOR CAIXA MOLD 3P 600VCA 35A(10008155).jpg",
+    "num": "10008155"
+  },
+  {
+    "name": "DISJUNTOR TERMOMAGN 2P 10A 400V - 415V",
+    "img": "DISJUNTOR TERMOMAGN 2P 10A 400V - 415V(10008207).jpg",
+    "num": "10008207"
+  },
+  {
+    "name": "DISJUNTOR TERMOMAGN 2P 440VCA 16A",
+    "img": "DISJUNTOR TERMOMAGN 2P 440VCA 16A(10008194).jpg",
+    "num": "10008194"
+  },
+  {
+    "name": "DISJUNTOR TERMOMAGN 2P 440VCA 20A",
+    "img": "DISJUNTOR TERMOMAGN 2P 440VCA 20A(10008205).jpg",
+    "num": "10008205"
+  },
+  {
+    "name": "DISJUNTOR TERMOMAGNETICO 2P 220VCA 15A",
+    "img": "DISJUNTOR TERMOMAGNETICO 2P 220VCA 15A(10008137).jpg",
+    "num": "10008137"
+  },
+  {
+    "name": "DISJUNTOR TERMOMAGNETICO 2P 380VCA 30A",
+    "img": "DISJUNTOR TERMOMAGNETICO 2P 380VCA 30A(10008136).jpg",
+    "num": "10008136"
+  },
+  {
+    "name": "DISJUNTOR TIPO SP UNIPOLAR 220380V 334A",
+    "img": "DISJUNTOR TIPO SP UNIPOLAR 220380V 334A(10006950).jpg",
+    "num": "10006950"
+  },
+  {
+    "name": "DISPLAY 7 SEGMENTOS VERMELHO",
+    "img": "DISPLAY 7 SEGMENTOS VERMELHO(10012089).jpg",
+    "num": "10012089"
+  },
+  {
+    "name": "DISTRIBUIDOR DE SINAL VIDEO BNC 2 PORTAS",
+    "img": "DISTRIBUIDOR DE SINAL VIDEO BNC 2 PORTAS(10006608).jpg",
+    "num": "10006608"
+  },
+  {
+    "name": "EIXO TENSIONADOR INFERIOR P LEITORA FD",
+    "img": "EIXO TENSIONADOR INFERIOR P LEITORA FD(10006747).jpg",
+    "num": "10006747"
+  },
+  {
+    "name": "EIXO TENSIONADOR SUPERIOR P LEITORA FD",
+    "img": "EIXO TENSIONADOR SUPERIOR P LEITORA FD(10006746).jpg",
+    "num": "10006746"
+  },
+  {
+    "name": "ELETRODUTO RIGIDO PVC PT BSP 34",
+    "img": "ELETRODUTO RIGIDO PVC PT BSP 34(10007722).jpg",
+    "num": "10007722"
+  },
+  {
+    "name": "ELETROIMA 120V ETNA 109925 BOBINA T52154",
+    "img": "ELETROIMA 120V ETNA 109925 BOBINA T52154(10008748).jpg",
+    "num": "10008748"
+  },
+  {
+    "name": "ELETROIMA 24VCC 18W",
+    "img": "ELETROIMA 24VCC 18W(10007363).jpg",
+    "num": "10007363"
+  },
+  {
+    "name": "ELETROIMA 24VCC 200W",
+    "img": "ELETROIMA 24VCC 200W(10007361).jpg",
+    "num": "10007361"
+  },
+  {
+    "name": "ELETROIMA 24VCC P TORNIQUETE BH36",
+    "img": "ELETROIMA 24VCC P TORNIQUETE BH36(10006810).jpg",
+    "num": "10006810"
+  },
+  {
+    "name": "EMBOLO DE ELETROIMA EM ACO INOX 13X64MM",
+    "img": "EMBOLO DE ELETROIMA EM ACO INOX 13X64MM(10006940).jpg",
+    "num": "10006940"
+  },
+  {
+    "name": "EMBOLO ELETROIMA VALIDADOR DG 2000PLUS",
+    "img": "EMBOLO ELETROIMA VALIDADOR DG 2000PLUS(10012224).jpg",
+    "num": "10012224"
+  },
+  {
+    "name": "ENGRENAGEM AMARELA P TRIPODE TORNIQUETE",
+    "img": "ENGRENAGEM AMARELA P TRIPODE TORNIQUETE(10006689).jpg",
+    "num": "10006689"
+  },
+  {
+    "name": "ENGRENAGEM DENTADA 33MM P BILHETAGEM",
+    "img": "ENGRENAGEM DENTADA 33MM P BILHETAGEM(10007162).jpg",
+    "num": "10007162"
+  },
+  {
+    "name": "ENGRENAGEM DENTADA 46MM P BILHETAGEM",
+    "img": "ENGRENAGEM DENTADA 46MM P BILHETAGEM(10007186).jpg",
+    "num": "10007186"
+  },
+  {
+    "name": "ENGRENAGEM HELICOIDAL INTERMEDIARIA",
+    "img": "ENGRENAGEM HELICOIDAL INTERMEDIARIA(10006748).jpg",
+    "num": "10006748"
+  },
+  {
+    "name": "ESPACADOR ANTENA RECOLHIMENTO VALIDADOR",
+    "img": "ESPACADOR ANTENA RECOLHIMENTO VALIDADOR(10012298).jpg",
+    "num": "10012298"
+  },
+  {
+    "name": "ESPACADOR DN 20MM DI 9MM PCORREIA MOTOR",
+    "img": "ESPACADOR DN 20MM DI 9MM PCORREIA MOTOR(10006723).jpg",
+    "num": "10006723"
+  },
+  {
+    "name": "ESTANHO SOLDA FIO 6040 1,50MM 500G",
+    "img": "ESTANHO SOLDA FIO 6040 1,50MM 500G(10000190).jpg",
+    "num": "10000190"
+  },
+  {
+    "name": "FECHADURA LINGU CROM CHAVE",
+    "img": "FECHADURA LINGU CROM CHAVE(10000685).jpg",
+    "num": "10000685"
+  },
+  {
+    "name": "FITA ADES SIMPLES CREPE BG 19MMX 50M",
+    "img": "FITA ADES SIMPLES CREPE BG 19MMX 50M(10000255).jpg",
+    "num": "10000255"
+  },
+  {
+    "name": "FITA ISOL AM 105GRC 19MM 20M 1UN",
+    "img": "FITA ISOL AM 105GRC 19MM 20M 1UN(10000158).jpg",
+    "num": "10000158"
+  },
+  {
+    "name": "FITA ISOL PRETA 69KV 19MM 10M AUTOFUSAO",
+    "img": "FITA ISOL PRETA 69KV 19MM 10M AUTOFUSAO(10000159).jpg",
+    "num": "10000159"
+  },
+  {
+    "name": "FITA ISOLANTE DE MICA 0,15MM 180 GRAUS",
+    "img": "FITA ISOLANTE DE MICA 0,15MM 180 GRAUS(10000132).jpg",
+    "num": "10000132"
+  },
+  {
+    "name": "FITA ISOLANTE PRETA 750V 19MM 20M",
+    "img": "FITA ISOLANTE PRETA 750V 19MM 20M(10000157).jpg",
+    "num": "10000157"
+  },
+  {
+    "name": "FITA ISOLANTE VERMELHA 750V 19MM  20M",
+    "img": "FITA ISOLANTE VERMELHA 750V 19MM  20M(10000155).jpg",
+    "num": "10000155"
+  },
+  {
+    "name": "FITA P IMPRESSORA EPSON LX-300 PRETA",
+    "img": "FITA P IMPRESSORA EPSON LX-300 PRETA(10006782).jpg",
+    "num": "10006782"
+  },
+  {
+    "name": "FITA TEFLON 18MM  X 50M",
+    "img": "FITA TEFLON 18MM  X 50M(10000745).jpg",
+    "num": "10000745"
+  },
+  {
+    "name": "FIXADOR AUTO ADES ABRACAD ACO 10MM",
+    "img": "FIXADOR AUTO ADES ABRACAD ACO 10MM(10007891).jpg",
+    "num": "10007891"
+  },
+  {
+    "name": "FONTE ALIM CHAV MONOF 110220VCA 5V 10A",
+    "img": "FONTE ALIM CHAV MONOF 110220VCA 5V 10A(10012323).jpg",
+    "num": "10012323"
+  },
+  {
+    "name": "FONTE ALIMENTACAO 12V 1A P CFTV",
+    "img": "FONTE ALIMENTACAO 12V 1A P CFTV(10006601).jpg",
+    "num": "10006601"
+  },
+  {
+    "name": "FONTE CHAVEADA 12VCC 1A P CFTV",
+    "img": "FONTE CHAVEADA 12VCC 1A P CFTV (2)(10006602).jpg",
+    "num": "10006602"
+  },
+  {
+    "name": "FONTE CHAVEADA 24V 1A P CFTV",
+    "img": "FONTE CHAVEADA 24V 1A P CFTV (2)(10006603).jpg",
+    "num": "10006603"
+  },
+  {
+    "name": "FUSIVEL CART RAPIDA 10,0X 38,0MM 10A",
+    "img": "FUSIVEL CART RAPIDA 10,0X 38,0MM 10A(10008836).jpg",
+    "num": "10008836"
+  },
+  {
+    "name": "FUSIVEL CART RAPIDA 10,3X 38,0MM 8A",
+    "img": "FUSIVEL CART RAPIDA 10,3X 38,0MM 8A(10008835).jpg",
+    "num": "10008835"
+  },
+  {
+    "name": "FUSIVEL CART RAPIDA 14,0X 51,0MM 10A",
+    "img": "FUSIVEL CART RAPIDA 14,0X 51,0MM 10A(10008871).jpg",
+    "num": "10008871"
+  },
+  {
+    "name": "FUSIVEL CARTUCHO 1000VCC 800A 100200KA",
+    "img": "FUSIVEL CARTUCHO 1000VCC 800A 100200KA(10003288).jpg",
+    "num": "10003288"
+  },
+  {
+    "name": "FUSIVEL NH RETARD 00 120KA 500V 100A",
+    "img": "FUSIVEL NH RETARD 00 120KA 500V 100A(10009000).jpg",
+    "num": "10009000"
+  },
+  {
+    "name": "FUSIVEL NH RETARD 00 120KA 500V 80A",
+    "img": "FUSIVEL NH RETARD 00 120KA 500V 80A(10008988).jpg",
+    "num": "10008988"
+  },
+  {
+    "name": "FUSIVEL VID 5,00X20,00MM 3A",
+    "img": "FUSIVEL VID 5,00X20,00MM 3A(10001517).jpg",
+    "num": "10001517"
+  },
+  {
+    "name": "FUSIVEL VID RAPIDA 5,00X20,00MM 10A",
+    "img": "FUSIVEL VID RAPIDA 5,00X20,00MM 10A(10008953).jpg",
+    "num": "10008953"
+  },
+  {
+    "name": "FUSIVEL VID RAPIDA 5,00X20,00MM 1A",
+    "img": "FUSIVEL VID RAPIDA 5,00X20,00MM 1A (2)(10008911).jpg",
+    "num": "10008911"
+  },
+  {
+    "name": "FUSIVEL VID RAPIDA 5,00X20,00MM 1A",
+    "img": "FUSIVEL VID RAPIDA 5,00X20,00MM 1A(10008859).jpg",
+    "num": "10008859"
+  },
+  {
+    "name": "FUSIVEL VID RAPIDA 5,00X20,00MM 3,15A",
+    "img": "FUSIVEL VID RAPIDA 5,00X20,00MM 3,15A(10008945).jpg",
+    "num": "10008945"
+  },
+  {
+    "name": "FUSIVEL VID RAPIDA 5,00X20,00MM 5A",
+    "img": "FUSIVEL VID RAPIDA 5,00X20,00MM 5A(10008844).jpg",
+    "num": "10008844"
+  },
+  {
+    "name": "FUSIVEL VID RETARD 5,00X20,00MM 6A",
+    "img": "FUSIVEL VID RETARD 5,00X20,00MM 6A(10008867).jpg",
+    "num": "10008867"
+  },
+  {
+    "name": "FUSIVEL VIDRO 250V 2A RAPIDO 5X20MM",
+    "img": "FUSIVEL VIDRO 250V 2A RAPIDO 5X20MM(10008852).jpg",
+    "num": "10008852"
+  },
+  {
+    "name": "FUSIVEL VIDRO 250V 4A NORMAL 5X20MM",
+    "img": "FUSIVEL VIDRO 250V 4A NORMAL 5X20MM(10008956).jpg",
+    "num": "10008956"
+  },
+  {
+    "name": "IMA C SUPORTE P ADAR",
+    "img": "IMA C SUPORTE P ADAR(10007242).jpg",
+    "num": "10007242"
+  },
+  {
+    "name": "INTERRUPTOR PRED 250V 10A 2P 1 TECLA",
+    "img": "INTERRUPTOR PRED 250V 10A 2P 1 TECLA(10008330).jpg",
+    "num": "10008330"
+  },
+  {
+    "name": "LAMINA P SENSOR RECOLHIMENTO VALIDADOR",
+    "img": "LAMINA P SENSOR RECOLHIMENTO VALIDADOR(10012304).jpg",
+    "num": "10012304"
+  },
+  {
+    "name": "LAMPADA FLUORESC TUBULAR FRIA 32W",
+    "img": "LAMPADA FLUORESC TUBULAR FRIA 32W(10009314).jpg",
+    "num": "10009314"
+  },
+  {
+    "name": "LAMPADA LED 9-9,5W 100-240V E27",
+    "img": "LAMPADA LED 9-9,5W 100-240V E27(10009183).jpg",
+    "num": "10009183"
+  },
+  {
+    "name": "LENTE CFTV 13 5-50MM F1,4",
+    "img": "LENTE CFTV 13 5-50MM F1,4(10006604).jpg",
+    "num": "10006604"
+  },
+  {
+    "name": "LIXA FOLHA DAGUA GR1500 225X275MM",
+    "img": "LIXA FOLHA DAGUA GR1500 225X275MM(10000230).jpg",
+    "num": "10000230"
+  },
+  {
+    "name": "LIXA FOLHA FERRO GR100 225X275MM",
+    "img": "LIXA FOLHA FERRO GR100 225X275MM(10000227).jpg",
+    "num": "10000227"
+  },
+  {
+    "name": "LIXA FOLHA FERRO GR80 225X275MM -",
+    "img": "LIXA FOLHA FERRO GR80 225X275MM -(10000236).jpg",
+    "num": "10000236"
+  },
+  {
+    "name": "LIXA FOLHA FERRO GR80 225X275MM",
+    "img": "LIXA FOLHA FERRO GR80 225X275MM(10000226).jpg",
+    "num": "10000226"
+  },
+  {
+    "name": "LIXA FOLHA MADEIRA GR80 225X275MM",
+    "img": "LIXA FOLHA MADEIRA GR80 225X275MM(10000212).jpg",
+    "num": "10000212"
+  },
+  {
+    "name": "MICRO AMPERIMETRO P BASTIDOR ARL",
+    "img": "MICRO AMPERIMETRO P BASTIDOR ARL(10006441).jpg",
+    "num": "10006441"
+  },
+  {
+    "name": "MICRO CHAVE 250V 5A PADAR",
+    "img": "MICRO CHAVE 250V 5A PADAR(10006890).jpg",
+    "num": "10006890"
+  },
+  {
+    "name": "MICRO SWITCH 250VAC 5A P TRIPODE",
+    "img": "MICRO SWITCH 250VAC 5A P TRIPODE(10007411).jpg",
+    "num": "10007411"
+  },
+  {
+    "name": "MICRO SWITCH P PRESENCA CARTAO ENTRADA",
+    "img": "MICRO SWITCH P PRESENCA CARTAO ENTRADA(10007543).jpg",
+    "num": "10007543"
+  },
+  {
+    "name": "MOLA 2 ESPIRAS 4MM P TORNIQUETE",
+    "img": "MOLA 2 ESPIRAS 4MM P TORNIQUETE(10007140).jpg",
+    "num": "10007140"
+  },
+  {
+    "name": "MOLA 2 ESPIRAS 6MM P TORNIQUETE",
+    "img": "MOLA 2 ESPIRAS 6MM P TORNIQUETE(10007148).jpg",
+    "num": "10007148"
+  },
+  {
+    "name": "MOLA AISI302 6,40X 49,00MM",
+    "img": "MOLA AISI302 6,40X 49,00MM(10006991).jpg",
+    "num": "10006991"
+  },
+  {
+    "name": "MOLA BARRA 10MM P TORNIQUETE",
+    "img": "MOLA BARRA 10MM P TORNIQUETE(10007189).jpg",
+    "num": "10007189"
+  },
+  {
+    "name": "MOLA BARRA 15MM P TORNIQUETE",
+    "img": "MOLA BARRA 15MM P TORNIQUETE(10007198).jpg",
+    "num": "10007198"
+  },
+  {
+    "name": "MOLA BARRA 32MM P TORNIQUETE",
+    "img": "MOLA BARRA 32MM P TORNIQUETE(10007196).jpg",
+    "num": "10007196"
+  },
+  {
+    "name": "MOLA BARRA P CELULA SAIDA TORNIQUETE",
+    "img": "MOLA BARRA P CELULA SAIDA TORNIQUETE(10006756).jpg",
+    "num": "10006756"
+  },
+  {
+    "name": "MOLA BARRA TIPO L 40MM",
+    "img": "MOLA BARRA TIPO L 40MM(10007190).jpg",
+    "num": "10007190"
+  },
+  {
+    "name": "MOLA FITA P TORNIQUETE LEITORA FD",
+    "img": "MOLA FITA P TORNIQUETE LEITORA FD(10006753).jpg",
+    "num": "10006753"
+  },
+  {
+    "name": "MOLA HELICOIDAL 10 ESPIRAS 1,5MM",
+    "img": "MOLA HELICOIDAL 10 ESPIRAS 1,5MM(10007217).jpg",
+    "num": "10007217"
+  },
+  {
+    "name": "MOLA HELICOIDAL 10 ESPIRAS 1MM",
+    "img": "MOLA HELICOIDAL 10 ESPIRAS 1MM(10007144).jpg",
+    "num": "10007144"
+  },
+  {
+    "name": "MOLA HELICOIDAL 18 ESPIRAS P TORNIQUETE",
+    "img": "MOLA HELICOIDAL 18 ESPIRAS P TORNIQUETE(10007152).jpg",
+    "num": "10007152"
+  },
+  {
+    "name": "MOLA HELICOIDAL 20 ESP P MOTOR BOUCLE",
+    "img": "MOLA HELICOIDAL 20 ESP P MOTOR BOUCLE(10007226).jpg",
+    "num": "10007226"
+  },
+  {
+    "name": "MOLA HELICOIDAL 21 ESPIRAS P TORNIQUETE",
+    "img": "MOLA HELICOIDAL 21 ESPIRAS P TORNIQUETE(10007145).jpg",
+    "num": "10007145"
+  },
+  {
+    "name": "MOLA HELICOIDAL 36 ESPIRAS P TORNIQUETE",
+    "img": "MOLA HELICOIDAL 36 ESPIRAS P TORNIQUETE(10007155).jpg",
+    "num": "10007155"
+  },
+  {
+    "name": "MOLA HELICOIDAL 38 ESPIRAS P TORNIQUETE",
+    "img": "MOLA HELICOIDAL 38 ESPIRAS P TORNIQUETE(10007142).jpg",
+    "num": "10007142"
+  },
+  {
+    "name": "MOLA HELICOIDAL 42 ESPIRAS P TORNIQUETE",
+    "img": "MOLA HELICOIDAL 42 ESPIRAS P TORNIQUETE(10007156).jpg",
+    "num": "10007156"
+  },
+  {
+    "name": "MOLA HELICOIDAL 6 ESPIRAS P TORNIQUETE",
+    "img": "MOLA HELICOIDAL 6 ESPIRAS P TORNIQUETE(10007150).jpg",
+    "num": "10007150"
+  },
+  {
+    "name": "MOLA INOX 42,50X 51,30X 30,50MM",
+    "img": "MOLA INOX 42,50X 51,30X 30,50MM(10006715).jpg",
+    "num": "10006715"
+  },
+  {
+    "name": "MOLA P AMORTEDOR TORNIQUETE LEITORA FD",
+    "img": "MOLA P AMORTEDOR TORNIQUETE LEITORA FD(10006722).jpg",
+    "num": "10006722"
+  },
+  {
+    "name": "MOLA P LEITOR ADAR GUIA BILHETE ENTRADA",
+    "img": "MOLA P LEITOR ADAR GUIA BILHETE ENTRADA(10006889).jpg",
+    "num": "10006889"
+  },
+  {
+    "name": "MOLA P PELICANO LEITORA BH36",
+    "img": "MOLA P PELICANO LEITORA BH36(10006995).jpg",
+    "num": "10006995"
+  },
+  {
+    "name": "MOLA P RETORNO TORNIQUETE WOLPAC",
+    "img": "MOLA P RETORNO TORNIQUETE WOLPAC(10006857).jpg",
+    "num": "10006857"
+  },
+  {
+    "name": "MOTOR P CORREIA TRANSPORTE CARTAO SMART",
+    "img": "MOTOR P CORREIA TRANSPORTE CARTAO SMART(10007541).jpg",
+    "num": "10007541"
+  },
+  {
+    "name": "MOTOR P LEITORA FD",
+    "img": "MOTOR P LEITORA FD(10006774).jpg",
+    "num": "10006774"
+  },
+  {
+    "name": "PANO LIMP CELULSINT BR",
+    "img": "PANO LIMP CELULSINT BR(10012162).jpg",
+    "num": "10012162"
+  },
+  {
+    "name": "PANO LIMPEZA MULTIUSO",
+    "img": "PANO LIMPEZA MULTIUSO(10012170).jpg",
+    "num": "10012170"
+  },
+  {
+    "name": "PARAFUSO ABAU SAE1010 RT 316 X 78",
+    "img": "PARAFUSO ABAU SAE1010 RT 316 X 78(10002770).jpg",
+    "num": "10002770"
+  },
+  {
+    "name": "PARAFUSO ATARR AISI304 4,8X 50,0MM",
+    "img": "PARAFUSO ATARR AISI304 4,8X 50,0MM(10000460).jpg",
+    "num": "10000460"
+  },
+  {
+    "name": "PARAFUSO ATARR SAE1020 4,1X 32,8MM",
+    "img": "PARAFUSO ATARR SAE1020 4,1X 32,8MM(10000457).jpg",
+    "num": "10000457"
+  },
+  {
+    "name": "PARAFUSO ATARR SAE1020 4,8X 32MM",
+    "img": "PARAFUSO ATARR SAE1020 4,8X 32MM(10000437).jpg",
+    "num": "10000437"
+  },
+  {
+    "name": "PARAFUSO AUTOATARRACHANTE 4,8X32MM",
+    "img": "PARAFUSO AUTOATARRACHANTE 4,8X32MM(10000468).jpg",
+    "num": "10000468"
+  },
+  {
+    "name": "PARAFUSO AUTOATARRAXANTE 14 X 2",
+    "img": "PARAFUSO AUTOATARRAXANTE 14 X 2(10000477).jpg",
+    "num": "10000477"
+  },
+  {
+    "name": "PARAFUSO AUTOATARRAXANTE Nº10 X 1 12",
+    "img": "PARAFUSO AUTOATARRAXANTE Nº10 X 1 12(10000470).jpg",
+    "num": "10000470"
+  },
+  {
+    "name": "PARAFUSO CABECA CILINDRICA M3X 8MM",
+    "img": "PARAFUSO CABECA CILINDRICA M3X 8MM(10007021).jpg",
+    "num": "10007021"
+  },
+  {
+    "name": "PARAFUSO CIL AISI304 RT M 4X 16MM",
+    "img": "PARAFUSO CIL AISI304 RT M 4X 16MM(10007025).jpg",
+    "num": "10007025"
+  },
+  {
+    "name": "PARAFUSO PANELA SAE1020 RT M 4X 16MM",
+    "img": "PARAFUSO PANELA SAE1020 RT M 4X 16MM(10007041).jpg",
+    "num": "10007041"
+  },
+  {
+    "name": "PILHA ALCALINA GRANDE D 1,5V",
+    "img": "PILHA ALCALINA GRANDE D 1,5V(10009352).jpg",
+    "num": "10009352"
+  },
+  {
+    "name": "PILHA ALCALINA MEDIA C 1,5V",
+    "img": "PILHA ALCALINA MEDIA C 1,5V(10009353).jpg",
+    "num": "10009353"
+  },
+  {
+    "name": "PILHA ALCALINA PALITO AAA 1,5V",
+    "img": "PILHA ALCALINA PALITO AAA 1,5V(10009355).jpg",
+    "num": "10009355"
+  },
+  {
+    "name": "PILHA ALCALINA PEQUENA AA 1,5V",
+    "img": "PILHA ALCALINA PEQUENA AA 1,5V(10009354).jpg",
+    "num": "10009354"
+  },
+  {
+    "name": "PINO MACHO PARA TOMADA DE RED",
+    "img": "PINO MACHO PARA TOMADA DE RED(10006785).jpg",
+    "num": "10006785"
+  },
+  {
+    "name": "PLACA ANTENA P MAQ INICIAL CARTOES",
+    "img": "PLACA ANTENA P MAQ INICIAL CARTOES(10007540).jpg",
+    "num": "10007540"
+  },
+  {
+    "name": "PLACA CP PPAINEL DE CONTROLE TORNIQUETE",
+    "img": "PLACA CP PPAINEL DE CONTROLE TORNIQUETE(10020152).jpg",
+    "num": "10020152"
+  },
+  {
+    "name": "PLACA FONTE P MAQ INICIALIZACAO CARTOES",
+    "img": "PLACA FONTE P MAQ INICIALIZACAO CARTOES(10007548).jpg",
+    "num": "10007548"
+  },
+  {
+    "name": "PLUGUE PREDIAL 250V 10A 2P",
+    "img": "PLUGUE PREDIAL 250V 10A 2P(10008107).jpg",
+    "num": "10008107"
+  },
+  {
+    "name": "PLUGUE PREDIAL 250V 10A 2P",
+    "img": "PLUGUE PREDIAL 250V 10A 2P(10008116).jpg",
+    "num": "10008116"
+  },
+  {
+    "name": "POLIA 37 DENTES P LEITORA FD TORNIQUETE",
+    "img": "POLIA 37 DENTES P LEITORA FD TORNIQUETE(10006749).jpg",
+    "num": "10006749"
+  },
+  {
+    "name": "POLIA CORREIA TRANSPORT MAQ EMISS CARTAO",
+    "img": "POLIA CORREIA TRANSPORT MAQ EMISS CARTAO(10007550).jpg",
+    "num": "10007550"
+  },
+  {
+    "name": "POLIA DENT PGUIA 5M1 CORREIA LEITORA FD",
+    "img": "POLIA DENT PGUIA 5M1 CORREIA LEITORA FD(10006763).jpg",
+    "num": "10006763"
+  },
+  {
+    "name": "POLIA DENT PGUIA 6M1 CORREIA LEITORA FD",
+    "img": "POLIA DENT PGUIA 6M1 CORREIA LEITORA FD(10006764).jpg",
+    "num": "10006764"
+  },
+  {
+    "name": "POLIA MESTRA INFERIOR P TORNIQUETE FD",
+    "img": "POLIA MESTRA INFERIOR P TORNIQUETE FD(10006726).jpg",
+    "num": "10006726"
+  },
+  {
+    "name": "PONTA PROVA PRETA P MULTIMETRO",
+    "img": "PONTA PROVA PRETA P MULTIMETRO(10000300).jpg",
+    "num": "10000300"
+  },
+  {
+    "name": "PONTA PROVA VERM P MULTIMETRO",
+    "img": "PONTA PROVA VERM P MULTIMETRO(10000301).jpg",
+    "num": "10000301"
+  },
+  {
+    "name": "PORCA SEXT SAE 10101020 GALV MG M10",
+    "img": "PORCA SEXT SAE 10101020 GALV MG M10(10007074).jpg",
+    "num": "10007074"
+  },
+  {
+    "name": "PORCA SEXT SAE1020 BSW 316",
+    "img": "PORCA SEXT SAE1020 BSW 316(10000497).jpg",
+    "num": "10000497"
+  },
+  {
+    "name": "PORTA CADEADO ACO CARB 63,0MM",
+    "img": "PORTA CADEADO ACO CARB 63,0MM(10008553).jpg",
+    "num": "10008553"
+  },
+  {
+    "name": "PORTA FUSIVEL P BILHETAGEM",
+    "img": "PORTA FUSIVEL P BILHETAGEM(10007483).jpg",
+    "num": "10007483"
+  },
+  {
+    "name": "PORTA FUSIVEL P LEITOR DECODIFICADOR",
+    "img": "PORTA FUSIVEL P LEITOR DECODIFICADOR(10006979).jpg",
+    "num": "10006979"
+  },
+  {
+    "name": "PRENDEDOR C FIXACAO P ADAR",
+    "img": "PRENDEDOR C FIXACAO P ADAR(10007214).jpg",
+    "num": "10007214"
+  },
+  {
+    "name": "PROTECAO P RECOLHIMENTO PPLACA ANTENA",
+    "img": "PROTECAO P RECOLHIMENTO PPLACA ANTENA(10012307).jpg",
+    "num": "10012307"
+  },
+  {
+    "name": "PROTETOR P MECANIXA TORNIQUETE",
+    "img": "PROTETOR P MECANIXA TORNIQUETE(10006861).jpg",
+    "num": "10006861"
+  },
+  {
+    "name": "PUXADOR P CARTOES CARREGADORES LINHA 2",
+    "img": "PUXADOR P CARTOES CARREGADORES LINHA 2(10007532).jpg",
+    "num": "10007532"
+  },
+  {
+    "name": "RABICHO LIGACAO P IMPRESSORAPDV",
+    "img": "RABICHO LIGACAO P IMPRESSORAPDV(10006967).jpg",
+    "num": "10006967"
+  },
+  {
+    "name": "RACK TAMPAO C 3 FUSIVEIS",
+    "img": "RACK TAMPAO C 3 FUSIVEIS(10012091).jpg",
+    "num": "10012091"
+  },
+  {
+    "name": "REBITE CAB ABAUL ALUM 1,5X5MM",
+    "img": "REBITE CAB ABAUL ALUM 1,5X5MM(10006842).jpg",
+    "num": "10006842"
+  },
+  {
+    "name": "REBITE CAB ABAUL ALUM 3,0X 6,0MM",
+    "img": "REBITE CAB ABAUL ALUM 3,0X 6,0MM(10006841).jpg",
+    "num": "10006841"
+  },
+  {
+    "name": "RELE 303 C1 P",
+    "img": "RELE 303 C1 P(10007366).jpg",
+    "num": "10007366"
+  },
+  {
+    "name": "RELE ACOPLADOR AA 24V 15A 1NAF",
+    "img": "RELE ACOPLADOR AA 24V 15A 1NAF.jpg",
+    "num": "10027720"
+  },
+  {
+    "name": "RELE FOTOELET ELETRICO 220V 1NF 1000W",
+    "img": "RELE FOTOELET ELETRICO 220V 1NF 1000W(10008390).jpg",
+    "num": "10008390"
+  },
+  {
+    "name": "RELE FOTOELET ELETROMAGN 220V 1NF 1000W",
+    "img": "RELE FOTOELET ELETROMAGN 220V 1NF 1000W(10010733).jpg",
+    "num": "10010733"
+  },
+  {
+    "name": "RELE IND 0,25 A 175VCC 1 REV 24V",
+    "img": "RELE IND 0,25 A 175VCC 1 REV 24V(10007409).jpg",
+    "num": "10007409"
+  },
+  {
+    "name": "RELE K7N10 V34321 A3620 X-1 PTELEFONIA",
+    "img": "RELE K7N10 V34321 A3620 X-1 PTELEFONIA(10006512).jpg",
+    "num": "10006512"
+  },
+  {
+    "name": "RELE K7N2 V34321 A3710 X-2 P TELEFONIA",
+    "img": "RELE K7N2 V34321 A3710 X-2 P TELEFONIA(10006513).jpg",
+    "num": "10006513"
+  },
+  {
+    "name": "RELE TEMPORIZ RETARDO 0,6 A 6MIN",
+    "img": "RELE TEMPORIZ RETARDO 0,6 A 6MIN(10001629).jpg",
+    "num": "10001629"
+  },
+  {
+    "name": "RESISTOR FILME CARBONO 0,25W 15K OHM",
+    "img": "RESISTOR FILME CARBONO 0,25W 15K OHM(10009394).jpg",
+    "num": "10009394"
+  },
+  {
+    "name": "RESISTOR FILME CARBONO 0,25W 33K OHM",
+    "img": "RESISTOR FILME CARBONO 0,25W 33K OHM(10009398).jpg",
+    "num": "10009398"
+  },
+  {
+    "name": "RESISTOR FILME CARBONO 0,25W 47,0OHM",
+    "img": "RESISTOR FILME CARBONO 0,25W 47,0OHM(10009372).jpg",
+    "num": "10009372"
+  },
+  {
+    "name": "RESISTOR FILME CARBONO 0,25W 47K OHM",
+    "img": "RESISTOR FILME CARBONO 0,25W 47K OHM(10009400).jpg",
+    "num": "10009400"
+  },
+  {
+    "name": "RESISTOR FILME CARBONO 0,25W 560K OHM",
+    "img": "RESISTOR FILME CARBONO 0,25W 560K OHM(10009413).jpg",
+    "num": "10009413"
+  },
+  {
+    "name": "RESISTOR FILME CARBONO 184W 1K OHM",
+    "img": "RESISTOR FILME CARBONO 184W 1K OHM(10009380).jpg",
+    "num": "10009380"
+  },
+  {
+    "name": "RODA FONICA P LEITORA FD",
+    "img": "RODA FONICA P LEITORA FD(10006772).jpg",
+    "num": "10006772"
+  },
+  {
+    "name": "ROLAMENTO AGULAX ESF NKX 35 Z9",
+    "img": "ROLAMENTO AGULAX ESF NKX 35 Z9(10000818).jpg",
+    "num": "10000818"
+  },
+  {
+    "name": "ROLAMENTO AGULHA RNA 4906",
+    "img": "ROLAMENTO AGULHA RNA 4906(10000817).jpg",
+    "num": "10000817"
+  },
+  {
+    "name": "ROLAMENTO RIG ESF 6003-2Z",
+    "img": "ROLAMENTO RIG ESF 6003-2Z(10006847).jpg",
+    "num": "10006847"
+  },
+  {
+    "name": "ROLAMENTO RIG ESF 61900-2Z",
+    "img": "ROLAMENTO RIG ESF 61900-2Z(10006677).jpg",
+    "num": "10006677"
+  },
+  {
+    "name": "ROLAMENTO RIG ESF 698-ZZ",
+    "img": "ROLAMENTO RIG ESF 698-ZZ(10006863).jpg",
+    "num": "10006863"
+  },
+  {
+    "name": "ROLAMENTO RIG ESF SSR 1350 ZZ",
+    "img": "ROLAMENTO RIG ESF SSR 1350 ZZ(10006864).jpg",
+    "num": "10006864"
+  },
+  {
+    "name": "ROLDANA BRACO POS TRIPODE P TORNIQUETE",
+    "img": "ROLDANA BRACO POS TRIPODE P TORNIQUETE(10006708).jpg",
+    "num": "10006708"
+  },
+  {
+    "name": "ROLDANA HMW ABA GRD P LEITOR TORNIQUETE",
+    "img": "ROLDANA HMW ABA GRD P LEITOR TORNIQUETE(10007136).jpg",
+    "num": "10007136"
+  },
+  {
+    "name": "ROLDANA HMW ABA PQN P LEITOR TORNIQUETE",
+    "img": "ROLDANA HMW ABA PQN P LEITOR TORNIQUETE(10006838).jpg",
+    "num": "10006838"
+  },
+  {
+    "name": "ROLETE P LEITORA FD",
+    "img": "ROLETE P LEITORA FD(10006751).jpg",
+    "num": "10006751"
+  },
+  {
+    "name": "ROLETE PRESSAO P MOD LEITOR TORNIQUETE",
+    "img": "ROLETE PRESSAO P MOD LEITOR TORNIQUETE(10006812).jpg",
+    "num": "10006812"
+  },
+  {
+    "name": "SABAO LIQ. DESENG. CESFOLIA CITRIC POWE",
+    "img": "SABAO LIQ. DESENG. CESFOLIA CITRIC POWE(10000071).jpg",
+    "num": "10000071"
+  },
+  {
+    "name": "SACO LIXO USO GERAL",
+    "img": "SACO LIXO USO GERAL(10000176).jpg",
+    "num": "10000176"
+  },
+  {
+    "name": "SERRA MAN HSS 300X13X0,6MM 24DENTES",
+    "img": "SERRA MAN HSS 300X13X0,6MM 24DENTES(10000705).jpg",
+    "num": "10000705"
+  },
+  {
+    "name": "SILICONE PASTA 85G",
+    "img": "SILICONE PASTA 85G(10000080).jpg",
+    "num": "10000080"
+  },
+  {
+    "name": "SOLENOIDE P LEITORA FD TORNIQUETE",
+    "img": "SOLENOIDE P LEITORA FD TORNIQUETE(10006985).jpg",
+    "num": "10006985"
+  },
+  {
+    "name": "SOLENOIDE P RECOLHIMENTO CARTAO DEFET",
+    "img": "SOLENOIDE P RECOLHIMENTO CARTAO DEFET(10007547).jpg",
+    "num": "10007547"
+  },
+  {
+    "name": "SOLENOIDE TRAV TRIPODE P LEITORA FD",
+    "img": "SOLENOIDE TRAV TRIPODE P LEITORA FD(10006741).jpg",
+    "num": "10006741"
+  },
+  {
+    "name": "SOQUETE LAMP PORC 4A-250V E-27",
+    "img": "SOQUETE LAMP PORC 4A-250V E-27(10009340).jpg",
+    "num": "10009340"
+  },
+  {
+    "name": "SOQUETE LAMP TERMOPL 110W-250V E-27",
+    "img": "SOQUETE LAMP TERMOPL 110W-250V E-27(10009342).jpg",
+    "num": "10009342"
+  },
+  {
+    "name": "SUPORTE CONICO P/ BRAÇO TRIPODE",
+    "img": "SUPORTE CONICO P BRACO TRIPODE(10006679).jpg",
+    "num": "10006679"
+  },
+  {
+    "name": "BRAÇO P/TRIPODE (SUPORTE CÔNICO)",
+    "img": "BRACO P TRIPODE DO TORNIQUETE(10006676).jpg",
+    "num": "10006676"
+  },
+  {
+    "name": "SUPORTE FIX P BANDEJA CABOS ARMARIO T",
+    "img": "SUPORTE FIX P BANDEJA CABOS ARMARIO T(10006521).jpg",
+    "num": "10006521"
+  },
+  {
+    "name": "SUPORTE FIX PAR TVDVD",
+    "img": "SUPORTE FIX PAR TVDVD(10006600).jpg",
+    "num": "10006600"
+  },
+  {
+    "name": "SUPORTE P CONECTOR MODULO ECONOMIA",
+    "img": "SUPORTE P CONECTOR MODULO ECONOMIA(10006860).jpg",
+    "num": "10006860"
+  },
+  {
+    "name": "SUPORTE P LEITORA FD 02",
+    "img": "SUPORTE P LEITORA FD 02(10006771).jpg",
+    "num": "10006771"
+  },
+  {
+    "name": "SUPORTE P LEITORA FD 03",
+    "img": "SUPORTE P LEITORA FD 03(10006770).jpg",
+    "num": "10006770"
+  },
+  {
+    "name": "SUPORTE P MOTOR LEITORA FD",
+    "img": "SUPORTE P MOTOR LEITORA FD(10006779).jpg",
+    "num": "10006779"
+  },
+  {
+    "name": "SUPORTE P SOLEN RECOLHIMENTO VALIDADOR",
+    "img": "SUPORTE P SOLEN RECOLHIMENTO VALIDADOR(10012310).jpg",
+    "num": "10012310"
+  },
+  {
+    "name": "SUPORTE PTINTA PROTETORES TELEFONIA ESK",
+    "img": "SUPORTE PTINTA PROTETORES TELEFONIA ESK(10006667).jpg",
+    "num": "10006667"
+  },
+  {
+    "name": "TAMPA CEGA P COFRE TORNIQUETE COMPLETO",
+    "img": "TAMPA CEGA P COFRE TORNIQUETE COMPLETO(10006850).jpg",
+    "num": "10006850"
+  },
+  {
+    "name": "TAMPA CEGA P MODULO LEITOR TORNIQUETE",
+    "img": "TAMPA CEGA P MODULO LEITOR TORNIQUETE(10006851).jpg",
+    "num": "10006851"
+  },
+  {
+    "name": "TERMINAL COMPR ANEL 10,00MM2",
+    "img": "TERMINAL COMPR ANEL 10,00MM2(10004091).jpg",
+    "num": "10004091"
+  },
+  {
+    "name": "TERMINAL COMPR ENGATE FEMEA 0,2-1,5MM2",
+    "img": "TERMINAL COMPR ENGATE FEMEA 0,2-1,5MM2(10007986).jpg",
+    "num": "10007986"
+  },
+  {
+    "name": "TERMINAL COMPR ENGATE FEMEA 1,0-2,6MM2",
+    "img": "TERMINAL COMPR ENGATE FEMEA 1,0-2,6MM2(10007948).jpg",
+    "num": "10007948"
+  },
+  {
+    "name": "TERMINAL COMPR ENGATE FEMEA 1,25-2,00MM2",
+    "img": "TERMINAL COMPR ENGATE FEMEA 1,25-2,00MM2(10007957).jpg",
+    "num": "10007957"
+  },
+  {
+    "name": "TERMINAL COMPR ENGATE FEMEA 1,6-2,6MM2",
+    "img": "TERMINAL COMPR ENGATE FEMEA 1,6-2,6MM2(10007949).jpg",
+    "num": "10007949"
+  },
+  {
+    "name": "TERMINAL COMPR ENGATE FEMEA 16-14 AWG",
+    "img": "TERMINAL COMPR ENGATE FEMEA 16-14 AWG (2)(10001524).jpg",
+    "num": "10001524"
+  },
+  {
+    "name": "TERMINAL COMPR ENGATE FEMEA 2,6-6,5MM2",
+    "img": "TERMINAL COMPR ENGATE FEMEA 2,6-6,5MM2(10007956).jpg",
+    "num": "10007956"
+  },
+  {
+    "name": "TERMINAL COMPR ENGATE MACHO 0,5-1,0MM2",
+    "img": "TERMINAL COMPR ENGATE MACHO 0,5-1,0MM2(10007941).jpg",
+    "num": "10007941"
+  },
+  {
+    "name": "TERMINAL COMPR OLHAL 1,0-2,6MM2",
+    "img": "TERMINAL COMPR OLHAL 1,0-2,6MM2(10007968).jpg",
+    "num": "10007968"
+  },
+  {
+    "name": "TERMINAL COMPR OLHAL 1,5-2,5MM2",
+    "img": "TERMINAL COMPR OLHAL 1,5-2,5MM2(10007954).jpg",
+    "num": "10007954"
+  },
+  {
+    "name": "TERMINAL COMPR OLHAL 1,5-2,5MM2",
+    "img": "TERMINAL COMPR OLHAL 1,5-2,5MM2(10007959).jpg",
+    "num": "10007959"
+  },
+  {
+    "name": "TERMINAL COMPR OLHAL 4,0-6,0MM2",
+    "img": "TERMINAL COMPR OLHAL 4,0-6,0MM2(10007963).jpg",
+    "num": "10007963"
+  },
+  {
+    "name": "TERMINAL COMPR OLHAL 4,0-6,0MM2",
+    "img": "TERMINAL COMPR OLHAL 4,0-6,0MM2(10007971).jpg",
+    "num": "10007971"
+  },
+  {
+    "name": "TERMINAL COMPR OLHAL 4,0-6,0MM2",
+    "img": "TERMINAL COMPR OLHAL 4,0-6,0MM2(10007979).jpg",
+    "num": "10007979"
+  },
+  {
+    "name": "TERMINAL COMPR PINO 0,3-1,4MM2",
+    "img": "TERMINAL COMPR PINO 0,3-1,4MM2(10007962).jpg",
+    "num": "10007962"
+  },
+  {
+    "name": "TERMINAL COMPR PINO 2,62-6,64MM2",
+    "img": "TERMINAL COMPR PINO 2,62-6,64MM2(10007955).jpg",
+    "num": "10007955"
+  },
+  {
+    "name": "TERMINAL COMPR PINO 2,62-6,64MM2",
+    "img": "TERMINAL COMPR PINO 2,62-6,64MM2(10007964).jpg",
+    "num": "10007964"
+  },
+  {
+    "name": "TERMINAL COMPR PINO RETO 1,3-2,6MM2",
+    "img": "TERMINAL COMPR PINO RETO 1,3-2,6MM2(10007961).jpg",
+    "num": "10007961"
+  },
+  {
+    "name": "TERMINAL COMPRESSAO PINO 22-16 AWG",
+    "img": "TERMINAL COMPRESSAO PINO 22-16 AWG(10007974).jpg",
+    "num": "10007974"
+  },
+  {
+    "name": "TERMINAL PINO 1,0-2,5MM2",
+    "img": "TERMINAL PINO 1,0-2,5MM2(10007977).jpg",
+    "num": "10007977"
+  },
+  {
+    "name": "TERMINAL PRE-ISOLADO AZUL",
+    "img": "TERMINAL PRE-ISOLADO AZUL(10007950).jpg",
+    "num": "10007950"
+  },
+  {
+    "name": "TERMINAL PRE-ISOLADO VERMELHO",
+    "img": "TERMINAL PRE-ISOLADO VERMELHO(10007951).jpg",
+    "num": "10007951"
+  },
+  {
+    "name": "TESTE TELEFONIA ESK 400E530751-K2082-X2",
+    "img": "TESTE TELEFONIA ESK 400E530751-K2082-X2(10006673).jpg",
+    "num": "10006673"
+  },
+  {
+    "name": "TOMADA EMBUTIR RETANG 250V 10A 1X 2P",
+    "img": "TOMADA EMBUTIR RETANG 250V 10A 1X 2P (2)(10008099).jpg",
+    "num": "10008099"
+  },
+  {
+    "name": "TOMADA EMBUTIR RETANG 250V 10A 1X 2P",
+    "img": "TOMADA EMBUTIR RETANG 250V 10A 1X 2P (2)(10008101).jpg",
+    "num": "10008101"
+  },
+  {
+    "name": "TOMADA TELEFONE 4PRJ11 EMBUTIDA 1X",
+    "img": "TOMADA TELEFONE 4PRJ11 EMBUTIDA 1X(10012101).jpg",
+    "num": "10012101"
+  },
+  {
+    "name": "TRANSFORMADOR 127220VAC 241S",
+    "img": "TRANSFORMADOR 127220VAC 241S(10006568).jpg",
+    "num": "10006568"
+  },
+  {
+    "name": "TRANSFORMADOR DE COMANDO 6VA",
+    "img": "TRANSFORMADOR DE COMANDO 6VA(10001249).jpg",
+    "num": "10001249"
+  },
+  {
+    "name": "TRANSFORMADOR P TELECOM",
+    "img": "TRANSFORMADOR P TELECOM(10006523).jpg",
+    "num": "10006523"
+  },
+  {
+    "name": "TRANSISTOR ALTA TENS NPN TO-126 KSC2688",
+    "img": "TRANSISTOR ALTA TENS NPN TO-126 KSC2688(10006588).jpg",
+    "num": "10006588"
+  },
+  {
+    "name": "TRANSISTOR POTENCIA BJT NPN TO-3 MJ15003",
+    "img": "TRANSISTOR POTENCIA BJT NPN TO-3 MJ15003(10007308).jpg",
+    "num": "10007308"
+  },
+  {
+    "name": "TRANSISTOR POTENCIA PNP TO-3 MJ15004",
+    "img": "TRANSISTOR POTENCIA PNP TO-3 MJ15004(10007307).jpg",
+    "num": "10007307"
+  },
+  {
+    "name": "TRANSMISSOR OPTICO 4 CANAIS P CFTV",
+    "img": "TRANSMISSOR OPTICO 4 CANAIS P CFTV(10006606).jpg",
+    "num": "10006606"
+  },
+  {
+    "name": "TRAVA P RELE MOTOR",
+    "img": "TRAVA P RELE MOTOR(10006859).jpg",
+    "num": "10006859"
+  },
+  {
+    "name": "TRAVA QUIM ALTA FIX CILIND 50G",
+    "img": "TRAVA QUIM ALTA FIX CILIND 50G(10000082).jpg",
+    "num": "10000082"
+  },
+  {
+    "name": "TRAVA TRIPODE P TORNIQUETE LEITORA FD",
+    "img": "TRAVA TRIPODE P TORNIQUETE LEITORA FD(10006720).jpg",
+    "num": "10006720"
+  },
+  {
+    "name": "TRINCHA PLASTICA 34POL",
+    "img": "TRINCHA PLASTICA 34POL(10000262).jpg",
+    "num": "10000262"
+  },
+  {
+    "name": "VALIDADOR PRODATA V3690",
+    "img": "VALIDADOR PRODATA V3690(30003149).jpg",
+    "num": "30003149"
+  },
+  {
+    "name": "VASELINA LIQUIDA IND 1000ML",
+    "img": "VASELINA LIQUIDA IND 1000ML(10000048).jpg",
+    "num": "10000048"
+  },
+  {
+    "name": "FITA ADES SIMPLES CREPE BR 24MMX 50M.jfif",
+    "img": "(10000256) FITA ADES SIMPLES CREPE BR 24MMX 50M.jfif",
+    "num": "10000256"
+  },
+  {
+    "name": "TRINCHA DUPL CERDA GRIS 2.png",
+    "img": "(10000266) TRINCHA DUPL CERDA GRIS 2.png",
+    "num": "10000266"
+  },
+  {
+    "name": "CABO FLEXIVEL PRETO 2,5MM² 70°C.jfif",
+    "img": "(10007684) CABO FLEXIVEL PRETO 2,5MM² 70°C.jfif",
+    "num": "10007684"
+  },
+  {
+    "name": "TELEFONE C/FIO MESA/PAR",
+    "img": "1000358425.jpg",
+    "num": "10012097"
+  },
+  {
+    "name": "ELETRODUTO CONDULETE TOP  34.png",
+    "img": "(10023128)ELETRODUTO CONDULETE TOP  34.png",
+    "num": "10023128"
+  },
+  {
+    "name": "LED VERDE INCOLOR PICTOG TORNIQUETE.png",
+    "img": "(10024145)LED VERDE INCOLOR PICTOG TORNIQUETE.png",
+    "num": "10024145"
+  },
+  {
+    "name": "ABRACADEIRA CONDULETE TOP  34",
+    "img": "ABRACADEIRA CONDULETE TOP  34(10023107).jpg",
+    "num": "10023107"
+  },
+  {
+    "name": "ABRACADEIRA CONDULETE TOP 1",
+    "img": "ABRACADEIRA CONDULETE TOP 1(10023106).jpg",
+    "num": "10023106"
+  },
+  {
+    "name": "ACIONADOR MANUAL QUEBRE O VIDRO HCP-W",
+    "img": "ACIONADOR MANUAL QUEBRE O VIDRO HCP-W(10024658).jpg",
+    "num": "10024658"
+  },
+  {
+    "name": "ADAPTADOR CONDULETE TOP 1",
+    "img": "ADAPTADOR CONDULETE TOP 1(10023108).jpg",
+    "num": "10023108"
+  },
+  {
+    "name": "ALCOOL ETILICO 92,8% 1Lls",
+    "img": "ALCOOL ETILICO 92,8_ 1Lls(10018545).jpg",
+    "num": "10018545"
+  },
+  {
+    "name": "ANTENA OMNIDIRECIONAL I-ATO1-3802700-02",
+    "img": "ANTENA OMNIDIRECIONAL I-ATO1-3802700-02(10026653).jpg",
+    "num": "10026653"
+  },
+  {
+    "name": "ARRUELA LIS CIRC SAE1020 BICR M8",
+    "img": "ARRUELA LIS CIRC SAE1020 BICR M8(10007117).jpg",
+    "num": "10007117"
+  },
+  {
+    "name": "BASE MONTAGEM P DETECTOR DE INCENDIO",
+    "img": "BASE MONTAGEM P DETECTOR DE INCENDIO(10012780).jpg",
+    "num": "10012780"
+  },
+  {
+    "name": "BATERIA LITIO 3V MOEDA MOD. CR 2032",
+    "img": "BATERIA LITIO 3V MOEDA MOD. CR 2032(10015563).jpg",
+    "num": "10015563"
+  },
+  {
+    "name": "BLOCO AUTO ADESIVO AMARELO 38X50MM",
+    "img": "BLOCO AUTO ADESIVO AMARELO 38X50MM(10017361).jpg",
+    "num": "10017361"
+  },
+  {
+    "name": "BLOCO AUTO ADESIVO AMARELO 76X102MM",
+    "img": "BLOCO AUTO ADESIVO AMARELO 76X102MM(10017362).jpg",
+    "num": "10017362"
+  },
+  {
+    "name": "BLOCO CONTATO BOTAO COMANDO 1NA",
+    "img": "BLOCO CONTATO BOTAO COMANDO 1NA(10026731).jpg",
+    "num": "10026731"
+  },
+  {
+    "name": "BOBINA PAPEL RELOGIO PONTO 55MM",
+    "img": "BOBINA PAPEL RELOGIO PONTO 55MM(10012842).jpg",
+    "num": "10012842"
+  },
+  {
+    "name": "BOBINA PARA COFRES INTELIGENTES",
+    "img": "BOBINA PARA COFRES INTELIGENTES(10023600).jpg",
+    "num": "10023600"
+  },
+  {
+    "name": "BOCAL ACRILICO P VALIDADOR DG2000",
+    "img": "BOCAL ACRILICO P VALIDADOR DG2000(10012875).jpg",
+    "num": "10012875"
+  },
+  {
+    "name": "BOCAL DG2000 PLUS RECOLHEDORA MCA VBU",
+    "img": "BOCAL DG2000 PLUS RECOLHEDORA MCA VBU(10026652).jpg",
+    "num": "10026652"
+  },
+  {
+    "name": "BRACO DO TRIPODE M30 DH E FD",
+    "img": "BRACO DO TRIPODE M30 DH E FD(10012282).jpg",
+    "num": "10012282"
+  },
+  {
+    "name": "CABO COAXIAL FLEXIVEL 12 CELLFLEX",
+    "img": "CABO COAXIAL FLEXIVEL 12 CELLFLEX(10026655).jpg",
+    "num": "10026655"
+  },
+  {
+    "name": "CABO COAXIAL FLEXIVEL 78 CELLFLEX",
+    "img": "CABO COAXIAL FLEXIVEL 78 CELLFLEX(10026656).jpg",
+    "num": "10026656"
+  },
+  {
+    "name": "CABO DO RECOLHIMENTO CN16 DO VBU",
+    "img": "CABO DO RECOLHIMENTO CN16 DO VBU(10026643).jpg",
+    "num": "10026643"
+  },
+  {
+    "name": "CABO FLEXIVEL 2,5MM2 750V AZUL",
+    "img": "CABO FLEXIVEL 2,5MM2 750V AZUL(10023775).jpg",
+    "num": "10023775"
+  },
+  {
+    "name": "CABO FLEXIVEL 2,5MM2 750V VERDE",
+    "img": "CABO FLEXIVEL 2,5MM2 750V VERDE(10023776).jpg",
+    "num": "10023776"
+  },
+  {
+    "name": "CABO FLEXIVEL 4MM2 750V AZUL",
+    "img": "CABO FLEXIVEL 4MM2 750V AZUL(10023778).jpg",
+    "num": "10023778"
+  },
+  {
+    "name": "CABO FLEXIVEL 4MM2 750V VERDE",
+    "img": "CABO FLEXIVEL 4MM2 750V VERDE(10023780).jpg",
+    "num": "10023780"
+  },
+  {
+    "name": "CABO FLEXIVEL 4MM2 750V VERMELHO",
+    "img": "CABO FLEXIVEL 4MM2 750V VERMELHO(10023781).jpg",
+    "num": "10023781"
+  },
+  {
+    "name": "CABO FLEXIVEL 6MM2 750V AZUL",
+    "img": "CABO FLEXIVEL 6MM2 750V AZUL(10023782).jpg",
+    "num": "10023782"
+  },
+  {
+    "name": "CABO FLEXIVEL 6MM2 750V VERDE",
+    "img": "CABO FLEXIVEL 6MM2 750V VERDE(10023783).jpg",
+    "num": "10023783"
+  },
+  {
+    "name": "CABO PATCHCORD FUTP 1,5M CZ CAT6",
+    "img": "CABO PATCHCORD FUTP 1,5M CZ CAT6(10015558).jpg",
+    "num": "10015558"
+  },
+  {
+    "name": "CADEADO HASTE LONGA CR 3070 MM",
+    "img": "CADEADO HASTE LONGA CR 3070 MM(10017364).jpg",
+    "num": "10017364"
+  },
+  {
+    "name": "CADERNO UNIVERS CAPA FLEXIVEL 200 FLS",
+    "img": "CADERNO UNIVERS CAPA FLEXIVEL 200 FLS(10017366).jpg",
+    "num": "10017366"
+  },
+  {
+    "name": "CUBA CALOTA USINADA",
+    "img": "CALOTA CA 3BR USINADA(10021301).jpg",
+    "num": "10021301"
+  },
+  {
+    "name": "HASTE DO TRIPODE (CUBA CALOTA USINADA)",
+    "img": "CJ. BRACO INOX GAB. METRO RIO (MOD. 2013(10025306).jpg",
+    "num": "10025306"
+  },
+  {
+    "name": "CAPA DE PROTECAO DO CONECTOR RJ45 VBU",
+    "img": "CAPA DE PROTECAO DO CONECTOR RJ45 VBU(10026645).jpg",
+    "num": "10026645"
+  },
+  {
+    "name": "CAPACITOR ELETROLITICO 6800UF±20% 6,3VDC",
+    "img": "CAPACITOR ELETROLITICO 6800UF±20_ 6,3VDC(10023996).jpg",
+    "num": "10023996"
+  },
+  {
+    "name": "CARENAGEM P VALIDADORES 315X196MM FIBRA",
+    "img": "CARENAGEM P VALIDADORES 315X196MM FIBRA(10024558).jpg",
+    "num": "10024558"
+  },
+  {
+    "name": "CHIP SAM DE RESSARCIMENTO P PDV DG820-C",
+    "img": "CHIP SAM DE RESSARCIMENTO P PDV DG820-C(10015680).jpg",
+    "num": "10015680"
+  },
+  {
+    "name": "CHIP SAM DE REVALIDACAO",
+    "img": "CHIP SAM DE REVALIDACAO(10012880).jpg",
+    "num": "10012880"
+  },
+  {
+    "name": "CHIP SAM DE VALIDACAO PARA DG710",
+    "img": "CHIP SAM DE VALIDACAO PARA DG710(10012884).jpg",
+    "num": "10012884"
+  },
+  {
+    "name": "CHIP SAM P PDV MODELO DG820-C",
+    "img": "CHIP SAM P PDV MODELO DG820-C(10012878).jpg",
+    "num": "10012878"
+  },
+  {
+    "name": "CHIP SAM P VALIDADOR DIGICON DG2000",
+    "img": "CHIP SAM P VALIDADOR DIGICON DG2000(10012877).jpg",
+    "num": "10012877"
+  },
+  {
+    "name": "CHUMBADOR UNC 38 X 3POL",
+    "img": "CHUMBADOR UNC 38 X 3POL(10012712).jpg",
+    "num": "10012712"
+  },
+  {
+    "name": "CIRCUITO INTEGRADO MOSFET  TOP-227",
+    "img": "CIRCUITO INTEGRADO MOSFET  TOP-227(10015608).jpg",
+    "num": "10015608"
+  },
+  {
+    "name": "CJ. MONTADO CLICO MECANISMO FMEC-105 - T",
+    "img": "CJ. MONTADO CLICO MECANISMO FMEC-105 - T(10020087).jpg",
+    "num": "10020087"
+  },
+  {
+    "name": "CONECTOR FEMEA GIGALAN",
+    "img": "CONECTOR FEMEA GIGALAN(10015557).jpg",
+    "num": "10015557"
+  },
+  {
+    "name": "CONECTOR OMNI FIT DE 12 FEMEA",
+    "img": "CONECTOR OMNI FIT DE 12 FEMEA(10026658).jpg",
+    "num": "10026658"
+  },
+  {
+    "name": "CONECTOR OMNI FIT DE 12 MACHO",
+    "img": "CONECTOR OMNI FIT DE 12 MACHO(10026659).jpg",
+    "num": "10026659"
+  },
+  {
+    "name": "CONECTOR PARA CABO COAXIAL N-TER-01",
+    "img": "CONECTOR PARA CABO COAXIAL N-TER-01(10026657).jpg",
+    "num": "10026657"
+  },
+  {
+    "name": "CONECTOR RAPID FIT DE 78 FEMEA",
+    "img": "CONECTOR RAPID FIT DE 78 FEMEA(10026661).jpg",
+    "num": "10026661"
+  },
+  {
+    "name": "CONECTOR RJ45 LCS2 CAT6A FEMEA UTP",
+    "img": "CONECTOR RJ45 LCS2 CAT6A FEMEA UTP(10026690).jpg",
+    "num": "10026690"
+  },
+  {
+    "name": "CONECTOR TERMINAL 16MM2 BRACADEIRA",
+    "img": "CONECTOR TERMINAL 16MM2 BRACADEIRA (2)(10022676).jpg",
+    "num": "10022676"
+  },
+  {
+    "name": "CONJ EMENDA OPTICA CAPACID 12-96 FIBRAS",
+    "img": "CONJ EMENDA OPTICA CAPACID 12-96 FIBRAS(10012846).jpg",
+    "num": "10012846"
+  },
+  {
+    "name": "CONJUNTO COLETOR DE RECOLHIMENTO DO VBU",
+    "img": "CONJUNTO COLETOR DE RECOLHIMENTO DO VBU(10026644).jpg",
+    "num": "10026644"
+  },
+  {
+    "name": "CONJUNTO DE ABAS CINZA WIDE FLAP",
+    "img": "CONJUNTO DE ABAS CINZA WIDE FLAP(10023833).jpg",
+    "num": "10023833"
+  },
+  {
+    "name": "CONJUNTO DE FIXACAO DA PLACA DIREITA VBU",
+    "img": "CONJUNTO DE FIXACAO DA PLACA DIREITA VBU(10026650).jpg",
+    "num": "10026650"
+  },
+  {
+    "name": "CONJUNTO DE FIXACAO PLACA ESQUERDA VBU",
+    "img": "CONJUNTO DE FIXACAO PLACA ESQUERDA VBU(10026651).jpg",
+    "num": "10026651"
+  },
+  {
+    "name": "CONJUNTO DE LEITOR E CABO DO VBU",
+    "img": "CONJUNTO DE LEITOR E CABO DO VBU(10026648).jpg",
+    "num": "10026648"
+  },
+  {
+    "name": "CONJUNTO DE LEITOR QR CODE E CABO DO VBU",
+    "img": "CONJUNTO DE LEITOR QR CODE E CABO DO VBU(10026649).jpg",
+    "num": "10026649"
+  },
+  {
+    "name": "CONJUNTO PICTOGRAMA ENTRADA GAB. AL1",
+    "img": "CONJUNTO PICTOGRAMA ENTRADA GAB. AL1(10022654).jpg",
+    "num": "10022654"
+  },
+  {
+    "name": "CONJUNTO PORTA COM PICTOGRAMA GABINETE",
+    "img": "CONJUNTO PORTA COM PICTOGRAMA GABINETE(10012789).jpg",
+    "num": "10012789"
+  },
+  {
+    "name": "CONJUNTO TAMPA GABINETE AL-1",
+    "img": "CONJUNTO TAMPA GABINETE AL-1(10012790).jpg",
+    "num": "10012790"
+  },
+  {
+    "name": "CONTATOR 3P AC-3 32A 2NA+2NF 110VCA",
+    "img": "CONTATOR 3P AC-3 32A 2NA+2NF 110VCA(10008325).jpg",
+    "num": "10008325"
+  },
+  {
+    "name": "CONVERSOR DE SINAL COAXIAL PARA UTP",
+    "img": "CONVERSOR DE SINAL COAXIAL PARA UTP(10026654).jpg",
+    "num": "10026654"
+  },
+  {
+    "name": "CONVERSOR M MONO FT-802S15 SC 5VDC",
+    "img": "CONVERSOR M MONO FT-802S15 SC 5VDC(10023673).jpg",
+    "num": "10023673"
+  },
+  {
+    "name": "CONVERSOR MOXA",
+    "img": "CONVERSOR MOXA(10026249).jpg",
+    "num": "10026249"
+  },
+  {
+    "name": "CONVERSOR PLANET FTP-802S15 48VDC",
+    "img": "CONVERSOR PLANET FTP-802S15 48VDC(10023672).jpg",
+    "num": "10023672"
+  },
+  {
+    "name": "CONVERSOR TELEFONIA ANALOGICA VG224",
+    "img": "CONVERSOR TELEFONIA ANALOGICA VG224(10015104).jpg",
+    "num": "10015104"
+  },
+  {
+    "name": "CURVA ELETRODUTO CONDULETE TOP 34 90°",
+    "img": "CURVA ELETRODUTO CONDULETE TOP 34 90°(10023122).jpg",
+    "num": "10023122"
+  },
+  {
+    "name": "DESENGRAXANTE SOLUVEL BIO LIQUIDO 5L",
+    "img": "DESENGRAXANTE SOLUVEL BIO LIQUIDO 5L(10018585).jpg",
+    "num": "10018585"
+  },
+  {
+    "name": "DETECTOR INCENDIO INTELIGENTE FP-11",
+    "img": "DETECTOR INCENDIO INTELIGENTE FP-11(10012775).jpg",
+    "num": "10012775"
+  },
+  {
+    "name": "DISJUNTOR SIEMENS 220VCA 1P 10A 5SY4",
+    "img": "DISJUNTOR SIEMENS 220VCA 1P 10A 5SY4(10015883).jpg",
+    "num": "10015883"
+  },
+  {
+    "name": "DISJUNTOR TERMOMAGN 3P 380VCA 32A",
+    "img": "DISJUNTOR TERMOMAGN 3P 380VCA 32A(10008200).jpg",
+    "num": "10008200"
+  },
+  {
+    "name": "DISJUNTOR TERMOMAGN 3P 440VCA 40A",
+    "img": "DISJUNTOR TERMOMAGN 3P 440VCA 40A(10008204).jpg",
+    "num": "10008204"
+  },
+  {
+    "name": "DISJUNTOR TERMOMAGNETICO 2P 380VCA 20A",
+    "img": "DISJUNTOR TERMOMAGNETICO 2P 380VCA 20A(10008130).jpg",
+    "num": "10008130"
+  },
+  {
+    "name": "DISJUNTOR TERMOMAGNETICO 3P 690VCA 40A",
+    "img": "DISJUNTOR TERMOMAGNETICO 3P 690VCA 40A(10013303).jpg",
+    "num": "10013303"
+  },
+  {
+    "name": "DISPLAY DE INTERFACE LED 4.3 DO VBU",
+    "img": "DISPLAY DE INTERFACE LED 4.3 DO VBU(10026646).jpg",
+    "num": "10026646"
+  },
+  {
+    "name": "DIVISOR DE SINAL SPLITERS DUAS VIAS PDSE",
+    "img": "DIVISOR DE SINAL SPLITERS DUAS VIAS PDSE(10026663).jpg",
+    "num": "10026663"
+  },
+  {
+    "name": "DIVISOR DE SINAL SPLITERS TRES VIAS PDSC",
+    "img": "DIVISOR DE SINAL SPLITERS TRES VIAS PDSC(10026662).jpg",
+    "num": "10026662"
+  },
+  {
+    "name": "ELETRODUTO FLEXIVEL TIPO SEALTUBO 3x4",
+    "img": "ELETRODUTO FLEXIVEL TIPO SEALTUBO 3x4(10012481).jpg",
+    "num": "10012481"
+  },
+  {
+    "name": "EMENDA RJ-45 INDUSTRIAL BLIND 1,5MM",
+    "img": "EMENDA RJ-45 INDUSTRIAL BLIND 1,5MM(10015554).jpg",
+    "num": "10015554"
+  },
+  {
+    "name": "ESTANHO SOLDA FIO 6040 1,50MM 500G",
+    "img": "ESTANHO SOLDA FIO 6040 1,50MM 500G(10016102).jpg",
+    "num": "10016102"
+  },
+  {
+    "name": "ETIQUETA IDENT RETIRADOS EM CORRETIVA",
+    "img": "ETIQUETA IDENT RETIRADOS EM CORRETIVA(10012435).jpg",
+    "num": "10012435"
+  },
+  {
+    "name": "EXTENSOR AVX-VGA-TP-SRX",
+    "img": "EXTENSOR AVX-VGA-TP-SRX(10019673).jpg",
+    "num": "10019673"
+  },
+  {
+    "name": "EXTENSOR VGA AVX-VGA-TP-TX-8",
+    "img": "EXTENSOR VGA AVX-VGA-TP-TX-8(10019672).jpg",
+    "num": "10019672"
+  },
+  {
+    "name": "EXTENSOR VGA REMOTO B PINDIC DESTINO",
+    "img": "EXTENSOR VGA REMOTO B PINDIC DESTINO(10012748).jpg",
+    "num": "10012748"
+  },
+  {
+    "name": "EXTRATOR GRAMPO ESPATULA ZINCADO CA-111",
+    "img": "EXTRATOR GRAMPO ESPATULA ZINCADO CA-111(10017381).jpg",
+    "num": "10017381"
+  },
+  {
+    "name": "FITA ADES DPL FACE ESP CZ 2,0X12MMX20M",
+    "img": "FITA ADES DPL FACE ESP CZ 2,0X12MMX20M(10000253).jpg",
+    "num": "10000253"
+  },
+  {
+    "name": "FITA ARMAZ DADOS DDS-5 170,0M 72GB",
+    "img": "FITA ARMAZ DADOS DDS-5 170,0M 72GB(10012866).jpg",
+    "num": "10012866"
+  },
+  {
+    "name": "FLAP STANDARD",
+    "img": "FLAP STANDARD(10026442).jpg",
+    "num": "10026442"
+  },
+  {
+    "name": "FONTE ALIM CHAV MONOF 110220VCA 12V 5A",
+    "img": "FONTE ALIM CHAV MONOF 110220VCA 12V 5A(10012341).jpg",
+    "num": "10012341"
+  },
+  {
+    "name": "FONTE ALIM CHAV MONOF 110220VCA 24V 3A",
+    "img": "FONTE ALIM CHAV MONOF 110220VCA 24V 3A(10012340).jpg",
+    "num": "10012340"
+  },
+  {
+    "name": "FONTE ALIMENTAC TDK LAMBDA DRF 480-24-1",
+    "img": "FONTE ALIMENTAC TDK LAMBDA DRF 480-24-1(10023834).jpg",
+    "num": "10023834"
+  },
+  {
+    "name": "FONTE ALIMENTACAO AUDIO PSW 12V12A",
+    "img": "FONTE ALIMENTACAO AUDIO PSW 12V12A(10020489).jpg",
+    "num": "10020489"
+  },
+  {
+    "name": "FONTE DE ALIMENTACAO 3.3V 10 CANAIS CFTV",
+    "img": "FONTE DE ALIMENTACAO 3.3V 10 CANAIS CFTV(10023993).jpg",
+    "num": "10023993"
+  },
+  {
+    "name": "FUSIVEL CART 22X58MM RPC 20A CPERCUTOR",
+    "img": "FUSIVEL CART 22X58MM RPC 20A CPERCUTOR(10015264).jpg",
+    "num": "10015264"
+  },
+  {
+    "name": "FUSIVEL CART 22X58MM RPC 40A CPERCUTOR",
+    "img": "FUSIVEL CART 22X58MM RPC 40A CPERCUTOR(10015265).jpg",
+    "num": "10015265"
+  },
+  {
+    "name": "GABINETE DE CAMERA SISTEMA CFTV ESTACOES",
+    "img": "GABINETE DE CAMERA SISTEMA CFTV ESTACOES(10024010).jpg",
+    "num": "10024010"
+  },
+  {
+    "name": "GBIC SFP 1GB LH CISCO",
+    "img": "GBIC SFP 1GB LH CISCO(10013238).jpg",
+    "num": "10013238"
+  },
+  {
+    "name": "GBIC SFP 1GB SX CISCO",
+    "img": "GBIC SFP 1GB SX CISCO(10013237).jpg",
+    "num": "10013237"
+  },
+  {
+    "name": "HEAD FONE HEADSET 2 TONS",
+    "img": "HEAD FONE HEADSET 2 TONS(10012677).jpg",
+    "num": "10012677"
+  },
+  {
+    "name": "KIT AMORTECEDOR P TORNIQUETE WOLPAC",
+    "img": "KIT AMORTECEDOR P TORNIQUETE WOLPAC(10022660).jpg",
+    "num": "10022660"
+  },
+  {
+    "name": "KIT EXTENSOR CATVGA LOCALREMOTE B",
+    "img": "KIT EXTENSOR CATVGA LOCALREMOTE B(10012751).jpg",
+    "num": "10012751"
+  },
+  {
+    "name": "LAMPADA FLUORESC TUBULAR LUZ DIA 28W",
+    "img": "LAMPADA FLUORESC TUBULAR LUZ DIA 28W(10012701).jpg",
+    "num": "10012701"
+  },
+  {
+    "name": "LAMPADA LED TUBULAR T8 18-20W BIVOLT",
+    "img": "LAMPADA LED TUBULAR T8 18-20W BIVOLT(10023289).jpg",
+    "num": "10023289"
+  },
+  {
+    "name": "LAMPADA TUBULAR LED 9W T8",
+    "img": "LAMPADA TUBULAR LED 9W T8(10022302).jpg",
+    "num": "10022302"
+  },
+  {
+    "name": "LANTERNA MODELO LED CREE POLICE",
+    "img": "LANTERNA MODELO LED CREE POLICE(10026797).jpg",
+    "num": "10026797"
+  },
+  {
+    "name": "LED VERMELHO INCOLOR PICTOG TORNIQUETE",
+    "img": "LED VERMELHO INCOLOR PICTOG TORNIQUETE(10024146).jpg",
+    "num": "10024146"
+  },
+  {
+    "name": "LIMPA CONTATO ELETRICO SOLVENTE 300 ML",
+    "img": "LIMPA CONTATO ELETRICO SOLVENTE 300 ML(10018556).jpg",
+    "num": "10018556"
+  },
+  {
+    "name": "LIMPADOR CONTATO ELETRICO NAO INFLAMAVEL",
+    "img": "LIMPADOR CONTATO ELETRICO NAO INFLAMAVEL(10022360).jpg",
+    "num": "10022360"
+  },
+  {
+    "name": "LIMPADOR PLCD E PLASMA 60ML",
+    "img": "LIMPADOR PLCD E PLASMA 60ML(10012697).jpg",
+    "num": "10012697"
+  },
+  {
+    "name": "LUVA ELETRODUTO CONDULETE TOP 1",
+    "img": "LUVA ELETRODUTO CONDULETE TOP 1(10023132).jpg",
+    "num": "10023132"
+  },
+  {
+    "name": "LUVA ELETRODUTO CONDULETE TOP 34",
+    "img": "LUVA ELETRODUTO CONDULETE TOP 34(10023133).jpg",
+    "num": "10023133"
+  },
+  {
+    "name": "MANCAL ROLMAX COM ROLAMENTO",
+    "img": "MANCAL ROLMAX COM ROLAMENTO(10022737).jpg",
+    "num": "10022737"
+  },
+  {
+    "name": "MEMBRANA TECLADO",
+    "img": "MEMBRANA TECLADO(10012674).jpg",
+    "num": "10012674"
+  },
+  {
+    "name": "MICROSWITCH 250V 16A BILHETAGEM",
+    "img": "MICROSWITCH 250V 16A BILHETAGEM(10020086).jpg",
+    "num": "10020086"
+  },
+  {
+    "name": "MODULO BLINDADO JACK  RJ-45",
+    "img": "MODULO BLINDADO JACK  RJ-45(10015560).jpg",
+    "num": "10015560"
+  },
+  {
+    "name": "MODULO CHOPPER MOTOR TORNIQUETE FLAP",
+    "img": "MODULO CHOPPER MOTOR TORNIQUETE FLAP(10024556).jpg",
+    "num": "10024556"
+  },
+  {
+    "name": "MODULO INTERCOM P SUPERVISAOBILHETERIA",
+    "img": "MODULO INTERCOM P SUPERVISAOBILHETERIA(30001134).jpg",
+    "num": "30001134"
+  },
+  {
+    "name": "MODULO PRE-AMPLIFICADOR AP-PRE 05",
+    "img": "MODULO PRE-AMPLIFICADOR AP-PRE 05(30002793).jpg",
+    "num": "30002793"
+  },
+  {
+    "name": "MODULO PRE-AMPLIFICADOR AP-PRE 05",
+    "img": "MODULO PRE-AMPLIFICADOR AP-PRE 05(30002865).jpg",
+    "num": "30002865"
+  },
+  {
+    "name": "MODULO PRINCIPAL MBB-2 DECTEC INCENDIO",
+    "img": "MODULO PRINCIPAL MBB-2 DECTEC INCENDIO(10012776).jpg",
+    "num": "10012776"
+  },
+  {
+    "name": "MODULO RECONHECIMENTO P BILHETERIA",
+    "img": "MODULO RECONHECIMENTO P BILHETERIA(30001135).jpg",
+    "num": "30001135"
+  },
+  {
+    "name": "MODULO TOMADA VERMELHA 2P+T 20A 250V",
+    "img": "MODULO TOMADA VERMELHA 2P+T 20A 250V(10026104).jpg",
+    "num": "10026104"
+  },
+  {
+    "name": "MOLA DO TRIQUE TORNIQUETE DUPLO WOLPAC",
+    "img": "MOLA DO TRIQUE TORNIQUETE DUPLO WOLPAC(10022736).jpg",
+    "num": "10022736"
+  },
+  {
+    "name": "MOLA HELICOIDAL PALAVANCA SUPINF BH36",
+    "img": "MOLA HELICOIDAL PALAVANCA SUPINF BH36(10006852).jpg",
+    "num": "10006852"
+  },
+  {
+    "name": "MOTOR CONTROLADOR FLAP 24VDC",
+    "img": "MOTOR CONTROLADOR FLAP 24VDC(10026264).jpg",
+    "num": "10026264"
+  },
+  {
+    "name": "OBS conector molex tipo kk 4 pinos",
+    "img": "OBS conector molex tipo kk 4 pinos(10026641).jpg",
+    "num": "10026641"
+  },
+  {
+    "name": "OLEO DESENGRIPANTE AEROSAL 300ML",
+    "img": "OLEO DESENGRIPANTE AEROSAL 300ML(10018522).jpg",
+    "num": "10018522"
+  },
+  {
+    "name": "PAINEL COMANDO P CONTROLE CFTV",
+    "img": "PAINEL COMANDO P CONTROLE CFTV(30001128).jpg",
+    "num": "30001128"
+  },
+  {
+    "name": "PAINEL DIGICON",
+    "img": "PAINEL DIGICON(30003146).jpg",
+    "num": "30003146"
+  },
+  {
+    "name": "PAINEL INTERCONEXAO P COFRE TORNIQUETE",
+    "img": "PAINEL INTERCONEXAO P COFRE TORNIQUETE(10006742).jpg",
+    "num": "10006742"
+  },
+  {
+    "name": "PARAFUSO ATARR AISI304 4,8X 32MM",
+    "img": "PARAFUSO ATARR AISI304 4,8X 32MM (2)(10012709).jpg",
+    "num": "10012709"
+  },
+  {
+    "name": "PARAFUSO ATARR SAE1020 4,8X 45,0MM",
+    "img": "PARAFUSO ATARR SAE1020 4,8X 45,0MM(10012558).jpg",
+    "num": "10012558"
+  },
+  {
+    "name": "PARAFUSO CAB SEXTAVADA SAE1020 316” X 1",
+    "img": "PARAFUSO CAB SEXTAVADA SAE1020 316” X 1(10000411).jpg",
+    "num": "10000411"
+  },
+  {
+    "name": "PATCH CORD CAT6A LCS UTP 3M",
+    "img": "PATCH CORD CAT6A LCS UTP 3M(10026691).jpg",
+    "num": "10026691"
+  },
+  {
+    "name": "PLACA CHAVEAMENTO CONTROLE CCOMA",
+    "img": "PLACA CHAVEAMENTO CONTROLE CCOMA(10012883).jpg",
+    "num": "10012883"
+  },
+  {
+    "name": "PLACA CONTROLADORA FC-100 PROGRAMAVEL",
+    "img": "PLACA CONTROLADORA FC-100 PROGRAMAVEL (2)(10020725).jpg",
+    "num": "10020725"
+  },
+  {
+    "name": "PLACA CPU VALIDADOR VBU CP1714 VMR",
+    "img": "PLACA CPU VALIDADOR VBU CP1714 VMR(10026619).jpg",
+    "num": "10026619"
+  },
+  {
+    "name": "PLACA FC-150",
+    "img": "PLACA FC-150(10019010).jpg",
+    "num": "10019010"
+  },
+  {
+    "name": "PLACA INTERTRAVAMENTOLIBERACAO ROLETA",
+    "img": "PLACA INTERTRAVAMENTOLIBERACAO ROLETA(10012176).jpg",
+    "num": "10012176"
+  },
+  {
+    "name": "REATOR LAMP. FLUOR. 127220 V 2 x 28W",
+    "img": "REATOR LAMP. FLUOR. 127220 V 2 x 28W(10012698).jpg",
+    "num": "10012698"
+  },
+  {
+    "name": "REFIL GEL SANITIZANTE PURELL NXT GO2770",
+    "img": "REFIL GEL SANITIZANTE PURELL NXT GO2770(10018623).jpg",
+    "num": "10018623"
+  },
+  {
+    "name": "REFLETOR LED 200W 100240V 6000K",
+    "img": "REFLETOR LED 200W 100240V 6000K(10026100).jpg",
+    "num": "10026100"
+  },
+  {
+    "name": "REFLETOR LED 50W 100240V 6000K",
+    "img": "REFLETOR LED 50W 100240V 6000K(10026101).jpg",
+    "num": "10026101"
+  },
+  {
+    "name": "RESISTOR FILME CARBONO 0,25W 33K OHM",
+    "img": "RESISTOR FILME CARBONO 0,25W 33K OHM(10015263).jpg",
+    "num": "10015263"
+  },
+  {
+    "name": "RESISTOR FIO NICR 5W 10,0OHM +-5%",
+    "img": "RESISTOR FIO NICR 5W 10,0OHM +-5_(10010201).jpg",
+    "num": "10010201"
+  },
+  {
+    "name": "SENSOR FLAP",
+    "img": "SENSOR FLAP(10026260).jpg",
+    "num": "10026260"
+  },
+  {
+    "name": "SILICONE PASTA 85G",
+    "img": "SILICONE PASTA 85G(10023665).jpg",
+    "num": "10023665"
+  },
+  {
+    "name": "SOLENOIDE DO CONJUNTO ELETRONICO DO VBU",
+    "img": "SOLENOIDE DO CONJUNTO ELETRONICO DO VBU(10026640).jpg",
+    "num": "10026640"
+  },
+  {
+    "name": "SOLENOIDE SL040 127VAC 25% CURSO 10MM",
+    "img": "SOLENOIDE SL040 127VAC 25_ CURSO 10MM(10016126).jpg",
+    "num": "10016126"
+  },
+  {
+    "name": "SOLENOIDE SL040 24V PARA TORNIQUETE",
+    "img": "SOLENOIDE SL040 24V PARA TORNIQUETE(10020150).jpg",
+    "num": "10020150"
+  },
+  {
+    "name": "SOQUETE G5 PARA LAMPADA T5",
+    "img": "SOQUETE G5 PARA LAMPADA T5(10023140).jpg",
+    "num": "10023140"
+  },
+  {
+    "name": "SUPORTE FIM DE CURSO CLICO TORNIQUETE",
+    "img": "SUPORTE FIM DE CURSO CLICO TORNIQUETE(10020085).jpg",
+    "num": "10020085"
+  },
+  {
+    "name": "SUPORTE PARA PAINEL DE COMANDO DIGICON",
+    "img": "SUPORTE PARA PAINEL DE COMANDO DIGICON(10021390).jpg",
+    "num": "10021390"
+  },
+  {
+    "name": "TAMPA CEGA CONDULETE TOP",
+    "img": "TAMPA CEGA CONDULETE TOP(10023144).jpg",
+    "num": "10023144"
+  },
+  {
+    "name": "TAMPA CONDULETE 12 E 34",
+    "img": "TAMPA CONDULETE 12 E 34(10026103).jpg",
+    "num": "10026103"
+  },
+  {
+    "name": "TAMPA CONDULETE TOP 2 INTERRUPTORES",
+    "img": "TAMPA CONDULETE TOP 2 INTERRUPTORES(10023143).jpg",
+    "num": "10023143"
+  },
+  {
+    "name": "TAMPA TOMADA REDONDA CONDULETE TOP",
+    "img": "TAMPA TOMADA REDONDA CONDULETE TOP(10023145).jpg",
+    "num": "10023145"
+  },
+  {
+    "name": "TERMINAL COMPR ENGATE FEMEA 16-14AWG",
+    "img": "TERMINAL COMPR ENGATE FEMEA 16-14AWG(10012342).jpg",
+    "num": "10012342"
+  },
+  {
+    "name": "TERMINAL COMPR OLHAL 0,2-1,6MM2",
+    "img": "TERMINAL COMPR OLHAL 0,2-1,6MM2(10007953).jpg",
+    "num": "10007953"
+  },
+  {
+    "name": "TERMINAL COMPRESSAO 1F 2C 16MM2 M6",
+    "img": "TERMINAL COMPRESSAO 1F 2C 16MM2 M6(10022322).jpg",
+    "num": "10022322"
+  },
+  {
+    "name": "TERMINAL RECARGA SALDO",
+    "img": "TERMINAL RECARGA SALDO(30003147).jpg",
+    "num": "30003147"
+  },
+  {
+    "name": "TOMADA DE EMBUTIR 2P+T 10A 250V",
+    "img": "TOMADA DE EMBUTIR 2P+T 10A 250V(10023146).jpg",
+    "num": "10023146"
+  },
+  {
+    "name": "TOMADA DE EMBUTIR 2P+T 20A 250V",
+    "img": "TOMADA DE EMBUTIR 2P+T 20A 250V(10023147).jpg",
+    "num": "10023147"
+  },
+  {
+    "name": "TREVO GUIA PMECANISMO COM AMORTECIMENTO",
+    "img": "TREVO GUIA PMECANISMO COM AMORTECIMENTO(10016562).jpg",
+    "num": "10016562"
+  },
+  {
+    "name": "TUBO ESPIRAL PARA PROTECAO CABO HWPP20",
+    "img": "TUBO ESPIRAL PARA PROTECAO CABO HWPP20(10012405).jpg",
+    "num": "10012405"
+  },
+  {
+    "name": "U.R-AMPLIFICADOR 240W 20OHMS 110220VAC",
+    "img": "U.R-AMPLIFICADOR 240W 20OHMS 110220VAC(30000855).jpg",
+    "num": "30000855"
+  },
+  {
+    "name": "U.R-AMPLIFICADOR POT",
+    "img": "U.R-AMPLIFICADOR POT(30000638).jpg",
+    "num": "30000638"
+  },
+  {
+    "name": "U.R-CAMERA CFTV COL 13 CCD 12VCC24VCA",
+    "img": "U.R-CAMERA CFTV COL 13 CCD 12VCC24VCA(30000637).jpg",
+    "num": "30000637"
+  },
+  {
+    "name": "U.R-CAMERA CFTV COL 14 CCD 24VCA",
+    "img": "U.R-CAMERA CFTV COL 14 CCD 24VCA(30000477).jpg",
+    "num": "30000477"
+  },
+  {
+    "name": "U.R-CARTAO CI CONTROL TONALIDADE GR5020",
+    "img": "U.R-CARTAO CI CONTROL TONALIDADE GR5020(30000514).jpg",
+    "num": "30000514"
+  },
+  {
+    "name": "U.R-CARTAO CI P MODULO COMANDO GR5076",
+    "img": "U.R-CARTAO CI P MODULO COMANDO GR5076(30000494).jpg",
+    "num": "30000494"
+  },
+  {
+    "name": "U.R-CARTAO CI RELE MOD LEITOR TORNIQUETE",
+    "img": "U.R-CARTAO CI RELE MOD LEITOR TORNIQUETE(30000523).jpg",
+    "num": "30000523"
+  },
+  {
+    "name": "U.R-FONTE CHAVEADA FC-100  24 VCC",
+    "img": "U.R-FONTE CHAVEADA FC-100  24 VCC.jpg",
+    "num": "30003692"
+  },
+  {
+    "name": "U.R-MODULO AMPLIFICADOR 200W",
+    "img": "U.R-MODULO AMPLIFICADOR 200W(30000499).jpg",
+    "num": "30000499"
+  },
+  {
+    "name": "U.R-MODULO INTERCOMUNICADOR",
+    "img": "U.R-MODULO INTERCOMUNICADOR(30000511).jpg",
+    "num": "30000511"
+  },
+  {
+    "name": "U.R-MODULO INTERLIGACAO SINAIS AUDIO",
+    "img": "U.R-MODULO INTERLIGACAO SINAIS AUDIO(30000497).jpg",
+    "num": "30000497"
+  },
+  {
+    "name": "U.R-MODULO LOGICA P SIST SEGURANCA",
+    "img": "U.R-MODULO LOGICA P SIST SEGURANCA(30000512).jpg",
+    "num": "30000512"
+  },
+  {
+    "name": "U.R-MODULO MISTURADOR 4 CANAIS NIVEL VU",
+    "img": "U.R-MODULO MISTURADOR 4 CANAIS NIVEL VU(30000501).jpg",
+    "num": "30000501"
+  },
+  {
+    "name": "U.R-MODULO PRE-AMPLIFICADOR",
+    "img": "U.R-MODULO PRE-AMPLIFICADOR(30000503).jpg",
+    "num": "30000503"
+  },
+  {
+    "name": "U.R-MOTOR CC SHUNT B3 100S 1,3CV",
+    "img": "U.R-MOTOR CC SHUNT B3 100S 1,3CV(30000186).jpg",
+    "num": "30000186"
+  },
+  {
+    "name": "U.R-RELE 72 VDC RCA-116-05",
+    "img": "U.R-RELE 72 VDC RCA-116-05(30000544).jpg",
+    "num": "30000544"
+  },
+  {
+    "name": "U.R. - PONTO DE VENDA DG 820",
+    "img": "U.R. - PONTO DE VENDA DG 820(30002835).jpg",
+    "num": "30002835"
+  },
+  {
+    "name": "U.R.-VALIDADOR PRODATA  V3681",
+    "img": "U.R.-VALIDADOR PRODATA  V3681(30002870).jpg",
+    "num": "30002870"
+  },
+  {
+    "name": "U.R.-VALIDADOR PRODATA V3680MG RECOLHIM",
+    "img": "U.R.-VALIDADOR PRODATA V3680MG RECOLHIM(30002869).jpg",
+    "num": "30002869"
+  },
+  {
+    "name": "U.R.-VALIDADOR PRODATA V770MG RECOLHIMEN",
+    "img": "U.R.-VALIDADOR PRODATA V770MG RECOLHIMEN(30002867).jpg",
+    "num": "30002867"
+  },
+  {
+    "name": "VASELINA SOLIDA IND 1KG",
+    "img": "VASELINA SOLIDA IND 1KG(10018542).jpg",
+    "num": "10018542"
+  },
+  {
+    "name": "VBU",
+    "img": "VBU(30003148).jpg",
+    "num": "30003148"
+  },
+  {
+    "name": "VBU QRCODE",
+    "img": "VBU(30003148).jpg",
+    "num": "30003891"
+  },
+  {
+    "name": "KIT EXTENSOR CAT/VGA LOCAL/REMOTO",
+    "img": "KIT VGA.jpg",
+    "num": "10012751"
+  }
+];
